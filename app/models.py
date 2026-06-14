@@ -16,14 +16,20 @@ class FundingOpportunity:
     summary: str | None = None
     amount: str | None = None
     status: str | None = None
+    funding_type: str | None = None
+    eligibility: str | None = None
+    location: str | None = None
     opening_date: str | None = None
     closing_date: str | None = None
     published_date: str | None = None
     url: str | None = None
+    categories: list[str] = field(default_factory=list)
     matched_keywords: list[str] = field(default_factory=list)
+    bid_summary: list[str] = field(default_factory=list)
     relevance_score: int = 0
     first_seen_at: str | None = None
     last_seen_at: str | None = None
+    change_summary: list[str] = field(default_factory=list)
 
     def display_funder(self) -> str:
         """Return a display-safe funder value."""

@@ -23,6 +23,9 @@ def test_keyword_scoring_counts_title_summary_status_academic_and_amount() -> No
     assert scored.relevance_score == 12
     assert scored.matched_keywords == ["sensors", "IoT", "digital health"]
     assert scored.amount == "GBP 100,000"
+    assert "Electronics / Sensors / Embedded" in scored.categories
+    assert "AI / Data" not in scored.categories
+    assert scored.bid_summary
 
 
 def test_short_keyword_ai_does_not_match_inside_words() -> None:
@@ -37,3 +40,4 @@ def test_short_keyword_ai_does_not_match_inside_words() -> None:
 
     assert scored.relevance_score == 0
     assert scored.matched_keywords == []
+    assert scored.categories == ["General / Low Match"]

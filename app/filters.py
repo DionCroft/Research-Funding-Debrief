@@ -5,8 +5,10 @@ from __future__ import annotations
 import re
 from collections.abc import Sequence
 
+from app.categories import assign_categories
 from app.config import DEFAULT_KEYWORDS
 from app.models import FundingOpportunity
+from app.summaries import build_bid_summary
 
 
 ACADEMIC_TERMS = (
@@ -99,6 +101,8 @@ def score_opportunity(
 
     opportunity.matched_keywords = matched
     opportunity.relevance_score = score
+    assign_categories(opportunity)
+    build_bid_summary(opportunity)
     return opportunity
 
 

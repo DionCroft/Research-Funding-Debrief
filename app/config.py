@@ -14,6 +14,9 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DATABASE_PATH = PROJECT_ROOT / "data" / "research_funding_debrief.db"
 DEFAULT_LOG_PATH = PROJECT_ROOT / "logs" / "research_funding_debrief.log"
 UKRI_RSS_URL = "https://www.ukri.org/opportunity/feed/"
+INNOVATE_UK_SEARCH_URL = "https://apply-for-innovation-funding.service.gov.uk/competition/search"
+FIND_A_GRANT_URL = "https://www.find-government-grants.service.gov.uk/grants"
+DEFAULT_ENABLED_SOURCES = ["ukri", "innovate_uk", "find_a_grant"]
 
 DEFAULT_KEYWORDS: list[str] = [
     "embedded systems",
@@ -64,6 +67,13 @@ def _env_keywords(defaults: Sequence[str]) -> list[str]:
     return [keyword.strip() for keyword in raw.split(",") if keyword.strip()]
 
 
+def _env_list(name: str, defaults: Sequence[str]) -> list[str]:
+    raw = os.getenv(name, "").strip()
+    if not raw:
+        return list(defaults)
+    return [item.strip() for item in raw.split(",") if item.strip()]
+
+
 @dataclass(frozen=True)
 class Config:
     """Runtime configuration loaded from defaults and environment variables."""
@@ -72,10 +82,16 @@ class Config:
     database_path: Path = DEFAULT_DATABASE_PATH
     log_path: Path = DEFAULT_LOG_PATH
     ukri_rss_url: str = UKRI_RSS_URL
+    innovate_uk_search_url: str = INNOVATE_UK_SEARCH_URL
+    find_a_grant_url: str = FIND_A_GRANT_URL
+    enabled_sources: list[str] = field(default_factory=lambda: list(DEFAULT_ENABLED_SOURCES))
     keywords: list[str] = field(default_factory=lambda: list(DEFAULT_KEYWORDS))
     relevant_score_threshold: int = 4
     high_relevance_threshold: int = 8
     medium_relevance_threshold: int = 4
+    max_known_report_items: int = 10
+    discord_max_items: int = 8
+    discord_include_known: bool = False
     enable_email: bool = False
     enable_discord: bool = False
     smtp_host: str | None = None
@@ -85,6 +101,8 @@ class Config:
     email_from: str | None = None
     email_to: str | None = None
     discord_webhook_url: str | None = None
+    discord_bot_token: str | None = None
+    discord_channel_id: str | None = None
 
 
 def load_config() -> Config:
@@ -99,10 +117,16 @@ def load_config() -> Config:
         database_path=database_path,
         log_path=log_path,
         ukri_rss_url=os.getenv("UKRI_RSS_URL", UKRI_RSS_URL),
+        innovate_uk_search_url=os.getenv("INNOVATE_UK_SEARCH_URL", INNOVATE_UK_SEARCH_URL),
+        find_a_grant_url=os.getenv("FIND_A_GRANT_URL", FIND_A_GRANT_URL),
+        enabled_sources=_env_list("ENABLED_SOURCES", DEFAULT_ENABLED_SOURCES),
         keywords=_env_keywords(DEFAULT_KEYWORDS),
         relevant_score_threshold=_env_int("RELEVANT_SCORE_THRESHOLD", 4),
         high_relevance_threshold=_env_int("HIGH_RELEVANCE_THRESHOLD", 8),
         medium_relevance_threshold=_env_int("MEDIUM_RELEVANCE_THRESHOLD", 4),
+        max_known_report_items=_env_int("MAX_KNOWN_REPORT_ITEMS", 10),
+        discord_max_items=_env_int("DISCORD_MAX_ITEMS", 8),
+        discord_include_known=_env_bool("DISCORD_INCLUDE_KNOWN", False),
         enable_email=_env_bool("ENABLE_EMAIL", False),
         enable_discord=_env_bool("ENABLE_DISCORD", False),
         smtp_host=os.getenv("SMTP_HOST") or None,
@@ -112,4 +136,6 @@ def load_config() -> Config:
         email_from=os.getenv("EMAIL_FROM") or None,
         email_to=os.getenv("EMAIL_TO") or None,
         discord_webhook_url=os.getenv("DISCORD_WEBHOOK_URL") or None,
+        discord_bot_token=os.getenv("DISCORD_BOT_TOKEN") or None,
+        discord_channel_id=os.getenv("DISCORD_CHANNEL_ID") or None,
     )
