@@ -2,7 +2,7 @@
 
 Research Funding Debrief is a local command-line Python project that checks research funding sources, stores opportunities in SQLite, scores them for relevance, and prints a daily email-style debrief in the terminal.
 
-The current local version checks UKRI, Innovate UK, and GOV.UK Find a Grant by default. The code is structured so additional sources such as EU Funding & Tenders, charity funders, university pages, or permitted Research Professional feeds can be added later.
+The current local version checks UKRI, Innovate UK, GOV.UK Find a Grant, NIHR, Wellcome, Royal Society, and Royal Academy of Engineering sources by default. The code is structured so additional sources such as EU Funding & Tenders, charity funders, university pages, or permitted Research Professional feeds can be added later.
 
 ## Install
 
@@ -64,7 +64,7 @@ The default relevance keywords live in `app/config.py`. You can edit `DEFAULT_KE
 Configured sources are controlled by `ENABLED_SOURCES`:
 
 ```env
-ENABLED_SOURCES=ukri,innovate_uk,find_a_grant
+ENABLED_SOURCES=ukri,innovate_uk,find_a_grant,nihr,wellcome,royal_society,raeng
 ```
 
 Available source keys:
@@ -72,6 +72,10 @@ Available source keys:
 - `ukri`
 - `innovate_uk`
 - `find_a_grant`
+- `nihr`
+- `wellcome`
+- `royal_society`
+- `raeng`
 
 Scoring currently uses:
 

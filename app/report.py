@@ -4,11 +4,27 @@ from __future__ import annotations
 
 from collections import Counter
 from collections.abc import Sequence
-from datetime import datetime
+from dataclasses import dataclass
+from datetime import date, datetime
+import re
 
 from app.config import Config
 from app.filters import relevance_bucket
 from app.models import FundingOpportunity
+
+
+EXPIRING_SOON_DAYS = 30
+
+
+@dataclass(frozen=True)
+class Timeline:
+    """Time-based slices for the daily debrief."""
+
+    today: date
+    new: list[FundingOpportunity]
+    expiring_soon: list[FundingOpportunity]
+    ongoing: list[FundingOpportunity]
+    unknown_deadline: list[FundingOpportunity]
 
 
 def generate_daily_debrief(
@@ -70,6 +86,14 @@ def generate_daily_debrief(
     if not fetched_opportunities:
         lines.append("No opportunities were fetched. The feed may be unavailable or empty.")
         return "\n".join(lines)
+
+    timeline = build_timeline(
+        fetched_opportunities=fetched_opportunities,
+        new_opportunities=new_opportunities,
+        config=config,
+        today=generated_at.date(),
+    )
+    lines.extend(_timeline_section(timeline, config))
 
     if not relevant_new and not relevant_changed:
         lines.extend(["No relevant new or changed opportunities found today.", ""])
@@ -144,6 +168,14 @@ def generate_discord_debrief(
         )
     lines.append("")
 
+    timeline = build_timeline(
+        fetched_opportunities=fetched_opportunities,
+        new_opportunities=new_opportunities,
+        config=config,
+        today=generated_at.date(),
+    )
+    lines.extend(_discord_timeline_section(timeline, config))
+
     if not relevant_new and not relevant_changed:
         lines.append("No relevant new or changed opportunities found today.")
         if config.discord_include_known:
@@ -166,6 +198,57 @@ def generate_discord_debrief(
     return "\n".join(lines).rstrip()
 
 
+def build_timeline(
+    fetched_opportunities: Sequence[FundingOpportunity],
+    new_opportunities: Sequence[FundingOpportunity],
+    config: Config,
+    today: date | None = None,
+) -> Timeline:
+    """Classify relevant opportunities into time-based reporting buckets."""
+
+    today = today or date.today()
+    relevant_fetched = [
+        opportunity
+        for opportunity in fetched_opportunities
+        if opportunity.relevance_score >= config.relevant_score_threshold
+        and not _is_closed(opportunity)
+    ]
+    relevant_new = [
+        opportunity
+        for opportunity in new_opportunities
+        if opportunity.relevance_score >= config.relevant_score_threshold
+        and not _is_closed(opportunity)
+    ]
+
+    new_keys = _opportunity_keys(relevant_new)
+    expiring_soon = [
+        opportunity
+        for opportunity in relevant_fetched
+        if _is_expiring_soon(opportunity, today)
+    ]
+    expiring_keys = _opportunity_keys(expiring_soon)
+    ongoing = [
+        opportunity
+        for opportunity in relevant_fetched
+        if _opportunity_key(opportunity) not in new_keys
+        and _opportunity_key(opportunity) not in expiring_keys
+        and _is_ongoing(opportunity, today)
+    ]
+    unknown_deadline = [
+        opportunity
+        for opportunity in ongoing
+        if opportunity.closing_date and parse_opportunity_date(opportunity.closing_date) is None
+    ]
+
+    return Timeline(
+        today=today,
+        new=_sort_for_timeline(relevant_new, today),
+        expiring_soon=_sort_for_timeline(expiring_soon, today),
+        ongoing=_sort_for_timeline(ongoing, today),
+        unknown_deadline=_sort_for_timeline(unknown_deadline, today),
+    )
+
+
 def _bucketed_new(
     opportunities: Sequence[FundingOpportunity],
     bucket: str,
@@ -185,8 +268,269 @@ def _bucketed_new(
     )
 
 
+def _timeline_section(timeline: Timeline, config: Config) -> list[str]:
+    lines = [
+        "Funding timeline:",
+        (
+            f"New: {len(timeline.new)} | "
+            f"Expiring within {EXPIRING_SOON_DAYS} days: {len(timeline.expiring_soon)} | "
+            f"Other ongoing: {len(timeline.ongoing)}"
+        ),
+        "",
+    ]
+    lines.extend(_timeline_bucket("New funding calls", timeline.new, timeline.today))
+    lines.extend(
+        _timeline_bucket(
+            f"Expiring within {EXPIRING_SOON_DAYS} days",
+            timeline.expiring_soon,
+            timeline.today,
+        )
+    )
+    lines.extend(
+        _timeline_bucket(
+            "Other ongoing calls",
+            timeline.ongoing[: config.max_known_report_items],
+            timeline.today,
+        )
+    )
+    if len(timeline.ongoing) > config.max_known_report_items:
+        lines.extend(
+            [
+                f"...and {len(timeline.ongoing) - config.max_known_report_items} more ongoing calls.",
+                "",
+            ]
+        )
+    if timeline.unknown_deadline:
+        lines.extend(
+            [
+                (
+                    "Note: "
+                    f"{len(timeline.unknown_deadline)} ongoing call(s) have an unparsed deadline."
+                ),
+                "",
+            ]
+        )
+    return lines
+
+
+def _timeline_bucket(
+    title: str,
+    opportunities: Sequence[FundingOpportunity],
+    today: date,
+) -> list[str]:
+    lines = [f"{title}:"]
+    if not opportunities:
+        lines.extend(["None.", ""])
+        return lines
+
+    for index, opportunity in enumerate(opportunities, start=1):
+        lines.extend(_format_timeline_opportunity(index, opportunity, today))
+    lines.append("")
+    return lines
+
+
+def _format_timeline_opportunity(
+    index: int,
+    opportunity: FundingOpportunity,
+    today: date,
+) -> list[str]:
+    timing = _timeline_timing(opportunity, today)
+    parts = [
+        f"Source: {opportunity.source}",
+        f"Funder: {opportunity.display_funder()}",
+        f"Score: {opportunity.relevance_score}",
+    ]
+    if opportunity.amount:
+        parts.append(f"Amount: {opportunity.amount}")
+    lines = [
+        f"{index}. {opportunity.title}",
+        f"   {' | '.join(parts)}",
+        f"   {timing}",
+    ]
+    if opportunity.url:
+        lines.append(f"   URL: {opportunity.url}")
+    return lines
+
+
+def _discord_timeline_section(timeline: Timeline, config: Config) -> list[str]:
+    lines = [
+        "**Funding timeline**",
+        (
+            f"New: {len(timeline.new)} | "
+            f"Expiring <= {EXPIRING_SOON_DAYS} days: {len(timeline.expiring_soon)} | "
+            f"Other ongoing: {len(timeline.ongoing)}"
+        ),
+        "",
+    ]
+    lines.extend(
+        _discord_timeline_bucket("New", timeline.new[: config.discord_max_items], timeline.today)
+    )
+    lines.extend(
+        _discord_timeline_bucket(
+            f"Expiring within {EXPIRING_SOON_DAYS} days",
+            timeline.expiring_soon[: config.discord_max_items],
+            timeline.today,
+        )
+    )
+    lines.extend(
+        _discord_timeline_bucket(
+            "Other ongoing",
+            timeline.ongoing[: config.discord_max_items],
+            timeline.today,
+        )
+    )
+    return lines
+
+
+def _discord_timeline_bucket(
+    title: str,
+    opportunities: Sequence[FundingOpportunity],
+    today: date,
+) -> list[str]:
+    lines = [f"**{title}**"]
+    if not opportunities:
+        lines.extend(["None.", ""])
+        return lines
+
+    for opportunity in opportunities:
+        lines.extend(_format_discord_timeline_opportunity(opportunity, today))
+    lines.append("")
+    return lines
+
+
+def _format_discord_timeline_opportunity(
+    opportunity: FundingOpportunity,
+    today: date,
+) -> list[str]:
+    return [
+        f"- **{opportunity.title}** - {_timeline_timing(opportunity, today)}; score {opportunity.relevance_score}",
+        f"  {opportunity.source} | {opportunity.display_funder()}",
+        f"  {opportunity.url or 'URL not available'}",
+    ]
+
+
 def _sort_by_score(opportunities: Sequence[FundingOpportunity]) -> list[FundingOpportunity]:
     return sorted(opportunities, key=lambda opportunity: opportunity.relevance_score, reverse=True)
+
+
+def _sort_for_timeline(
+    opportunities: Sequence[FundingOpportunity],
+    today: date,
+) -> list[FundingOpportunity]:
+    return sorted(
+        opportunities,
+        key=lambda opportunity: (
+            _sort_date(opportunity),
+            -opportunity.relevance_score,
+            opportunity.title.lower(),
+        ),
+    )
+
+
+def _sort_date(opportunity: FundingOpportunity) -> date:
+    closing = parse_opportunity_date(opportunity.closing_date)
+    opening = parse_opportunity_date(opportunity.opening_date)
+    return closing or opening or date.max
+
+
+def _timeline_timing(opportunity: FundingOpportunity, today: date) -> str:
+    parts: list[str] = []
+    if opportunity.opening_date:
+        parts.append(f"opens {opportunity.opening_date}")
+    if opportunity.closing_date:
+        closing_date = parse_opportunity_date(opportunity.closing_date)
+        if closing_date:
+            days_left = (closing_date - today).days
+            days_label = "today" if days_left == 0 else f"{days_left} days left"
+            parts.append(f"closes {opportunity.closing_date} ({days_label})")
+        else:
+            parts.append(f"closes {opportunity.closing_date}")
+    return " | ".join(parts) if parts else "No parsed opening or closing date"
+
+
+def _is_ongoing(opportunity: FundingOpportunity, today: date) -> bool:
+    closing = parse_opportunity_date(opportunity.closing_date)
+    if closing:
+        return closing >= today
+    if opportunity.closing_date:
+        return True
+    status = (opportunity.status or "").lower()
+    return "open" in status or "upcoming" in status
+
+
+def _is_closed(opportunity: FundingOpportunity) -> bool:
+    status = (opportunity.status or "").lower()
+    return "closed" in status
+
+
+def _days_until_closing(opportunity: FundingOpportunity, today: date) -> int | None:
+    closing = parse_opportunity_date(opportunity.closing_date)
+    if not closing:
+        return None
+    return (closing - today).days
+
+
+def _is_expiring_soon(opportunity: FundingOpportunity, today: date) -> bool:
+    days_until_closing = _days_until_closing(opportunity, today)
+    return (
+        days_until_closing is not None
+        and 0 <= days_until_closing <= EXPIRING_SOON_DAYS
+    )
+
+
+def _opportunity_keys(opportunities: Sequence[FundingOpportunity]) -> set[tuple[str, str]]:
+    return {_opportunity_key(opportunity) for opportunity in opportunities}
+
+
+def _opportunity_key(opportunity: FundingOpportunity) -> tuple[str, str]:
+    return (opportunity.source, opportunity.external_id)
+
+
+def parse_opportunity_date(value: str | None) -> date | None:
+    """Best-effort date parser for source-supplied funding dates."""
+
+    if not value:
+        return None
+
+    cleaned = _clean_date_value(value)
+    for fmt in (
+        "%Y-%m-%d",
+        "%Y-%m-%dT%H:%M:%S",
+        "%Y-%m-%dT%H:%M:%S%z",
+        "%d %B %Y",
+        "%d %b %Y",
+        "%d/%m/%Y",
+        "%d-%m-%Y",
+        "%B %d, %Y",
+        "%b %d, %Y",
+    ):
+        try:
+            return datetime.strptime(cleaned, fmt).date()
+        except ValueError:
+            continue
+
+    iso_match = re.search(r"\d{4}-\d{2}-\d{2}", cleaned)
+    if iso_match:
+        try:
+            return datetime.strptime(iso_match.group(0), "%Y-%m-%d").date()
+        except ValueError:
+            return None
+
+    return None
+
+
+def _clean_date_value(value: str) -> str:
+    cleaned = re.sub(r"\s+", " ", value).strip(" .")
+    cleaned = re.sub(
+        r"^(Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday),?\s+",
+        "",
+        cleaned,
+        flags=re.IGNORECASE,
+    )
+    cleaned = re.sub(r"\s+at\s+.*$", "", cleaned, flags=re.IGNORECASE)
+    cleaned = re.sub(r"\s+\d{1,2}:\d{2}.*$", "", cleaned)
+    cleaned = re.sub(r"\s+\d{1,2}(am|pm).*$", "", cleaned, flags=re.IGNORECASE)
+    return cleaned
 
 
 def _category_counts(opportunities: Sequence[FundingOpportunity]) -> Counter[str]:

@@ -16,7 +16,22 @@ DEFAULT_LOG_PATH = PROJECT_ROOT / "logs" / "research_funding_debrief.log"
 UKRI_RSS_URL = "https://www.ukri.org/opportunity/feed/"
 INNOVATE_UK_SEARCH_URL = "https://apply-for-innovation-funding.service.gov.uk/competition/search"
 FIND_A_GRANT_URL = "https://www.find-government-grants.service.gov.uk/grants"
-DEFAULT_ENABLED_SOURCES = ["ukri", "innovate_uk", "find_a_grant"]
+NIHR_FUNDING_URL = "https://www.nihr.ac.uk/funding-opportunities"
+WELLCOME_FUNDING_URL = "https://wellcome.org/research-funding/schemes"
+ROYAL_SOCIETY_GRANTS_URL = "https://royalsociety.org/grants/search/grant-listings/"
+RAENG_PROGRAMMES_URL = (
+    "https://raeng.org.uk/programmes-and-prizes/programmes/uk-grants-and-prizes/"
+    "support-for-research/"
+)
+DEFAULT_ENABLED_SOURCES = [
+    "ukri",
+    "innovate_uk",
+    "find_a_grant",
+    "nihr",
+    "wellcome",
+    "royal_society",
+    "raeng",
+]
 
 DEFAULT_KEYWORDS: list[str] = [
     "embedded systems",
@@ -84,6 +99,10 @@ class Config:
     ukri_rss_url: str = UKRI_RSS_URL
     innovate_uk_search_url: str = INNOVATE_UK_SEARCH_URL
     find_a_grant_url: str = FIND_A_GRANT_URL
+    nihr_funding_url: str = NIHR_FUNDING_URL
+    wellcome_funding_url: str = WELLCOME_FUNDING_URL
+    royal_society_grants_url: str = ROYAL_SOCIETY_GRANTS_URL
+    raeng_programmes_url: str = RAENG_PROGRAMMES_URL
     enabled_sources: list[str] = field(default_factory=lambda: list(DEFAULT_ENABLED_SOURCES))
     keywords: list[str] = field(default_factory=lambda: list(DEFAULT_KEYWORDS))
     relevant_score_threshold: int = 4
@@ -119,6 +138,13 @@ def load_config() -> Config:
         ukri_rss_url=os.getenv("UKRI_RSS_URL", UKRI_RSS_URL),
         innovate_uk_search_url=os.getenv("INNOVATE_UK_SEARCH_URL", INNOVATE_UK_SEARCH_URL),
         find_a_grant_url=os.getenv("FIND_A_GRANT_URL", FIND_A_GRANT_URL),
+        nihr_funding_url=os.getenv("NIHR_FUNDING_URL", NIHR_FUNDING_URL),
+        wellcome_funding_url=os.getenv("WELLCOME_FUNDING_URL", WELLCOME_FUNDING_URL),
+        royal_society_grants_url=os.getenv(
+            "ROYAL_SOCIETY_GRANTS_URL",
+            ROYAL_SOCIETY_GRANTS_URL,
+        ),
+        raeng_programmes_url=os.getenv("RAENG_PROGRAMMES_URL", RAENG_PROGRAMMES_URL),
         enabled_sources=_env_list("ENABLED_SOURCES", DEFAULT_ENABLED_SOURCES),
         keywords=_env_keywords(DEFAULT_KEYWORDS),
         relevant_score_threshold=_env_int("RELEVANT_SCORE_THRESHOLD", 4),

@@ -9,7 +9,10 @@ import requests
 from bs4 import BeautifulSoup, Tag
 
 
-USER_AGENT = "ResearchFundingDebrief/0.2"
+USER_AGENT = (
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
+    "Chrome/125.0 Safari/537.36 ResearchFundingDebrief/0.2"
+)
 STOP_LABELS = {
     "opportunity status",
     "funders",
@@ -43,6 +46,8 @@ def get_soup(url: str, timeout: int = 30) -> BeautifulSoup:
 
     response = requests.get(url, headers={"User-Agent": USER_AGENT}, timeout=timeout)
     response.raise_for_status()
+    if not response.text.strip():
+        raise requests.RequestException(f"Empty response from {url}")
     return BeautifulSoup(response.text, "html.parser")
 
 
