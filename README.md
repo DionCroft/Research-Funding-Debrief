@@ -51,6 +51,63 @@ python run.py --no-discord
 python run.py --dry-run
 ```
 
+## Signup front page
+
+The project includes a static front page with a local signup endpoint for daily or weekly funding
+briefing preferences:
+
+```bash
+python web/server.py
+```
+
+If port `8080` is already in use, choose another port:
+
+```bash
+python web/server.py --port 8081
+```
+
+Then open:
+
+```text
+http://127.0.0.1:8080
+```
+
+Submissions are stored in `data/signup_subscribers.db`. If the HTML file is opened directly without
+the local server, the form falls back to an email signup draft.
+
+## GitHub Pages
+
+The signup page can be published as a static GitHub Pages site using the included workflow:
+
+```text
+.github/workflows/deploy-pages.yml
+```
+
+To enable it:
+
+1. Push the repository to GitHub.
+2. In the repository, go to Settings > Pages.
+3. Set Build and deployment > Source to GitHub Actions.
+4. Push to the `main` branch, or run the `Deploy signup page` workflow manually.
+
+The public URL will usually be:
+
+```text
+https://<github-username>.github.io/research-funding-debrief/
+```
+
+GitHub Pages is static, so it cannot run `web/server.py` or write to SQLite. On GitHub Pages the
+signup form opens a prefilled email to `d.mariyanayagam@londonmet.ac.uk`. The local SQLite signup
+flow still works when running `python web/server.py`.
+
+If you later deploy a hosted signup API, set this before `web/app.js` loads:
+
+```html
+<script>
+  window.RESEARCH_FUNDING_SIGNUP_API = "https://example.com/api/signup";
+</script>
+```
+
 ## Configuration
 
 Copy `.env.example` to `.env` if you want local overrides:

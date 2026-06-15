@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Research Funding Debrief</title>
+    <meta
+      name="description"
+      content="A focused daily or weekly email briefing for research funding calls, deadlines, and opportunities."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="page-title">
+        <img
+          class="hero__image"
+          src="assets/funding-intelligence-hero.png"
+          alt="Abstract research funding dashboard with grant timelines and opportunity cards"
+        >
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+          <p class="eyebrow">Research Funding Debrief</p>
+          <h1 id="page-title">Funding calls, deadlines, and bid-fit signals in one clean briefing.</h1>
+          <p class="hero__lead">
+            A concise email digest for academics, researchers, and innovation teams tracking grants,
+            fellowships, translational funding, and collaboration calls.
+          </p>
+          <div class="hero__metrics" aria-label="Current coverage">
+            <span><strong>7</strong> live sources</span>
+            <span><strong>30</strong> day deadline radar</span>
+            <span><strong>2</strong> delivery rhythms</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="signup-band" aria-labelledby="signup-title">
+        <div class="signup-copy">
+          <p class="section-kicker">Briefing Preferences</p>
+          <h2 id="signup-title">Choose the calls worth watching.</h2>
+          <p>
+            Select a daily or weekly digest and tune the briefing around the topics you care about.
+            The debrief currently tracks UKRI, Innovate UK, Find a Grant, NIHR, Royal Society,
+            Royal Academy of Engineering, and Wellcome.
+          </p>
+        </div>
+
+        <form class="signup-form" id="signup-form">
+          <div class="field-grid">
+            <label>
+              <span>First name</span>
+              <input name="firstName" autocomplete="given-name" required>
+            </label>
+            <label>
+              <span>Last name</span>
+              <input name="lastName" autocomplete="family-name" required>
+            </label>
+          </div>
+
+          <label>
+            <span>Email address</span>
+            <input name="email" type="email" autocomplete="email" required>
+          </label>
+
+          <fieldset>
+            <legend>Email frequency</legend>
+            <div class="segmented-control">
+              <label>
+                <input type="radio" name="frequency" value="daily" checked>
+                <span>Daily</span>
+              </label>
+              <label>
+                <input type="radio" name="frequency" value="weekly">
+                <span>Weekly</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Topics of interest</legend>
+            <div class="topic-grid">
+              <label><input type="checkbox" name="topics" value="AI / Data"> <span>AI / Data</span></label>
+              <label><input type="checkbox" name="topics" value="Robotics / Automation"> <span>Robotics</span></label>
+              <label><input type="checkbox" name="topics" value="Electronics / IoT"> <span>Electronics / IoT</span></label>
+              <label><input type="checkbox" name="topics" value="Digital Health"> <span>Digital Health</span></label>
+              <label><input type="checkbox" name="topics" value="Assistive Technology / SEND"> <span>Assistive Tech</span></label>
+              <label><input type="checkbox" name="topics" value="Energy / Sustainability"> <span>Sustainability</span></label>
+              <label><input type="checkbox" name="topics" value="Cybersecurity"> <span>Cybersecurity</span></label>
+              <label><input type="checkbox" name="topics" value="KTP / Collaboration"> <span>KTP / Collaboration</span></label>
+              <label><input type="checkbox" name="topics" value="Fellowships"> <span>Fellowships</span></label>
+              <label><input type="checkbox" name="topics" value="Capital / Infrastructure"> <span>Infrastructure</span></label>
+            </div>
+          </fieldset>
+
+          <button class="submit-button" type="submit">
+            <span>Join the briefing</span>
+            <span aria-hidden="true">→</span>
+          </button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="preview-band" aria-labelledby="preview-title">
+        <div>
+          <p class="section-kicker">Signal Over Noise</p>
+          <h2 id="preview-title">A briefing shaped around deadlines.</h2>
+        </div>
+        <div class="preview-list" aria-label="Example digest sections">
+          <article>
+            <span class="status-dot status-dot--new"></span>
+            <h3>New calls</h3>
+            <p>Freshly detected opportunities, scored against your selected topics.</p>
+          </article>
+          <article>
+            <span class="status-dot status-dot--soon"></span>
+            <h3>Closing soon</h3>
+            <p>Calls expiring within a month, surfaced before they disappear into the archive.</p>
+          </article>
+          <article>
+            <span class="status-dot status-dot--steady"></span>
+            <h3>Ongoing calls</h3>
+            <p>Relevant open opportunities that still have time for a considered bid decision.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="developer-band" aria-labelledby="developer-title">
+        <div class="developer-profile">
+          <p class="section-kicker">Developed By</p>
+          <h2 id="developer-title">Dr Dion Miroy Mariyanayagam</h2>
+          <p class="credentials">BEng (Hons) PGCert FHEA PhD MIET CEng</p>
+          <p>
+            Principal Lecturer and Course Leader for BEng (Hons) Computer Systems Engineering and
+            Robotics, BEng (Hons) Electronics Engineering and IoT, and MSc Robotics with AI.
+          </p>
+          <p>
+            School of Computing and Digital Media, Department of Communications Technology and
+            Mathematics, London Metropolitan University.
+          </p>
+          <div class="developer-links">
+            <a href="mailto:d.mariyanayagam@londonmet.ac.uk">d.mariyanayagam@londonmet.ac.uk</a>
+            <a href="https://www.linkedin.com/in/dion-mariyanayagam-665bb313b/">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
