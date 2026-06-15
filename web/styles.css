@@ -288,6 +288,43 @@ h1 {
   line-height: 1.72;
 }
 
+.microsoft-form-panel {
+  display: grid;
+  gap: 14px;
+  padding: clamp(12px, 2vw, 16px);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.microsoft-form-frame {
+  width: 100%;
+  min-height: 760px;
+  border: 0;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.form-open-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid #cbd4cd;
+  border-radius: 8px;
+  color: var(--teal-dark);
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+}
+
+.form-open-link:hover {
+  border-color: var(--teal);
+  background: #e4f3ef;
+}
+
 .signup-form {
   display: grid;
   gap: 22px;
@@ -631,5 +668,9 @@ input:focus {
 
   .signup-form {
     padding: 18px;
+  }
+
+  .microsoft-form-frame {
+    min-height: 840px;
   }
 }

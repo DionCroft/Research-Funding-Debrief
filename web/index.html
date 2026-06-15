@@ -72,105 +72,30 @@
       <section class="signup-band" aria-labelledby="signup-title">
         <div class="signup-copy">
           <p class="section-kicker">Briefing Preferences</p>
-          <h2 id="signup-title">Choose the calls worth watching.</h2>
+          <h2 id="signup-title">Sign up in under a minute.</h2>
           <p>
-            Select a daily or weekly digest and tune the briefing around the topics you care about.
-            The debrief currently tracks UKRI, Innovate UK, Find a Grant, NIHR, Royal Society,
-            Royal Academy of Engineering, and Wellcome.
+            Use the embedded Microsoft Form to choose your briefing rhythm, topics, preferred
+            funders, and opportunity types. Responses are captured in Microsoft Forms so the public
+            GitHub Pages site can collect signups without asking users to email manually.
           </p>
         </div>
 
-        <form class="signup-form" id="signup-form">
-          <div class="field-grid">
-            <label>
-              <span>First name</span>
-              <input name="firstName" autocomplete="given-name" required>
-            </label>
-            <label>
-              <span>Last name</span>
-              <input name="lastName" autocomplete="family-name" required>
-            </label>
-          </div>
-
-          <label>
-            <span>Email address</span>
-            <input name="email" type="email" autocomplete="email" required>
-          </label>
-
-          <fieldset>
-            <legend>Email frequency</legend>
-            <div class="segmented-control">
-              <label>
-                <input type="radio" name="frequency" value="daily" checked>
-                <span>Daily</span>
-              </label>
-              <label>
-                <input type="radio" name="frequency" value="weekly">
-                <span>Weekly</span>
-              </label>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>Topics of interest</legend>
-            <div class="topic-groups">
-              <div class="topic-group">
-                <h3>Technology</h3>
-                <div class="topic-grid">
-                  <label><input type="checkbox" name="topics" value="AI / Data"> <span>AI / Data</span></label>
-                  <label><input type="checkbox" name="topics" value="Machine Learning"> <span>Machine Learning</span></label>
-                  <label><input type="checkbox" name="topics" value="Robotics / Automation"> <span>Robotics</span></label>
-                  <label><input type="checkbox" name="topics" value="Electronics / IoT"> <span>Electronics / IoT</span></label>
-                  <label><input type="checkbox" name="topics" value="Embedded Systems"> <span>Embedded Systems</span></label>
-                  <label><input type="checkbox" name="topics" value="Sensors / Instrumentation"> <span>Sensors</span></label>
-                  <label><input type="checkbox" name="topics" value="Cybersecurity"> <span>Cybersecurity</span></label>
-                  <label><input type="checkbox" name="topics" value="Wireless / Telecoms"> <span>Wireless / Telecoms</span></label>
-                </div>
-              </div>
-              <div class="topic-group">
-                <h3>Health & Society</h3>
-                <div class="topic-grid">
-                  <label><input type="checkbox" name="topics" value="Digital Health"> <span>Digital Health</span></label>
-                  <label><input type="checkbox" name="topics" value="Assistive Technology / SEND"> <span>Assistive Tech / SEND</span></label>
-                  <label><input type="checkbox" name="topics" value="Clinical Evidence / Trials"> <span>Clinical Evidence</span></label>
-                  <label><input type="checkbox" name="topics" value="Public Health"> <span>Public Health</span></label>
-                  <label><input type="checkbox" name="topics" value="Social Care"> <span>Social Care</span></label>
-                  <label><input type="checkbox" name="topics" value="Mental Health"> <span>Mental Health</span></label>
-                  <label><input type="checkbox" name="topics" value="Education / Skills"> <span>Education / Skills</span></label>
-                  <label><input type="checkbox" name="topics" value="Policy / Social Sciences"> <span>Policy / Social Sciences</span></label>
-                </div>
-              </div>
-              <div class="topic-group">
-                <h3>Innovation Areas</h3>
-                <div class="topic-grid">
-                  <label><input type="checkbox" name="topics" value="Energy / Sustainability"> <span>Sustainability</span></label>
-                  <label><input type="checkbox" name="topics" value="Climate / Environment"> <span>Climate / Environment</span></label>
-                  <label><input type="checkbox" name="topics" value="Manufacturing / Industry 4.0"> <span>Manufacturing</span></label>
-                  <label><input type="checkbox" name="topics" value="Space / Aerospace"> <span>Space / Aerospace</span></label>
-                  <label><input type="checkbox" name="topics" value="Defence / Security"> <span>Defence / Security</span></label>
-                  <label><input type="checkbox" name="topics" value="Creative / Media Tech"> <span>Creative Tech</span></label>
-                </div>
-              </div>
-              <div class="topic-group">
-                <h3>Funding Types</h3>
-                <div class="topic-grid">
-                  <label><input type="checkbox" name="topics" value="KTP / Collaboration"> <span>KTP / Collaboration</span></label>
-                  <label><input type="checkbox" name="topics" value="Fellowships"> <span>Fellowships</span></label>
-                  <label><input type="checkbox" name="topics" value="Early Career"> <span>Early Career</span></label>
-                  <label><input type="checkbox" name="topics" value="Capital / Infrastructure"> <span>Infrastructure</span></label>
-                  <label><input type="checkbox" name="topics" value="International / Horizon Europe"> <span>International</span></label>
-                  <label><input type="checkbox" name="topics" value="Commercialisation / Translation"> <span>Commercialisation</span></label>
-                </div>
-              </div>
-            </div>
-          </fieldset>
-
-          <button class="submit-button" type="submit">
-            <span>Join the briefing</span>
-            <span aria-hidden="true">→</span>
-          </button>
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-        </form>
+        <div class="microsoft-form-panel">
+          <iframe
+            class="microsoft-form-frame"
+            src="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=nO4cPfCLdUO1uVwDFdEYfleRArkuWg1FnZVlBt6O751UMVZLWkxXTUNYS1c1Q0JCUEdRRTBYUDZSRy4u&amp;route=shorturl&amp;embed=true"
+            title="Research Funding Debrief signup form"
+            loading="lazy"
+          ></iframe>
+          <a
+            class="form-open-link"
+            href="https://forms.cloud.microsoft/e/6HiR44VDU7"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Open signup form in a new tab
+          </a>
+        </div>
       </section>
 
       <section class="preview-band" aria-labelledby="preview-title">
