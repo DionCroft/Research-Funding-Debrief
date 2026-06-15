@@ -143,6 +143,26 @@ If you later deploy a hosted signup API, set this before `web/app.js` loads:
 </script>
 ```
 
+### Microsoft Forms signup backend option
+
+For a public GitHub Pages version, Microsoft Forms is a low-maintenance way to capture newsletter
+preferences without running a custom public backend.
+
+Recommended flow:
+
+1. Create a Microsoft Form with first name, last name, email, frequency, and topic checkboxes.
+2. Set the form to allow responses from the intended audience.
+3. Embed the form in the GitHub Pages site or link to it from the signup button.
+4. Create a Power Automate flow using the Microsoft Forms trigger `When a new response is submitted`.
+5. Add the Microsoft Forms action `Get response details`.
+6. Save each response to an Excel workbook or SharePoint List.
+7. Optionally add a final step that posts the response to the Raspberry Pi signup API if the Pi is
+   reachable from the internet.
+
+This keeps the user-facing signup simple while giving an automated, structured backend. The local
+SQLite database remains useful for the Raspberry Pi service; Microsoft Forms or SharePoint can act
+as the public collection point.
+
 ## Configuration
 
 Copy `.env.example` to `.env` if you want local overrides:
