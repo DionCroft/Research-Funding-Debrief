@@ -6,6 +6,7 @@ const liveActiveCount = document.querySelector("#live-active-count");
 const liveClosingCount = document.querySelector("#live-closing-count");
 const liveSourceCount = document.querySelector("#live-source-count");
 const liveTopicCount = document.querySelector("#live-topic-count");
+const liveRefresh = document.querySelector("#live-refresh");
 const localHosts = new Set(["localhost", "127.0.0.1", "::1"]);
 const configuredSignupApi = window.RESEARCH_FUNDING_SIGNUP_API || "";
 
@@ -83,6 +84,15 @@ function updateLiveStats(summary) {
 
 function renderLiveItems(items) {
   if (!liveList || !items || items.length === 0) {
+    if (liveList) {
+      liveList.innerHTML = `
+        <article>
+          <p class="live-label">Snapshot empty</p>
+          <h3>No funding calls are available yet.</h3>
+          <p>Try refreshing the radar again shortly.</p>
+        </article>
+      `;
+    }
     return;
   }
 
@@ -109,8 +119,15 @@ async function loadLiveUpdates() {
     return;
   }
 
+  if (liveRefresh) {
+    liveRefresh.disabled = true;
+    liveRefresh.classList.add("is-refreshing");
+  }
+  setText(liveUpdated, "Refreshing funding snapshot...");
+  liveList.setAttribute("aria-busy", "true");
+
   try {
-    const response = await fetch("data/live-updates.json", { cache: "no-store" });
+    const response = await fetch(`data/live-updates.json?refresh=${Date.now()}`, { cache: "no-store" });
     if (!response.ok) {
       throw new Error("Live updates unavailable");
     }
@@ -120,6 +137,19 @@ async function loadLiveUpdates() {
     renderLiveItems(payload.items || []);
   } catch (error) {
     setText(liveUpdated, "Live snapshot unavailable right now");
+    liveList.innerHTML = `
+      <article>
+        <p class="live-label">Refresh failed</p>
+        <h3>The radar could not load the latest snapshot.</h3>
+        <p>Please use the refresh button again in a moment.</p>
+      </article>
+    `;
+  } finally {
+    liveList.setAttribute("aria-busy", "false");
+    if (liveRefresh) {
+      liveRefresh.disabled = false;
+      liveRefresh.classList.remove("is-refreshing");
+    }
   }
 }
 
@@ -172,6 +202,12 @@ if (form) {
       setStatus("Signup service is not running. Opening an email signup instead.", true);
       mailtoSignup(payload);
     }
+  });
+}
+
+if (liveRefresh) {
+  liveRefresh.addEventListener("click", () => {
+    loadLiveUpdates();
   });
 }
 

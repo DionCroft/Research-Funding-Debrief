@@ -165,6 +165,56 @@ h1 {
   white-space: nowrap;
 }
 
+.live-actions {
+  display: grid;
+  justify-items: end;
+  gap: 12px;
+}
+
+.refresh-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 10px 14px;
+  border: 1px solid rgba(11, 127, 121, 0.34);
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--teal-dark);
+  font-weight: 850;
+  cursor: pointer;
+  transition: background 0.16s ease, border-color 0.16s ease, transform 0.16s ease;
+}
+
+.refresh-button:hover {
+  border-color: var(--teal);
+  background: #e4f3ef;
+  transform: translateY(-1px);
+}
+
+.refresh-button:disabled {
+  cursor: wait;
+  opacity: 0.72;
+  transform: none;
+}
+
+.refresh-button span {
+  display: inline-block;
+  font-size: 1.06rem;
+  line-height: 1;
+}
+
+.refresh-button.is-refreshing span {
+  animation: refresh-spin 0.8s linear infinite;
+}
+
+@keyframes refresh-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .live-stats {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -561,33 +611,21 @@ input:focus {
 }
 
 .course-list {
-  display: grid;
-  gap: 10px;
+  display: block;
   max-width: 820px;
-  margin: 0 0 22px;
-  padding: 0;
-  list-style: none;
+  margin: 0 0 24px;
+  padding-left: 20px;
+  color: rgba(255, 253, 250, 0.9);
 }
 
 .course-list li {
-  position: relative;
-  padding: 12px 14px 12px 38px;
-  border: 1px solid rgba(255, 253, 250, 0.16);
-  border-radius: 8px;
-  color: rgba(255, 253, 250, 0.9);
-  background: rgba(255, 253, 250, 0.04);
+  margin-bottom: 8px;
+  padding-left: 4px;
   line-height: 1.45;
 }
 
-.course-list li::before {
-  content: "";
-  position: absolute;
-  left: 16px;
-  top: 20px;
-  width: 8px;
-  height: 8px;
-  border-radius: 999px;
-  background: #9fd7cf;
+.course-list li::marker {
+  color: #9fd7cf;
 }
 
 .developer-links {
@@ -638,6 +676,10 @@ input:focus {
 
   .live-updated {
     white-space: normal;
+  }
+
+  .live-actions {
+    justify-items: start;
   }
 
   .live-stats,
