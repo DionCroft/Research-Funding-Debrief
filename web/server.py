@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 import sqlite3
 from datetime import datetime, timezone
@@ -145,8 +146,10 @@ def _save_signup(subscriber: dict[str, object]) -> None:
 
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(description="Serve the Research Funding Debrief signup page.")
-    parser.add_argument("--host", default=HOST, help=f"Host to bind. Default: {HOST}")
-    parser.add_argument("--port", type=int, default=PORT, help=f"Port to bind. Default: {PORT}")
+    host = os.getenv("SIGNUP_SERVER_HOST", HOST)
+    port = int(os.getenv("SIGNUP_SERVER_PORT", str(PORT)))
+    parser.add_argument("--host", default=host, help=f"Host to bind. Default: {host}")
+    parser.add_argument("--port", type=int, default=port, help=f"Port to bind. Default: {port}")
     return parser
 
 

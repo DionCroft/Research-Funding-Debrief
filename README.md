@@ -75,6 +75,38 @@ http://127.0.0.1:8080
 Submissions are stored in `data/signup_subscribers.db`. If the HTML file is opened directly without
 the local server, the form falls back to an email signup draft.
 
+### Run the signup server 24/7 on a Raspberry Pi
+
+For a Raspberry Pi, install the signup page as a user-level `systemd` service:
+
+```bash
+python scripts/install_signup_service.py
+```
+
+By default this binds to all network interfaces on port `8080`, so another device on the same
+network can open:
+
+```text
+http://<raspberry-pi-ip-address>:8080
+```
+
+Use a different port if needed:
+
+```bash
+python scripts/install_signup_service.py --port 8081
+```
+
+Useful service commands:
+
+```bash
+systemctl --user status research-funding-signup.service
+systemctl --user restart research-funding-signup.service
+journalctl --user -u research-funding-signup.service -f
+```
+
+If the Pi is rebooted, the service will start again automatically. The installer also attempts to
+enable lingering for the current user so the service can run even when you are not logged in.
+
 ## GitHub Pages
 
 The signup page can be published as a static GitHub Pages site using the included workflow:

@@ -1,0 +1,17 @@
+[Unit]
+Description=Research Funding Debrief signup server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory={{PROJECT_DIR}}
+Environment=PYTHONUNBUFFERED=1
+Environment=SIGNUP_SERVER_HOST={{HOST}}
+Environment=SIGNUP_SERVER_PORT={{PORT}}
+ExecStart={{PYTHON_BIN}} web/server.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
