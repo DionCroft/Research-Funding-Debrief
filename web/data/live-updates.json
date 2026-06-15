@@ -1,0 +1,110 @@
+{
+  "generatedAt": "2026-06-15T17:13:17+01:00",
+  "items": [
+    {
+      "deadline": "16 June 2026 at 1:00 pm",
+      "source": "NIHR",
+      "status": "Closing soon",
+      "title": "Postdoctoral Award (Cohort 3)",
+      "topics": [
+        "Fellowships / Academic Career"
+      ],
+      "urgency": "1 day left",
+      "url": "https://www.nihr.ac.uk/funding/postdoctoral-award-cohort-3/2026427"
+    },
+    {
+      "deadline": "17 June 2026 at 1:00 pm",
+      "source": "NIHR",
+      "status": "Closing soon",
+      "title": "Mentoring Programme 2026 (Cohort 2) - Mentees",
+      "topics": [
+        "General / Low Match"
+      ],
+      "urgency": "2 days left",
+      "url": "https://www.nihr.ac.uk/funding/mentoring-programme-2026-cohort-2-mentees/2026430"
+    },
+    {
+      "deadline": "17 June 2026 at 1:00 pm",
+      "source": "NIHR",
+      "status": "Closing soon",
+      "title": "Mentoring Programme 2026 (Cohort 2) - Mentors",
+      "topics": [
+        "General / Low Match"
+      ],
+      "urgency": "2 days left",
+      "url": "https://www.nihr.ac.uk/funding/mentoring-programme-2026-cohort-2-mentors/2026429"
+    },
+    {
+      "deadline": "24 June 2026",
+      "source": "Innovate UK",
+      "status": "Closing soon",
+      "title": "Ofgem Strategic Innovation Fund Discovery C6",
+      "topics": [
+        "KTP / University-Business Collaboration"
+      ],
+      "urgency": "9 days left",
+      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2484/overview/770c0946-2e24-4566-bab1-2bf1c1dd2b38"
+    },
+    {
+      "deadline": "24 June 2026",
+      "source": "Innovate UK",
+      "status": "Closing soon",
+      "title": "Ofgem Strategic Innovation Fund Round 5 Discovery C6",
+      "topics": [
+        "KTP / University-Business Collaboration"
+      ],
+      "urgency": "9 days left",
+      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2480/overview/96372f42-c714-4d17-91b0-dd75b9a80e17"
+    },
+    {
+      "deadline": "30 June 2026 at 1:00 pm",
+      "source": "NIHR",
+      "status": "Closing soon",
+      "title": "Global Health Research Professorships (Cohort 9)",
+      "topics": [
+        "Digital Health / Assistive Tech / SEND",
+        "Fellowships / Academic Career"
+      ],
+      "urgency": "15 days left",
+      "url": "https://www.nihr.ac.uk/funding/global-health-research-professorships-cohort-9/2026423"
+    },
+    {
+      "deadline": "30 June 2026 at 1:00 pm",
+      "source": "NIHR",
+      "status": "Closing soon",
+      "title": "Global Advanced Fellowships (Cohort 2)",
+      "topics": [
+        "Digital Health / Assistive Tech / SEND",
+        "Energy / Sustainability",
+        "Fellowships / Academic Career"
+      ],
+      "urgency": "15 days left",
+      "url": "https://www.nihr.ac.uk/funding/global-advanced-fellowships-cohort-2/2026297"
+    },
+    {
+      "deadline": "1 July 2026 at 1:00 pm",
+      "source": "NIHR",
+      "status": "Closing soon",
+      "title": "Team Science Camp (Cohort 4)",
+      "topics": [
+        "General / Low Match"
+      ],
+      "urgency": "16 days left",
+      "url": "https://www.nihr.ac.uk/funding/team-science-camp-cohort-4/2026440"
+    }
+  ],
+  "sourceCounts": {
+    "Find a Grant": 10,
+    "Innovate UK": 10,
+    "NIHR": 50,
+    "Royal Academy of Engineering": 11,
+    "Royal Society": 3,
+    "UKRI": 20
+  },
+  "summary": {
+    "closingSoon": 25,
+    "sourcesScanned": 7,
+    "topicCategories": 30,
+    "trackedCalls": 102
+  }
+}

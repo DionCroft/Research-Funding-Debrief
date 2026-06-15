@@ -90,15 +90,18 @@ To enable it:
 3. Set Build and deployment > Source to GitHub Actions.
 4. Push to the `main` branch, or run the `Deploy signup page` workflow manually.
 
-The public URL will usually be:
+The public URL is:
 
 ```text
-https://<github-username>.github.io/research-funding-debrief/
+https://dioncroft.github.io/Research-Funding-Debrief/
 ```
 
 GitHub Pages is static, so it cannot run `web/server.py` or write to SQLite. On GitHub Pages the
 signup form opens a prefilled email to `d.mariyanayagam@londonmet.ac.uk`. The local SQLite signup
 flow still works when running `python web/server.py`.
+
+The deployment workflow runs `python web/live_updates.py` before publishing, which writes
+`web/data/live-updates.json` for the live funding radar on the front page.
 
 If you later deploy a hosted signup API, set this before `web/app.js` loads:
 
