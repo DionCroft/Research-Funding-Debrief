@@ -164,7 +164,7 @@ enable lingering for the current user so the service can run even when you are n
 
 ## GitHub Pages
 
-The signup page can be published as a static GitHub Pages site using the included workflow:
+The funding radar can be published as a static GitHub Pages site using the included workflow:
 
 ```text
 .github/workflows/deploy-pages.yml
@@ -175,7 +175,7 @@ To enable it:
 1. Push the repository to GitHub.
 2. In the repository, go to Settings > Pages.
 3. Set Build and deployment > Source to GitHub Actions.
-4. Push to the `main` branch, or run the `Deploy signup page` workflow manually.
+4. Push to the `main` branch, or run the `Deploy funding radar` workflow manually.
 
 The public URL is:
 
@@ -187,9 +187,23 @@ GitHub Pages is static, so it cannot run `web/server.py` or write to SQLite. The
 or links to the Microsoft Forms signup flow, and the local SQLite signup flow remains available only
 when running `python web/server.py`.
 
-The deployment workflow runs `python web/live_updates.py` before publishing, which writes
-`web/data/live-updates.json` for the live funding radar and `web/data/live-updates.xml` for
-Power Automate/RSS-based briefing flows.
+The deployment workflow publishes the committed static snapshot in `web/data/`. It does not
+regenerate live funding data on GitHub Actions, because Actions runners do not have the persistent
+local SQLite database needed to preserve `first_seen_at` and accurate `New`/`Seen` tracking.
+
+Generate the live data on the persistent scheduled machine instead, then commit and push the
+refreshed files:
+
+```bash
+python web/live_updates.py
+git add web/data/live-updates.json web/data/live-updates.xml
+git commit -m "Refresh live funding data"
+git push
+```
+
+The website reads the featured `items` list from the JSON snapshot. The RSS feed is generated from
+the full active `allItems` list so Power Automate can build daily and weekly emails from every
+active call, not only the featured website list.
 
 If you later deploy a hosted signup API, set this before `web/app.js` loads:
 

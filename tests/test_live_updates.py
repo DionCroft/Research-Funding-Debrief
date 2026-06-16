@@ -4,7 +4,7 @@ from xml.etree import ElementTree as ET
 
 from app.database import OpportunityDatabase
 from app.models import FundingOpportunity
-from web.live_updates import write_live_updates
+from web.live_updates import MAX_FEATURED_ITEMS, _fetch_opportunities, write_live_updates
 
 
 def test_live_updates_marks_new_for_last_seven_days_and_writes_rss(tmp_path) -> None:
@@ -53,6 +53,7 @@ def test_live_updates_marks_new_for_last_seven_days_and_writes_rss(tmp_path) -> 
     )
 
     payload = json.loads(json_path.read_text(encoding="utf-8"))
+    assert len(payload["allItems"]) == 2
     status_by_title = {
         item["title"]: item["statusLabels"]
         for item in payload["items"]
@@ -84,3 +85,70 @@ def test_live_updates_marks_new_for_last_seven_days_and_writes_rss(tmp_path) -> 
     assert new_rss_item.findtext("publishedDate") == "1 June 2026"
     assert new_rss_item.findtext("firstSeenAt").startswith("2026-06-10")
     assert "Published: 1 June 2026" in new_rss_item.findtext("description")
+
+
+def test_rss_uses_all_active_calls_not_only_featured_items(tmp_path) -> None:
+    database = OpportunityDatabase(tmp_path / "funding.db")
+    database.initialise()
+    opportunities = [
+        FundingOpportunity(
+            source="UKRI",
+            external_id=f"item-{index}",
+            title=f"Active funding {index:03}",
+            summary="Research grant for active opportunities.",
+            status="Open",
+            closing_date="31 December 2026",
+            url=f"https://example.test/{index}",
+            categories=["AI / Data"],
+            relevance_score=5,
+            first_seen_at=datetime(2026, 6, 1, tzinfo=timezone.utc).isoformat(
+                timespec="seconds"
+            ),
+        )
+        for index in range(MAX_FEATURED_ITEMS + 1)
+    ]
+    database.store_opportunities(opportunities)
+
+    json_path = tmp_path / "live-updates.json"
+    rss_path = tmp_path / "live-updates.xml"
+    write_live_updates(
+        opportunities,
+        database,
+        ["ukri"],
+        output_path=json_path,
+        rss_output_path=rss_path,
+        today=date(2026, 6, 16),
+    )
+
+    payload = json.loads(json_path.read_text(encoding="utf-8"))
+    assert len(payload["items"]) == MAX_FEATURED_ITEMS
+    assert len(payload["allItems"]) == MAX_FEATURED_ITEMS + 1
+    assert payload["summary"]["featuredCalls"] == MAX_FEATURED_ITEMS
+    assert payload["summary"]["rssCalls"] == MAX_FEATURED_ITEMS + 1
+
+    rss = ET.parse(rss_path)
+    assert len(rss.findall("./channel/item")) == MAX_FEATURED_ITEMS + 1
+
+
+def test_fetch_opportunities_skips_failed_sources() -> None:
+    expected = FundingOpportunity(
+        source="Working source",
+        external_id="working-item",
+        title="Working funding",
+        summary="A source that still parses.",
+        status="Open",
+    )
+
+    class BrokenSource:
+        name = "Broken source"
+
+        def fetch(self) -> list[FundingOpportunity]:
+            raise RuntimeError("parser exploded")
+
+    class WorkingSource:
+        name = "Working source"
+
+        def fetch(self) -> list[FundingOpportunity]:
+            return [expected]
+
+    assert _fetch_opportunities([BrokenSource(), WorkingSource()]) == [expected]

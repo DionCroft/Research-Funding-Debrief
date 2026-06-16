@@ -154,7 +154,7 @@ def run(argv: Sequence[str] | None = None) -> int:
             write_live_updates(
                 scored_opportunities,
                 database,
-                list(SOURCE_FACTORIES),
+                config.enabled_sources,
                 relevant_score_threshold=config.relevant_score_threshold,
             )
             logger.info("Live JSON snapshot refreshed.")

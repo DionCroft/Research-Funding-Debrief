@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import logging
 import sys
 from collections import Counter
 from collections.abc import Iterable
@@ -20,14 +21,15 @@ from app.database import OpportunityDatabase
 from app.filters import score_opportunities
 from app.models import FundingOpportunity
 from app.report import EXPIRING_SOON_DAYS, parse_opportunity_date
-from app.sources.registry import SOURCE_FACTORIES, build_sources
+from app.sources.registry import build_sources
 
 
 OUTPUT_PATH = Path(__file__).resolve().parent / "data" / "live-updates.json"
 RSS_OUTPUT_PATH = Path(__file__).resolve().parent / "data" / "live-updates.xml"
 SITE_URL = "https://dioncroft.github.io/Research-Funding-Debrief/"
-MAX_ITEMS = 60
+MAX_FEATURED_ITEMS = 60
 NEW_DAYS = 7
+logger = logging.getLogger(__name__)
 SOURCE_LABELS = {
     "Find a Grant": "GOV.UK Find a Grant",
 }
@@ -52,14 +54,15 @@ OPPORTUNITY_TYPE_KEYWORDS: dict[str, tuple[str, ...]] = {
 
 
 def main() -> int:
+    if not logging.getLogger().handlers:
+        logging.basicConfig(level=logging.INFO, format="%(levelname)s:%(name)s:%(message)s")
+
     config = load_config()
     database = OpportunityDatabase(config.database_path)
     database.initialise()
-    fetched: list[FundingOpportunity] = []
-    source_names = list(SOURCE_FACTORIES)
+    source_names = config.enabled_sources
 
-    for source in build_sources(source_names, config):
-        fetched.extend(source.fetch())
+    fetched = _fetch_opportunities(build_sources(source_names, config))
 
     scored = score_opportunities(fetched, config.keywords)
     database.store_opportunities(scored)
@@ -70,6 +73,21 @@ def main() -> int:
         relevant_score_threshold=config.relevant_score_threshold,
     )
     return 0
+
+
+def _fetch_opportunities(sources: Iterable[object]) -> list[FundingOpportunity]:
+    """Fetch every source that works, logging and skipping unexpected failures."""
+
+    fetched: list[FundingOpportunity] = []
+    for source in sources:
+        try:
+            fetched.extend(source.fetch())
+        except Exception:
+            logger.exception(
+                "Source failed unexpectedly: %s",
+                getattr(source, "name", source.__class__.__name__),
+            )
+    return fetched
 
 
 def write_live_updates(
@@ -96,12 +114,15 @@ def write_live_updates(
         for opportunity in active
         if opportunity.relevance_score >= relevant_score_threshold
     ]
-    featured = _unique(closing_soon + relevant + active)[:MAX_ITEMS]
+    all_items = _unique(active)
+    featured = _unique(closing_soon + relevant + active)[:MAX_FEATURED_ITEMS]
 
     payload = {
         "generatedAt": datetime.now().astimezone().isoformat(timespec="seconds"),
         "summary": {
             "trackedCalls": len(active),
+            "featuredCalls": len(featured),
+            "rssCalls": len(all_items),
             "closingSoon": len(closing_soon),
             "sourcesScanned": len(source_names),
             "topicCategories": len(category_names()),
@@ -109,6 +130,10 @@ def write_live_updates(
         "items": [
             _serialise_opportunity(opportunity, today, database)
             for opportunity in featured
+        ],
+        "allItems": [
+            _serialise_opportunity(opportunity, today, database)
+            for opportunity in all_items
         ],
         "sourceCounts": Counter(_source_label(opportunity.source) for opportunity in scored),
     }
@@ -135,7 +160,7 @@ def _write_rss_feed(payload: dict[str, object], output_path: Path) -> None:
     ET.SubElement(channel, "language").text = "en-gb"
     ET.SubElement(channel, "lastBuildDate").text = format_datetime(generated_at)
 
-    for item in payload["items"]:
+    for item in payload.get("allItems") or payload.get("items") or []:
         if isinstance(item, dict):
             _append_rss_item(channel, item, generated_at)
 
