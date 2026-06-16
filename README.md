@@ -1,8 +1,8 @@
 # Research Funding Debrief
 
-Research Funding Debrief is a local command-line Python project that checks research funding sources, stores opportunities in SQLite, scores them for relevance, and prints a daily email-style debrief in the terminal.
+Research Funding Debrief is a public GitHub Pages funding radar backed by a local Python refresh script. It checks research funding sources, stores opportunities in SQLite, scores and categorises them, publishes static JSON/RSS snapshots for the website and Power Automate, and can send compact Discord debriefs.
 
-The current local version checks UKRI, Innovate UK, GOV.UK Find a Grant, NIHR, Wellcome, Royal Society, and Royal Academy of Engineering sources by default. The code is structured so additional sources such as EU Funding & Tenders, charity funders, university pages, or permitted Research Professional feeds can be added later.
+The current version checks UKRI, Innovate UK, GOV.UK Find a Grant, NIHR, Wellcome, Royal Society, and Royal Academy of Engineering sources by default. Microsoft Forms captures signup and unsubscribe requests, Microsoft Lists stores subscriber preferences, and Power Automate sends onboarding, test, and future briefing emails.
 
 ## Install
 
@@ -37,6 +37,7 @@ The run will:
 - insert new opportunities and update `last_seen_at` for known ones
 - flag changed opportunities when important details change
 - print a Daily Research Funding Debrief in the terminal
+- refresh `web/data/live-updates.json` and `web/data/live-updates.xml` when requested
 - log activity to `logs/research_funding_debrief.log`
 
 Useful CLI options:
@@ -52,10 +53,9 @@ python run.py --no-discord
 python run.py --dry-run
 ```
 
-## Scheduled refresh and Discord alerts
+## Scheduled refresh, RSS, and Discord alerts
 
-Use the included cron wrapper to refresh the website JSON and send the Discord debrief from one
-fetch cycle:
+Use the included cron wrapper to refresh the website data files and send the Discord debrief from one fetch cycle:
 
 ```bash
 scripts/run_scheduled_debrief.sh
@@ -86,13 +86,30 @@ The scheduled job:
 - fetches the configured funding sources
 - updates `data/research_funding_debrief.db`
 - refreshes `web/data/live-updates.json`
+- refreshes `web/data/live-updates.xml`
 - sends the compact Discord debrief when Discord is configured
 - writes normal app logs to `logs/research_funding_debrief.log`
 
+The published GitHub Pages data endpoints are:
+
+```text
+https://dioncroft.github.io/Research-Funding-Debrief/data/live-updates.json
+https://dioncroft.github.io/Research-Funding-Debrief/data/live-updates.xml
+```
+
+The website uses the JSON file. Power Automate can use the RSS file with the standard RSS connector, which avoids the Premium licence requirement for the generic HTTP action.
+
+Funding call status labels are generated during the refresh:
+
+- `New`: first seen in the local opportunity database within the last 7 days
+- `Seen`: first seen more than 7 days ago
+- `Closing soon`: deadline is within the configured 30-day window
+- `Ongoing`: source status includes open or upcoming
+
 ## Signup front page
 
-The project includes a static front page with a local signup endpoint for daily or weekly funding
-briefing preferences:
+The project includes a static front page for the public funding radar. For local backend testing,
+`web/server.py` can still run a SQLite-backed signup endpoint:
 
 ```bash
 python web/server.py
@@ -110,8 +127,8 @@ Then open:
 http://127.0.0.1:8080
 ```
 
-Submissions are stored in `data/signup_subscribers.db`. If the HTML file is opened directly without
-the local server, the form falls back to an email signup draft.
+Submissions to the local server are stored in `data/signup_subscribers.db`. The production GitHub
+Pages site uses Microsoft Forms instead of this local SQLite signup flow.
 
 ### Run the signup server 24/7 on a Raspberry Pi
 
@@ -166,12 +183,13 @@ The public URL is:
 https://dioncroft.github.io/Research-Funding-Debrief/
 ```
 
-GitHub Pages is static, so it cannot run `web/server.py` or write to SQLite. On GitHub Pages the
-signup form opens a prefilled email to `d.mariyanayagam@londonmet.ac.uk`. The local SQLite signup
-flow still works when running `python web/server.py`.
+GitHub Pages is static, so it cannot run `web/server.py` or write to SQLite. The public site embeds
+or links to the Microsoft Forms signup flow, and the local SQLite signup flow remains available only
+when running `python web/server.py`.
 
 The deployment workflow runs `python web/live_updates.py` before publishing, which writes
-`web/data/live-updates.json` for the live funding radar on the front page.
+`web/data/live-updates.json` for the live funding radar and `web/data/live-updates.xml` for
+Power Automate/RSS-based briefing flows.
 
 If you later deploy a hosted signup API, set this before `web/app.js` loads:
 
@@ -181,25 +199,39 @@ If you later deploy a hosted signup API, set this before `web/app.js` loads:
 </script>
 ```
 
-### Microsoft Forms signup backend option
+### Microsoft Forms and Lists backend
 
-For a public GitHub Pages version, Microsoft Forms is a low-maintenance way to capture newsletter
-preferences without running a custom public backend.
+The production signup backend uses Microsoft Forms, Microsoft Lists, and Power Automate.
 
-Recommended flow:
+Current forms:
 
-1. Create a Microsoft Form with first name, last name, email, frequency, and topic checkboxes.
-2. Set the form to allow responses from the intended audience.
-3. Embed the form in the GitHub Pages site or link to it from the signup button.
-4. Create a Power Automate flow using the Microsoft Forms trigger `When a new response is submitted`.
-5. Add the Microsoft Forms action `Get response details`.
-6. Save each response to an Excel workbook or SharePoint List.
-7. Optionally add a final step that posts the response to the Raspberry Pi signup API if the Pi is
-   reachable from the internet.
+- Signup: `https://forms.cloud.microsoft/e/6HiR44VDU7`
+- Unsubscribe: `https://forms.cloud.microsoft/e/tv8P5mEVAH`
 
-This keeps the user-facing signup simple while giving an automated, structured backend. The local
-SQLite database remains useful for the Raspberry Pi service; Microsoft Forms or SharePoint can act
-as the public collection point.
+Recommended signup flow:
+
+1. Microsoft Forms trigger: `When a new response is submitted`.
+2. Microsoft Forms action: `Get response details`.
+3. SharePoint/Microsoft Lists action: create an item in `Research Funding Debrief Signups`.
+4. Store first name, last name, email, frequency, topics, funders, opportunity types, relevance level, notes, consent, created timestamp, and `Active`.
+5. Send an onboarding email with a website button and the unsubscribe form link.
+
+Recommended unsubscribe flow:
+
+1. Microsoft Forms trigger on the unsubscribe form.
+2. Get response details.
+3. Get matching Microsoft List items by email.
+4. Mark matching active subscribers inactive or delete already inactive entries.
+5. Send an unsubscribe confirmation email.
+
+Recommended daily/weekly briefing source:
+
+1. Recurrence trigger for daily or weekly delivery.
+2. RSS action: list feed items from `https://dioncroft.github.io/Research-Funding-Debrief/data/live-updates.xml`.
+3. SharePoint/Microsoft Lists action: get active subscribers with `Active eq 1`.
+4. Filter subscribers by `Frequency`.
+5. For each subscriber, filter RSS items using their Topics, Funders, OpportunityTypes, and RelevanceLevel preferences.
+6. Send an email only when matching items exist.
 
 ## Configuration
 
@@ -235,18 +267,36 @@ Scoring currently uses:
 - +2 for university, academic, research organisation, or collaboration language
 - +1 when a funding amount is detected
 
-Opportunities are also assigned categories such as:
+Opportunities are assigned categories that match the Microsoft Forms topic choices, including:
 
 - AI / Data
-- Electronics / Sensors / Embedded
+- Machine Learning
 - Robotics / Automation
-- Digital Health / Assistive Tech / SEND
-- Energy / Sustainability
+- Electronics / IoT
+- Embedded Systems
+- Sensors / Instrumentation
 - Cybersecurity
-- KTP / University-Business Collaboration
-- Fellowships / Academic Career
+- Wireless / Telecoms
+- Digital Health
+- Assistive Technology / SEND
+- Clinical Evidence / Trials
+- Public Health
+- Social Care
+- Mental Health
+- Education / Skills
+- Policy / Social Sciences
+- Energy / Sustainability
+- Climate / Environment
+- Manufacturing / Industry 4.0
+- Space / Aerospace
+- Defence / Security
+- Creative / Media Tech
+- KTP / Collaboration
+- Fellowships
+- Early Career
 - Capital / Infrastructure
-- General / Low Match
+- International / Horizon Europe
+- Commercialisation / Translation
 
 ## Database deduplication
 

@@ -7,7 +7,9 @@ import sys
 from collections import Counter
 from collections.abc import Iterable
 from datetime import date, datetime
+from email.utils import format_datetime
 from pathlib import Path
+from xml.etree import ElementTree as ET
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
@@ -22,6 +24,8 @@ from app.sources.registry import SOURCE_FACTORIES, build_sources
 
 
 OUTPUT_PATH = Path(__file__).resolve().parent / "data" / "live-updates.json"
+RSS_OUTPUT_PATH = Path(__file__).resolve().parent / "data" / "live-updates.xml"
+SITE_URL = "https://dioncroft.github.io/Research-Funding-Debrief/"
 MAX_ITEMS = 60
 NEW_DAYS = 7
 SOURCE_LABELS = {
@@ -74,9 +78,10 @@ def write_live_updates(
     source_names: list[str],
     relevant_score_threshold: int = 4,
     output_path: Path = OUTPUT_PATH,
+    rss_output_path: Path = RSS_OUTPUT_PATH,
     today: date | None = None,
 ) -> None:
-    """Write the static live funding snapshot for the front page."""
+    """Write the static live funding snapshots for the front page and RSS feed."""
 
     today = today or date.today()
     active = [opportunity for opportunity in scored if not _is_closed(opportunity)]
@@ -111,6 +116,95 @@ def write_live_updates(
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
     print(f"Wrote {output_path}")
+
+    _write_rss_feed(payload, rss_output_path)
+    print(f"Wrote {rss_output_path}")
+
+
+def _write_rss_feed(payload: dict[str, object], output_path: Path) -> None:
+    """Write an RSS view of the live updates for no-premium Power Automate flows."""
+
+    generated_at = _parse_datetime(str(payload["generatedAt"]))
+    rss = ET.Element("rss", {"version": "2.0"})
+    channel = ET.SubElement(rss, "channel")
+    ET.SubElement(channel, "title").text = "Research Funding Debrief"
+    ET.SubElement(channel, "link").text = SITE_URL
+    ET.SubElement(channel, "description").text = (
+        "Live research funding opportunities for personalised briefings."
+    )
+    ET.SubElement(channel, "language").text = "en-gb"
+    ET.SubElement(channel, "lastBuildDate").text = format_datetime(generated_at)
+
+    for item in payload["items"]:
+        if isinstance(item, dict):
+            _append_rss_item(channel, item, generated_at)
+
+    ET.indent(rss, space="  ")
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    ET.ElementTree(rss).write(output_path, encoding="utf-8", xml_declaration=True)
+
+
+def _append_rss_item(
+    channel: ET.Element,
+    item: dict[str, object],
+    generated_at: datetime,
+) -> None:
+    entry = ET.SubElement(channel, "item")
+    title = str(item.get("title") or "Untitled funding opportunity")
+    source = str(item.get("source") or "Unknown source")
+    url = str(item.get("url") or SITE_URL)
+
+    ET.SubElement(entry, "title").text = title
+    ET.SubElement(entry, "link").text = url
+    ET.SubElement(entry, "guid", {"isPermaLink": "false"}).text = url or f"{source}: {title}"
+    ET.SubElement(entry, "pubDate").text = format_datetime(
+        _parse_datetime(str(item.get("firstSeenAt") or ""), fallback=generated_at)
+    )
+    ET.SubElement(entry, "description").text = _rss_description(item)
+
+    categories = _as_list(item.get("statusLabels"))
+    categories.extend(_as_list(item.get("topics")))
+    categories.extend(_as_list(item.get("opportunityTypes")))
+    categories.extend([source, str(item.get("relevanceLevel") or "")])
+    for category in [category for category in categories if category]:
+        ET.SubElement(entry, "category").text = category
+
+
+def _rss_description(item: dict[str, object]) -> str:
+    lines = [
+        f"Source: {item.get('source') or 'Unknown source'}",
+        f"Status: {item.get('status') or 'Unlabelled'}",
+        f"Deadline: {item.get('deadline') or 'No deadline parsed'}",
+        f"Urgency: {item.get('urgency') or 'Deadline not parsed'}",
+        f"Topics: {_join_feed_values(item.get('topics'))}",
+        f"Opportunity types: {_join_feed_values(item.get('opportunityTypes'))}",
+        f"Relevance: {item.get('relevanceLevel') or 'Send me a broad scan'}",
+        f"First seen: {item.get('firstSeenAt') or 'Unknown'}",
+    ]
+    return "\n".join(lines)
+
+
+def _join_feed_values(value: object) -> str:
+    values = _as_list(value)
+    return ", ".join(values) if values else "Uncategorised"
+
+
+def _as_list(value: object) -> list[str]:
+    if isinstance(value, list):
+        return [str(item) for item in value if item]
+    if isinstance(value, tuple):
+        return [str(item) for item in value if item]
+    return []
+
+
+def _parse_datetime(value: str, fallback: datetime | None = None) -> datetime:
+    if value:
+        try:
+            parsed = datetime.fromisoformat(value)
+            return parsed.astimezone() if parsed.tzinfo else parsed.astimezone()
+        except ValueError:
+            pass
+    return fallback or datetime.now().astimezone()
 
 
 def _serialise_opportunity(
