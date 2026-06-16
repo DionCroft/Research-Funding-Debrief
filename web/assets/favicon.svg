@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Research Funding Debrief icon">
+  <defs>
+    <linearGradient id="tile" x1="12" y1="6" x2="52" y2="58" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#293241"/>
+      <stop offset="1" stop-color="#0f3d3a"/>
+    </linearGradient>
+    <linearGradient id="paper" x1="27" y1="16" x2="43" y2="42" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff8ea"/>
+      <stop offset="1" stop-color="#dff1ea"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="15" fill="url(#tile)"/>
+  <circle cx="31" cy="33" r="21" fill="none" stroke="#7fd6c6" stroke-width="2.5" opacity=".32"/>
+  <circle cx="31" cy="33" r="13" fill="none" stroke="#7fd6c6" stroke-width="2.5" opacity=".48"/>
+  <path d="M31 33 48 21" fill="none" stroke="#f4c95d" stroke-width="4" stroke-linecap="round"/>
+  <path d="M31 12v42M10 33h42" fill="none" stroke="#b8ebe0" stroke-width="2" opacity=".36"/>
+
+  <path d="M27 16h13l8 8v24H27z" fill="url(#paper)"/>
+  <path d="M40 16v9h8" fill="none" stroke="#7aa99f" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M32 31h11M32 38h11" fill="none" stroke="#1d5f59" stroke-width="2.8" stroke-linecap="round"/>
+  <circle cx="20" cy="46" r="7" fill="#f4c95d"/>
+  <path d="M20 42v8M16.5 46h7" fill="none" stroke="#293241" stroke-width="2.4" stroke-linecap="round"/>
+</svg>
