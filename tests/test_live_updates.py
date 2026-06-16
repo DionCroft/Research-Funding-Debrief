@@ -17,6 +17,7 @@ def test_live_updates_marks_new_for_last_seven_days_and_writes_rss(tmp_path) -> 
         summary="Research grant for AI and data.",
         status="Open",
         closing_date="30 June 2026",
+        published_date="1 June 2026",
         url="https://example.test/new",
         categories=["AI / Data"],
         relevance_score=8,
@@ -58,6 +59,11 @@ def test_live_updates_marks_new_for_last_seven_days_and_writes_rss(tmp_path) -> 
     }
     assert status_by_title["New AI funding"][0] == "New"
     assert status_by_title["Seen robotics funding"][0] == "Seen"
+    new_item = next(
+        item for item in payload["items"] if item["title"] == "New AI funding"
+    )
+    assert new_item["publishedLabel"] == "1 June 2026"
+    assert new_item["firstSeenAt"].startswith("2026-06-10")
 
     rss = ET.parse(rss_path)
     item_categories = {
@@ -69,3 +75,12 @@ def test_live_updates_marks_new_for_last_seven_days_and_writes_rss(tmp_path) -> 
     assert "New" in item_categories["New AI funding"]
     assert "Seen" in item_categories["Seen robotics funding"]
     assert rss.findtext("./channel/title") == "Research Funding Debrief"
+    new_rss_item = next(
+        item
+        for item in rss.findall("./channel/item")
+        if item.findtext("title") == "New AI funding"
+    )
+    assert new_rss_item.findtext("pubDate").startswith("Mon, 01 Jun 2026")
+    assert new_rss_item.findtext("publishedDate") == "1 June 2026"
+    assert new_rss_item.findtext("firstSeenAt").startswith("2026-06-10")
+    assert "Published: 1 June 2026" in new_rss_item.findtext("description")

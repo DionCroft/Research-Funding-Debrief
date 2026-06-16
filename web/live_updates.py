@@ -6,7 +6,7 @@ import json
 import sys
 from collections import Counter
 from collections.abc import Iterable
-from datetime import date, datetime
+from datetime import date, datetime, time
 from email.utils import format_datetime
 from pathlib import Path
 from xml.etree import ElementTree as ET
@@ -157,10 +157,16 @@ def _append_rss_item(
     ET.SubElement(entry, "title").text = title
     ET.SubElement(entry, "link").text = url
     ET.SubElement(entry, "guid", {"isPermaLink": "false"}).text = url or f"{source}: {title}"
+    published_at = str(item.get("publishedAt") or "")
+    first_seen_at = str(item.get("firstSeenAt") or "")
     ET.SubElement(entry, "pubDate").text = format_datetime(
-        _parse_datetime(str(item.get("firstSeenAt") or ""), fallback=generated_at)
+        _parse_datetime(published_at, fallback=_parse_datetime(first_seen_at, generated_at))
     )
     ET.SubElement(entry, "description").text = _rss_description(item)
+    ET.SubElement(entry, "publishedDate").text = str(
+        item.get("publishedLabel") or "Not provided by source"
+    )
+    ET.SubElement(entry, "firstSeenAt").text = first_seen_at or "Unknown"
 
     categories = _as_list(item.get("statusLabels"))
     categories.extend(_as_list(item.get("topics")))
@@ -176,6 +182,7 @@ def _rss_description(item: dict[str, object]) -> str:
         f"Status: {item.get('status') or 'Unlabelled'}",
         f"Deadline: {item.get('deadline') or 'No deadline parsed'}",
         f"Urgency: {item.get('urgency') or 'Deadline not parsed'}",
+        f"Published: {item.get('publishedLabel') or 'Not provided by source'}",
         f"Topics: {_join_feed_values(item.get('topics'))}",
         f"Opportunity types: {_join_feed_values(item.get('opportunityTypes'))}",
         f"Relevance: {item.get('relevanceLevel') or 'Send me a broad scan'}",
@@ -203,7 +210,9 @@ def _parse_datetime(value: str, fallback: datetime | None = None) -> datetime:
             parsed = datetime.fromisoformat(value)
             return parsed.astimezone() if parsed.tzinfo else parsed.astimezone()
         except ValueError:
-            pass
+            parsed_date = parse_opportunity_date(value)
+            if parsed_date:
+                return datetime.combine(parsed_date, time.min).astimezone()
     return fallback or datetime.now().astimezone()
 
 
@@ -229,6 +238,8 @@ def _serialise_opportunity(
         "rawSource": opportunity.source,
         "deadline": _deadline_label(opportunity),
         "urgency": _urgency_label(days_left),
+        "publishedAt": opportunity.published_date or "",
+        "publishedLabel": _published_label(opportunity),
         "url": opportunity.url or "",
         "topics": opportunity.categories,
         "opportunityTypes": _opportunity_types(opportunity),
@@ -274,6 +285,17 @@ def _deadline_label(opportunity: FundingOpportunity) -> str:
         return raw_deadline[:87].rstrip() + "..."
 
     return f"{closing.day} {closing.strftime('%B %Y')}"
+
+
+def _published_label(opportunity: FundingOpportunity) -> str:
+    raw_published = opportunity.published_date or ""
+    if not raw_published:
+        return "Not provided by source"
+
+    published = parse_opportunity_date(raw_published)
+    if published:
+        return f"{published.day} {published.strftime('%B %Y')}"
+    return raw_published
 
 
 def _urgency_label(days_left: int | None) -> str:

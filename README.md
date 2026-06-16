@@ -233,6 +233,11 @@ Recommended daily/weekly briefing source:
 5. For each subscriber, filter RSS items using their Topics, Funders, OpportunityTypes, and RelevanceLevel preferences.
 6. Send an email only when matching items exist.
 
+In the RSS feed, `Feed published on` is the funder/source published date when the source provides
+one. If no source published date is available, it falls back to the Research Funding Debrief
+first-seen timestamp so the RSS item still has a valid publish date. The feed summary also includes
+explicit `Published:` and `First seen:` lines for transparency.
+
 ## Configuration
 
 Copy `.env.example` to `.env` if you want local overrides:

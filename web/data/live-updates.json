@@ -1,13 +1,15 @@
 {
-  "generatedAt": "2026-06-16T15:37:09+01:00",
+  "generatedAt": "2026-06-16T16:34:19+01:00",
   "items": [
     {
       "deadline": "17 June 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:09+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 0,
@@ -27,10 +29,12 @@
     {
       "deadline": "17 June 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:09+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 0,
@@ -50,10 +54,12 @@
     {
       "deadline": "18 June 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:09+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 0,
@@ -73,11 +79,13 @@
     {
       "deadline": "23 June 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:09+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants",
         "Studentships / PhD funding"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 1,
@@ -100,12 +108,14 @@
     {
       "deadline": "24 June 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "Innovate UK",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -125,12 +135,14 @@
     {
       "deadline": "24 June 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "Innovate UK",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -150,11 +162,13 @@
     {
       "deadline": "30 June 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T13:51:42+00:00",
-      "lastSeenAt": "2026-06-16T14:37:09+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants",
         "Fellowships"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -176,10 +190,12 @@
     {
       "deadline": "1 July 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -200,13 +216,15 @@
     {
       "deadline": "8 July 2026 11:00am UK time",
       "firstSeenAt": "2026-06-16T11:23:50+00:00",
-      "lastSeenAt": "2026-06-16T14:37:07+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
       ],
+      "publishedAt": "2026-06-16T08:08:46+00:00",
+      "publishedLabel": "16 June 2026",
       "rawSource": "UKRI",
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 9,
@@ -228,13 +246,15 @@
     {
       "deadline": "8 July 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "Innovate UK",
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 9,
@@ -256,12 +276,14 @@
     {
       "deadline": "8 July 2026 11:00am UK time",
       "firstSeenAt": "2026-06-15T15:44:37+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
       ],
+      "publishedAt": "2026-06-15T07:15:24+00:00",
+      "publishedLabel": "15 June 2026",
       "rawSource": "UKRI",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
@@ -282,12 +304,14 @@
     {
       "deadline": "8 July 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "Innovate UK",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
@@ -308,10 +332,12 @@
     {
       "deadline": "8 July 2026 11:00am UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Innovation grants"
       ],
+      "publishedAt": "2026-06-02T11:46:57+00:00",
+      "publishedLabel": "2 June 2026",
       "rawSource": "UKRI",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -332,10 +358,12 @@
     {
       "deadline": "8 July 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Innovation grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "Innovate UK",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -356,10 +384,12 @@
     {
       "deadline": "8 July 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -381,10 +411,12 @@
     {
       "deadline": "8 July 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -406,10 +438,12 @@
     {
       "deadline": "8 July 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -430,10 +464,12 @@
     {
       "deadline": "8 July 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -455,10 +491,12 @@
     {
       "deadline": "9 July 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -480,11 +518,13 @@
     {
       "deadline": "14 July 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-16T11:23:50+00:00",
-      "lastSeenAt": "2026-06-16T14:37:07+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Commercialisation / spinout support"
       ],
+      "publishedAt": "2026-06-16T08:00:33+00:00",
+      "publishedLabel": "16 June 2026",
       "rawSource": "UKRI",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
@@ -507,11 +547,13 @@
     {
       "deadline": "14 July 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Commercialisation / spinout support"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -533,11 +575,13 @@
     {
       "deadline": "15 July 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Studentships / PhD funding"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -559,10 +603,12 @@
     {
       "deadline": "15 July 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -584,10 +630,12 @@
     {
       "deadline": "15 July 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -610,10 +658,12 @@
     {
       "deadline": "15 July 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -634,10 +684,12 @@
     {
       "deadline": "15 July 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -659,11 +711,13 @@
     {
       "deadline": "16 July 2026",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Capital / equipment funding"
       ],
+      "publishedAt": "2026-06-09T08:00:49+00:00",
+      "publishedLabel": "9 June 2026",
       "rawSource": "UKRI",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 4,
@@ -686,10 +740,12 @@
     {
       "deadline": "16 July 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -710,13 +766,15 @@
     {
       "deadline": "17 July 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
         "Industry collaboration",
         "Capital / equipment funding"
       ],
+      "publishedAt": "2026-06-04T08:11:26+00:00",
+      "publishedLabel": "4 June 2026",
       "rawSource": "UKRI",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 7,
@@ -740,12 +798,14 @@
     {
       "deadline": "28 July 2026 11:00am UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
       ],
+      "publishedAt": "2026-06-09T11:45:22+00:00",
+      "publishedLabel": "9 June 2026",
       "rawSource": "UKRI",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
@@ -766,12 +826,14 @@
     {
       "deadline": "28 July 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "Innovate UK",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
@@ -791,12 +853,14 @@
     {
       "deadline": "29 July 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "Innovate UK",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
@@ -817,10 +881,12 @@
     {
       "deadline": "29 July 2026 11:00am UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Innovation grants"
       ],
+      "publishedAt": "2026-06-08T08:49:08+00:00",
+      "publishedLabel": "8 June 2026",
       "rawSource": "UKRI",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -840,10 +906,12 @@
     {
       "deadline": "5 August 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -863,10 +931,12 @@
     {
       "deadline": "5 August 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -886,10 +956,12 @@
     {
       "deadline": "5 August 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -909,10 +981,12 @@
     {
       "deadline": "5 August 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -932,11 +1006,13 @@
     {
       "deadline": "12 August 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Studentships / PhD funding"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 6,
@@ -957,10 +1033,12 @@
     {
       "deadline": "18 August 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 7,
@@ -983,10 +1061,12 @@
     {
       "deadline": "18 August 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 4,
@@ -1007,11 +1087,13 @@
     {
       "deadline": "18 August 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants",
         "Travel / networking funding"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -1032,10 +1114,12 @@
     {
       "deadline": "18 August 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -1057,10 +1141,12 @@
     {
       "deadline": "18 August 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -1081,10 +1167,12 @@
     {
       "deadline": "18 August 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -1105,10 +1193,12 @@
     {
       "deadline": "18 August 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -1129,10 +1219,12 @@
     {
       "deadline": "18 August 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
@@ -1153,11 +1245,13 @@
     {
       "deadline": "19 August 2026",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:09+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Industry collaboration",
         "Commercialisation / spinout support"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "Royal Society",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -1179,12 +1273,14 @@
     {
       "deadline": "20 August 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
       ],
+      "publishedAt": "2026-06-10T14:03:41+00:00",
+      "publishedLabel": "10 June 2026",
       "rawSource": "UKRI",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
@@ -1205,7 +1301,7 @@
     {
       "deadline": "26 August 2026 11:00am UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1213,6 +1309,8 @@
         "Industry collaboration",
         "Commercialisation / spinout support"
       ],
+      "publishedAt": "2026-06-10T10:45:58+00:00",
+      "publishedLabel": "10 June 2026",
       "rawSource": "UKRI",
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 10,
@@ -1234,7 +1332,7 @@
     {
       "deadline": "26 August 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1242,6 +1340,8 @@
         "Industry collaboration",
         "Commercialisation / spinout support"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "Innovate UK",
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 10,
@@ -1263,11 +1363,13 @@
     {
       "deadline": "1 September 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:09+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants",
         "Studentships / PhD funding"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -1288,7 +1390,7 @@
     {
       "deadline": "2 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Fellowships",
@@ -1296,6 +1398,8 @@
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
       ],
+      "publishedAt": "2026-06-04T08:00:06+00:00",
+      "publishedLabel": "4 June 2026",
       "rawSource": "UKRI",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 6,
@@ -1317,10 +1421,12 @@
     {
       "deadline": "2 September 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -1340,10 +1446,12 @@
     {
       "deadline": "2 September 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -1363,10 +1471,12 @@
     {
       "deadline": "2 September 2026",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:09+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -1386,10 +1496,12 @@
     {
       "deadline": "2 September 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -1409,10 +1521,12 @@
     {
       "deadline": "2 September 2026",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:09+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -1432,10 +1546,12 @@
     {
       "deadline": "2 September 2026 at 1:00 pm",
       "firstSeenAt": "2026-06-16T11:23:52+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:19+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
       "rawSource": "NIHR",
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
@@ -1457,12 +1573,14 @@
     {
       "deadline": "8 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
       ],
+      "publishedAt": "2026-06-08T13:29:38+00:00",
+      "publishedLabel": "8 June 2026",
       "rawSource": "UKRI",
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 10,
@@ -1485,12 +1603,14 @@
     {
       "deadline": "8 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-15T15:44:37+00:00",
-      "lastSeenAt": "2026-06-16T14:37:08+00:00",
+      "lastSeenAt": "2026-06-16T15:34:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
       ],
+      "publishedAt": "2026-06-15T08:00:20+00:00",
+      "publishedLabel": "15 June 2026",
       "rawSource": "UKRI",
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
