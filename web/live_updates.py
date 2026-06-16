@@ -19,7 +19,7 @@ from app.sources.registry import SOURCE_FACTORIES, build_sources
 
 
 OUTPUT_PATH = Path(__file__).resolve().parent / "data" / "live-updates.json"
-MAX_ITEMS = 8
+MAX_ITEMS = 60
 TOPIC_CATEGORY_COUNT = 30
 
 
@@ -76,7 +76,7 @@ def _serialise_opportunity(opportunity: FundingOpportunity, today: date) -> dict
         "status": status,
         "title": opportunity.title,
         "source": opportunity.source,
-        "deadline": opportunity.closing_date or "No deadline parsed",
+        "deadline": _deadline_label(opportunity),
         "urgency": _urgency_label(days_left),
         "url": opportunity.url or "",
         "topics": opportunity.categories[:3],
@@ -106,6 +106,18 @@ def _days_left(opportunity: FundingOpportunity, today: date) -> int | None:
     if not closing:
         return None
     return (closing - today).days
+
+
+def _deadline_label(opportunity: FundingOpportunity) -> str:
+    raw_deadline = opportunity.closing_date or "No deadline parsed"
+    if len(raw_deadline) <= 90:
+        return raw_deadline
+
+    closing = parse_opportunity_date(raw_deadline)
+    if not closing:
+        return raw_deadline[:87].rstrip() + "..."
+
+    return f"{closing.day} {closing.strftime('%B %Y')}"
 
 
 def _urgency_label(days_left: int | None) -> str:

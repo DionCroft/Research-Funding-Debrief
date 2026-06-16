@@ -7,8 +7,14 @@ const liveClosingCount = document.querySelector("#live-closing-count");
 const liveSourceCount = document.querySelector("#live-source-count");
 const liveTopicCount = document.querySelector("#live-topic-count");
 const liveRefresh = document.querySelector("#live-refresh");
+const personalRadarForm = document.querySelector("#personal-radar-form");
+const personalRadarResults = document.querySelector("#personal-radar-results");
+const personalRadarCount = document.querySelector("#personal-radar-count");
+const personalRadarReset = document.querySelector("#personal-radar-reset");
 const localHosts = new Set(["localhost", "127.0.0.1", "::1"]);
 const configuredSignupApi = window.RESEARCH_FUNDING_SIGNUP_API || "";
+const personalRadarStorageKey = "researchFundingDebrief.personalRadar";
+let liveFundingItems = [];
 
 function selectedTopics(formData) {
   return formData.getAll("topics");
@@ -82,6 +88,137 @@ function updateLiveStats(summary) {
   setText(liveTopicCount, summary.topicCategories ?? "--");
 }
 
+function normaliseText(value) {
+  return String(value || "").toLowerCase();
+}
+
+function selectedValues(name) {
+  if (!personalRadarForm) {
+    return [];
+  }
+
+  return Array.from(personalRadarForm.querySelectorAll(`input[name="${name}"]:checked`)).map(
+    (input) => input.value
+  );
+}
+
+function itemMatchesStatus(item, selectedStatuses) {
+  if (selectedStatuses.length === 0) {
+    return true;
+  }
+
+  const status = item.status || "Open";
+  if (selectedStatuses.includes(status)) {
+    return true;
+  }
+
+  return selectedStatuses.includes("Open") && !["New", "Closing soon"].includes(status);
+}
+
+function itemMatchesNeedle(item, selectedNeedles, fields) {
+  if (selectedNeedles.length === 0) {
+    return true;
+  }
+
+  const haystack = fields
+    .flatMap((field) => {
+      const value = item[field];
+      return Array.isArray(value) ? value : [value];
+    })
+    .map(normaliseText)
+    .join(" ");
+
+  return selectedNeedles.some((needle) => haystack.includes(normaliseText(needle)));
+}
+
+function readPersonalRadarFilters() {
+  return {
+    status: selectedValues("status"),
+    topics: selectedValues("topics"),
+    sources: selectedValues("sources"),
+  };
+}
+
+function savePersonalRadarFilters() {
+  if (!personalRadarForm) {
+    return;
+  }
+
+  window.localStorage.setItem(personalRadarStorageKey, JSON.stringify(readPersonalRadarFilters()));
+}
+
+function restorePersonalRadarFilters() {
+  if (!personalRadarForm) {
+    return;
+  }
+
+  try {
+    const saved = JSON.parse(window.localStorage.getItem(personalRadarStorageKey) || "{}");
+    ["status", "topics", "sources"].forEach((name) => {
+      if (!Array.isArray(saved[name])) {
+        return;
+      }
+
+      personalRadarForm.querySelectorAll(`input[name="${name}"]`).forEach((input) => {
+        input.checked = saved[name].includes(input.value);
+      });
+    });
+  } catch (error) {
+    window.localStorage.removeItem(personalRadarStorageKey);
+  }
+}
+
+function filterPersonalRadarItems() {
+  const filters = readPersonalRadarFilters();
+  return liveFundingItems.filter((item) => {
+    return (
+      itemMatchesStatus(item, filters.status) &&
+      itemMatchesNeedle(item, filters.topics, ["topics", "title"]) &&
+      itemMatchesNeedle(item, filters.sources, ["source"])
+    );
+  });
+}
+
+function renderPersonalRadar() {
+  if (!personalRadarResults) {
+    return;
+  }
+
+  const matches = filterPersonalRadarItems();
+  setText(
+    personalRadarCount,
+    `${matches.length} matching ${matches.length === 1 ? "call" : "calls"}`
+  );
+
+  if (matches.length === 0) {
+    personalRadarResults.innerHTML = `
+      <article>
+        <p class="live-label">No matches</p>
+        <h3>No calls match those filters yet.</h3>
+        <p>Broaden the topics or funders to scan more of the current snapshot.</p>
+      </article>
+    `;
+    return;
+  }
+
+  personalRadarResults.innerHTML = "";
+  matches.slice(0, 12).forEach((item) => {
+    const card = document.createElement("article");
+    const link = item.url
+      ? `<a href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(item.title)}</a>`
+      : escapeHtml(item.title);
+    const topics = Array.isArray(item.topics) ? item.topics.slice(0, 4) : [];
+
+    card.innerHTML = `
+      <p class="live-label">${escapeHtml(item.status || "Open")} · ${escapeHtml(item.source || "Unknown source")}</p>
+      <h3>${link}</h3>
+      <p>${escapeHtml(item.deadline || "No deadline parsed")} <span>${escapeHtml(item.urgency || "")}</span></p>
+      <div class="live-tags">${topics.map((topic) => `<span>${escapeHtml(topic)}</span>`).join("")}</div>
+    `;
+    personalRadarResults.append(card);
+  });
+}
+
 function renderLiveItems(items) {
   if (!liveList || !items || items.length === 0) {
     if (liveList) {
@@ -132,10 +269,13 @@ async function loadLiveUpdates() {
       throw new Error("Live updates unavailable");
     }
     const payload = await response.json();
+    liveFundingItems = payload.items || [];
     setText(liveUpdated, formatUpdatedAt(payload.generatedAt));
     updateLiveStats(payload.summary || {});
-    renderLiveItems(payload.items || []);
+    renderLiveItems(liveFundingItems);
+    renderPersonalRadar();
   } catch (error) {
+    liveFundingItems = [];
     setText(liveUpdated, "Live snapshot unavailable right now");
     liveList.innerHTML = `
       <article>
@@ -144,6 +284,7 @@ async function loadLiveUpdates() {
         <p>Please use the refresh button again in a moment.</p>
       </article>
     `;
+    renderPersonalRadar();
   } finally {
     liveList.setAttribute("aria-busy", "false");
     if (liveRefresh) {
@@ -208,6 +349,22 @@ if (form) {
 if (liveRefresh) {
   liveRefresh.addEventListener("click", () => {
     loadLiveUpdates();
+  });
+}
+
+if (personalRadarForm) {
+  restorePersonalRadarFilters();
+  personalRadarForm.addEventListener("change", () => {
+    savePersonalRadarFilters();
+    renderPersonalRadar();
+  });
+}
+
+if (personalRadarReset && personalRadarForm) {
+  personalRadarReset.addEventListener("click", () => {
+    window.localStorage.removeItem(personalRadarStorageKey);
+    personalRadarForm.reset();
+    renderPersonalRadar();
   });
 }
 

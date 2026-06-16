@@ -75,6 +75,74 @@
         </div>
       </section>
 
+      <section class="personal-radar-band" aria-labelledby="personal-radar-title">
+        <div class="personal-radar-copy">
+          <p class="section-kicker">No Email Needed</p>
+          <h2 id="personal-radar-title">Tune the radar to your interests.</h2>
+          <p>
+            Select the topics, funders, and deadline view you care about. Your choices stay in
+            this browser and instantly shape the calls shown below.
+          </p>
+        </div>
+
+        <div class="personal-radar-shell">
+          <form class="personal-radar-controls" id="personal-radar-form">
+            <fieldset>
+              <legend>Deadline view</legend>
+              <div class="chip-grid chip-grid--compact" data-filter-group="status">
+                <label><input type="checkbox" name="status" value="New"><span>New</span></label>
+                <label><input type="checkbox" name="status" value="Closing soon" checked><span>Closing soon</span></label>
+                <label><input type="checkbox" name="status" value="Open" checked><span>Ongoing</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Topics</legend>
+              <div class="chip-grid" data-filter-group="topics">
+                <label><input type="checkbox" name="topics" value="AI / Data"><span>AI / Data</span></label>
+                <label><input type="checkbox" name="topics" value="Machine Learning"><span>Machine Learning</span></label>
+                <label><input type="checkbox" name="topics" value="Robotics / Automation"><span>Robotics / Automation</span></label>
+                <label><input type="checkbox" name="topics" value="Electronics / IoT"><span>Electronics / IoT</span></label>
+                <label><input type="checkbox" name="topics" value="Embedded Systems"><span>Embedded Systems</span></label>
+                <label><input type="checkbox" name="topics" value="Sensors / Instrumentation"><span>Sensors / Instrumentation</span></label>
+                <label><input type="checkbox" name="topics" value="Digital Health"><span>Digital Health</span></label>
+                <label><input type="checkbox" name="topics" value="Assistive Tech"><span>Assistive Tech</span></label>
+                <label><input type="checkbox" name="topics" value="Energy / Sustainability"><span>Energy / Sustainability</span></label>
+                <label><input type="checkbox" name="topics" value="Fellowships"><span>Fellowships</span></label>
+                <label><input type="checkbox" name="topics" value="KTP"><span>KTP / Collaboration</span></label>
+                <label><input type="checkbox" name="topics" value="Infrastructure"><span>Infrastructure</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Funders</legend>
+              <div class="chip-grid chip-grid--compact" data-filter-group="sources">
+                <label><input type="checkbox" name="sources" value="UKRI"><span>UKRI</span></label>
+                <label><input type="checkbox" name="sources" value="Innovate UK"><span>Innovate UK</span></label>
+                <label><input type="checkbox" name="sources" value="Find a Grant"><span>Find a Grant</span></label>
+                <label><input type="checkbox" name="sources" value="NIHR"><span>NIHR</span></label>
+                <label><input type="checkbox" name="sources" value="Wellcome"><span>Wellcome</span></label>
+                <label><input type="checkbox" name="sources" value="Royal Society"><span>Royal Society</span></label>
+                <label><input type="checkbox" name="sources" value="Royal Academy of Engineering"><span>RAEng</span></label>
+              </div>
+            </fieldset>
+
+            <div class="personal-radar-actions">
+              <button class="secondary-button" type="button" id="personal-radar-reset">Reset filters</button>
+              <p id="personal-radar-count">Loading matches...</p>
+            </div>
+          </form>
+
+          <div class="personal-radar-results" id="personal-radar-results" aria-live="polite">
+            <article>
+              <p class="live-label">Preparing matches</p>
+              <h3>Your filtered opportunities are loading.</h3>
+              <p>The latest public funding snapshot will appear here shortly.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
       <section class="signup-band" aria-labelledby="signup-title">
         <div class="signup-copy">
           <p class="section-kicker">Briefing Preferences</p>
