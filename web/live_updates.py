@@ -59,7 +59,12 @@ def main() -> int:
 
     scored = score_opportunities(fetched, config.keywords)
     database.store_opportunities(scored)
-    write_live_updates(scored, database, source_names)
+    write_live_updates(
+        scored,
+        database,
+        source_names,
+        relevant_score_threshold=config.relevant_score_threshold,
+    )
     return 0
 
 
@@ -67,6 +72,7 @@ def write_live_updates(
     scored: list[FundingOpportunity],
     database: OpportunityDatabase,
     source_names: list[str],
+    relevant_score_threshold: int = 4,
     output_path: Path = OUTPUT_PATH,
     today: date | None = None,
 ) -> None:
@@ -83,7 +89,7 @@ def write_live_updates(
     relevant = [
         opportunity
         for opportunity in active
-        if opportunity.relevance_score >= config.relevant_score_threshold
+        if opportunity.relevance_score >= relevant_score_threshold
     ]
     featured = _unique(closing_soon + relevant + active)[:MAX_ITEMS]
 

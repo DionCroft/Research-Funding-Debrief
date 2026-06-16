@@ -151,7 +151,12 @@ def run(argv: Sequence[str] | None = None) -> int:
         try:
             from web.live_updates import write_live_updates
 
-            write_live_updates(scored_opportunities, database, list(SOURCE_FACTORIES))
+            write_live_updates(
+                scored_opportunities,
+                database,
+                list(SOURCE_FACTORIES),
+                relevant_score_threshold=config.relevant_score_threshold,
+            )
             logger.info("Live JSON snapshot refreshed.")
         except Exception:
             logger.exception("Failed to refresh live JSON snapshot.")
