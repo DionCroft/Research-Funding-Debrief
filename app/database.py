@@ -250,6 +250,23 @@ class OpportunityDatabase:
 
         return new_opportunities, changed_opportunities, known_opportunities
 
+    def seen_timestamps(self, source: str, external_id: str) -> tuple[str | None, str | None]:
+        """Return stored first/last seen timestamps for an opportunity."""
+
+        with self._connect() as connection:
+            row = connection.execute(
+                """
+                SELECT first_seen_at, last_seen_at
+                FROM opportunities
+                WHERE source = ? AND external_id = ?
+                """,
+                (source, external_id),
+            ).fetchone()
+
+        if not row:
+            return None, None
+        return row["first_seen_at"], row["last_seen_at"]
+
     def _connect(self) -> sqlite3.Connection:
         connection = sqlite3.connect(self.database_path)
         connection.row_factory = sqlite3.Row

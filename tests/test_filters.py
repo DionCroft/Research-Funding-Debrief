@@ -23,7 +23,9 @@ def test_keyword_scoring_counts_title_summary_status_academic_and_amount() -> No
     assert scored.relevance_score == 12
     assert scored.matched_keywords == ["sensors", "IoT", "digital health"]
     assert scored.amount == "GBP 100,000"
-    assert "Electronics / Sensors / Embedded" in scored.categories
+    assert "Sensors / Instrumentation" in scored.categories
+    assert "Electronics / IoT" in scored.categories
+    assert "Digital Health" in scored.categories
     assert "AI / Data" not in scored.categories
     assert scored.bid_summary
 

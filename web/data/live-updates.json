@@ -1,21 +1,47 @@
 {
-  "generatedAt": "2026-06-16T02:30:15+01:00",
+  "generatedAt": "2026-06-16T12:23:52+01:00",
   "items": [
     {
       "deadline": "16 June 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Studentships / PhD funding"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 0,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon",
+      "statusLabels": [
+        "New",
+        "Closing soon"
+      ],
       "title": "Postdoctoral Award (Cohort 3)",
       "topics": [
-        "Fellowships / Academic Career"
+        "Education / Skills",
+        "Early Career"
       ],
       "urgency": "Closes today",
       "url": "https://www.nihr.ac.uk/funding/postdoctoral-award-cohort-3/2026427"
     },
     {
       "deadline": "17 June 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 0,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon",
+      "statusLabels": [
+        "New",
+        "Closing soon"
+      ],
       "title": "Mentoring Programme 2026 (Cohort 2) - Mentees",
       "topics": [
         "General / Low Match"
@@ -25,8 +51,20 @@
     },
     {
       "deadline": "17 June 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 0,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon",
+      "statusLabels": [
+        "New",
+        "Closing soon"
+      ],
       "title": "Mentoring Programme 2026 (Cohort 2) - Mentors",
       "topics": [
         "General / Low Match"
@@ -35,56 +73,122 @@
       "url": "https://www.nihr.ac.uk/funding/mentoring-programme-2026-cohort-2-mentors/2026429"
     },
     {
+      "deadline": "18 June 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 0,
+      "source": "NIHR",
+      "status": "New \u00b7 Closing soon",
+      "statusLabels": [
+        "New",
+        "Closing soon"
+      ],
+      "title": "Future Focused Leadership Programme - Emerging Research Leaders (Cohort 6)",
+      "topics": [
+        "General / Low Match"
+      ],
+      "urgency": "2 days left",
+      "url": "https://www.nihr.ac.uk/funding/future-focused-leadership-programme-emerging-research-leaders-cohort-6/2026425"
+    },
+    {
+      "deadline": "23 June 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Studentships / PhD funding"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 1,
+      "source": "NIHR",
+      "status": "New \u00b7 Closing soon",
+      "statusLabels": [
+        "New",
+        "Closing soon"
+      ],
+      "title": "Doctoral Award (Cohort 3)",
+      "topics": [
+        "Digital Health",
+        "Social Care",
+        "Education / Skills",
+        "Early Career"
+      ],
+      "urgency": "7 days left",
+      "url": "https://www.nihr.ac.uk/funding/doctoral-award-cohort-3/2026426"
+    },
+    {
       "deadline": "24 June 2026",
+      "firstSeenAt": "2026-06-12T11:46:31+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
       "source": "Innovate UK",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon",
+      "statusLabels": [
+        "New",
+        "Closing soon"
+      ],
       "title": "Ofgem Strategic Innovation Fund Discovery C6",
       "topics": [
-        "KTP / University-Business Collaboration"
+        "KTP / Collaboration"
       ],
       "urgency": "8 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2484/overview/770c0946-2e24-4566-bab1-2bf1c1dd2b38"
     },
     {
       "deadline": "24 June 2026",
+      "firstSeenAt": "2026-06-12T11:46:31+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
       "source": "Innovate UK",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon",
+      "statusLabels": [
+        "New",
+        "Closing soon"
+      ],
       "title": "Ofgem Strategic Innovation Fund Round 5 Discovery C6",
       "topics": [
-        "KTP / University-Business Collaboration"
+        "KTP / Collaboration"
       ],
       "urgency": "8 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2480/overview/96372f42-c714-4d17-91b0-dd75b9a80e17"
     },
     {
-      "deadline": "30 June 2026 at 1:00 pm",
-      "source": "NIHR",
-      "status": "Closing soon",
-      "title": "Global Health Research Professorships (Cohort 9)",
-      "topics": [
-        "Digital Health / Assistive Tech / SEND",
-        "Fellowships / Academic Career"
-      ],
-      "urgency": "14 days left",
-      "url": "https://www.nihr.ac.uk/funding/global-health-research-professorships-cohort-9/2026423"
-    },
-    {
-      "deadline": "30 June 2026 at 1:00 pm",
-      "source": "NIHR",
-      "status": "Closing soon",
-      "title": "Global Advanced Fellowships (Cohort 2)",
-      "topics": [
-        "Digital Health / Assistive Tech / SEND",
-        "Energy / Sustainability",
-        "Fellowships / Academic Career"
-      ],
-      "urgency": "14 days left",
-      "url": "https://www.nihr.ac.uk/funding/global-advanced-fellowships-cohort-2/2026297"
-    },
-    {
       "deadline": "1 July 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "Team Science Camp (Cohort 4)",
       "topics": [
         "General / Low Match"
@@ -93,43 +197,130 @@
       "url": "https://www.nihr.ac.uk/funding/team-science-camp-cohort-4/2026440"
     },
     {
-      "deadline": "8 July 2026",
-      "source": "Innovate UK",
-      "status": "Closing soon",
+      "deadline": "8 July 2026 11:00am UK time",
+      "firstSeenAt": "2026-06-16T11:23:50+00:00",
+      "lastSeenAt": "2026-06-16T11:23:50+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me only highly relevant calls",
+      "relevanceScore": 9,
+      "source": "UKRI",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "Robotics Adoption Central Convening Body summer 2026",
       "topics": [
         "Robotics / Automation",
-        "KTP / University-Business Collaboration"
+        "KTP / Collaboration"
+      ],
+      "urgency": "22 days left",
+      "url": "https://www.ukri.org/opportunity/robotics-adoption-central-convening-body-summer-2026/"
+    },
+    {
+      "deadline": "8 July 2026",
+      "firstSeenAt": "2026-06-12T11:46:31+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me only highly relevant calls",
+      "relevanceScore": 9,
+      "source": "Innovate UK",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
+      "title": "Robotics Adoption Central Convening Body summer 2026",
+      "topics": [
+        "Robotics / Automation",
+        "KTP / Collaboration"
       ],
       "urgency": "22 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2504/overview/05f2babb-c5b0-4b37-80dc-3883b41bc2c7"
     },
     {
       "deadline": "8 July 2026 11:00am UK time",
+      "firstSeenAt": "2026-06-15T15:44:37+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 5,
       "source": "UKRI",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "Scaling Supply Chains for Quantum Enabled Sensing and PNT",
       "topics": [
-        "KTP / University-Business Collaboration"
+        "KTP / Collaboration"
       ],
       "urgency": "22 days left",
       "url": "https://www.ukri.org/opportunity/scaling-supply-chains-for-quantum-enabled-sensing-and-pnt/"
     },
     {
       "deadline": "8 July 2026",
+      "firstSeenAt": "2026-06-12T11:46:31+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 5,
       "source": "Innovate UK",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "Scaling Supply Chains for Quantum Enabled Sensing and PNT",
       "topics": [
-        "KTP / University-Business Collaboration"
+        "KTP / Collaboration"
       ],
       "urgency": "22 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2495/overview/b2a4cd81-a226-4a11-83c8-966284542f59"
     },
     {
       "deadline": "8 July 2026 11:00am UK time",
+      "firstSeenAt": "2026-06-12T10:52:24+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Innovation grants"
+      ],
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
       "source": "UKRI",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "ADOPT facilitator support grant: round 9",
       "topics": [
         "General / Low Match"
@@ -139,8 +330,21 @@
     },
     {
       "deadline": "8 July 2026",
+      "firstSeenAt": "2026-06-12T11:46:31+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Innovation grants"
+      ],
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
       "source": "Innovate UK",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "ADOPT Facilitator Support Grant: Round 9",
       "topics": [
         "General / Low Match"
@@ -149,144 +353,330 @@
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2482/overview/a17ac084-56fa-4679-8d35-1f5602f27d29"
     },
     {
-      "deadline": "8 July 2026 11:00am UK time",
-      "source": "UKRI",
-      "status": "Closing soon",
-      "title": "CfI Improving Outcomes for Children Experiencing Homelessness",
-      "topics": [
-        "General / Low Match"
-      ],
-      "urgency": "22 days left",
-      "url": "https://www.ukri.org/opportunity/cfi-improving-outcomes-for-children-experiencing-homelessness/"
-    },
-    {
       "deadline": "8 July 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "HSDR - Researcher-led",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health",
+        "Social Care"
       ],
       "urgency": "22 days left",
       "url": "https://www.nihr.ac.uk/funding/hsdr-researcher-led/2026412"
     },
     {
       "deadline": "8 July 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "NIHR NICE rolling funding opportunity",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health",
+        "Social Care"
       ],
       "urgency": "22 days left",
       "url": "https://www.nihr.ac.uk/funding/nihr-nice-rolling-funding-opportunity/2026413"
     },
     {
       "deadline": "8 July 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "Research for Patient Benefit - March 2026",
       "topics": [
-        "General / Low Match"
+        "Digital Health"
       ],
       "urgency": "22 days left",
       "url": "https://www.nihr.ac.uk/funding/research-patient-benefit-march-2026/2026352-2026353-2026354"
     },
     {
       "deadline": "8 July 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "Tackling bacterial and fungal antimicrobial resistance in sub-Saharan Africa and South Asia",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health",
+        "International / Horizon Europe"
       ],
       "urgency": "22 days left",
       "url": "https://www.nihr.ac.uk/funding/tackling-bacterial-and-fungal-antimicrobial-resistance-sub-saharan-africa-and-south-asia/2026402"
     },
     {
       "deadline": "9 July 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "Population Health Career Scientist Award (Round 6)",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health",
+        "Public Health"
       ],
       "urgency": "23 days left",
       "url": "https://www.nihr.ac.uk/funding/population-health-career-scientist-award-round-6/2026416"
     },
     {
+      "deadline": "14 July 2026 4:00pm UK time",
+      "firstSeenAt": "2026-06-16T11:23:50+00:00",
+      "lastSeenAt": "2026-06-16T11:23:50+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Commercialisation / spinout support"
+      ],
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 5,
+      "source": "UKRI",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
+      "title": "UKRI metascience impact funding (Invite only)",
+      "topics": [
+        "AI / Data",
+        "Policy / Social Sciences",
+        "Commercialisation / Translation"
+      ],
+      "urgency": "28 days left",
+      "url": "https://www.ukri.org/opportunity/ukri-metascience-impact-funding-invite-only/"
+    },
+    {
       "deadline": "14 July 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Innovation grants",
+        "Commercialisation / spinout support"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "NIHR Innovation Catalyst - June 2026",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health",
+        "Commercialisation / Translation"
       ],
       "urgency": "28 days left",
       "url": "https://www.nihr.ac.uk/funding/nihr20/nihr-innovation-catalyst-june-2026/2026447"
     },
     {
       "deadline": "15 July 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Studentships / PhD funding"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "Development and Skills Enhancement Award (Cohort 10)",
       "topics": [
-        "Fellowships / Academic Career"
+        "Education / Skills",
+        "Early Career"
       ],
       "urgency": "29 days left",
       "url": "https://www.nihr.ac.uk/funding/development-and-skills-enhancement-award-cohort-10/2026410"
     },
     {
       "deadline": "15 July 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "Early intervention programmes for infants with an increased chance of neurodisability",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health",
+        "Assistive Technology / SEND"
       ],
       "urgency": "29 days left",
       "url": "https://www.nihr.ac.uk/funding/early-intervention-programmes-infants-increased-chance-neurodisability/2026382"
     },
     {
       "deadline": "15 July 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "Pharmacological treatment with and without cognitive behavioural therapy for the treatment of gambling that harms",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health",
+        "Mental Health",
+        "Policy / Social Sciences"
       ],
       "urgency": "29 days left",
       "url": "https://www.nihr.ac.uk/funding/pharmacological-treatment-and-without-cognitive-behavioural-therapy-treatment-gambling-harms/2026383"
     },
     {
       "deadline": "15 July 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "Transabdominal ultrasound surveillance for gallbladder cancer in patients with gallbladder polyps",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health"
       ],
       "urgency": "29 days left",
       "url": "https://www.nihr.ac.uk/funding/transabdominal-ultrasound-surveillance-gallbladder-cancer-patients-gallbladder-polyps/2026405"
     },
     {
       "deadline": "15 July 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "What is the effectiveness and cost-effectiveness of specialist palliative care support in care home settings?",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health",
+        "Social Care"
       ],
       "urgency": "29 days left",
       "url": "https://www.nihr.ac.uk/funding/what-effectiveness-and-cost-effectiveness-specialist-palliative-care-support-care-home-settings/2026381"
     },
     {
       "deadline": "16 July 2026",
+      "firstSeenAt": "2026-06-12T10:52:24+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Capital / equipment funding"
+      ],
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 4,
       "source": "UKRI",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "Future data services sandpit: transforming discovery and access",
       "topics": [
         "AI / Data",
+        "Policy / Social Sciences",
         "Capital / Infrastructure"
       ],
       "urgency": "30 days left",
@@ -294,23 +684,53 @@
     },
     {
       "deadline": "16 July 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Closing soon",
+      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Closing soon",
+        "Ongoing"
+      ],
       "title": "Pre-Application Support Fund (Cohort 9)",
       "topics": [
-        "Fellowships / Academic Career"
+        "Early Career"
       ],
       "urgency": "30 days left",
       "url": "https://www.nihr.ac.uk/funding/pre-application-support-fund-cohort-9/2026445"
     },
     {
       "deadline": "17 July 2026 4:00pm UK time",
+      "firstSeenAt": "2026-06-12T10:52:24+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Innovation grants",
+        "Industry collaboration",
+        "Capital / equipment funding"
+      ],
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 7,
       "source": "UKRI",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "AIRR compute opportunity: AI open access",
       "topics": [
         "AI / Data",
-        "Digital Health / Assistive Tech / SEND",
+        "Digital Health",
+        "Policy / Social Sciences",
+        "Climate / Environment",
         "Capital / Infrastructure"
       ],
       "urgency": "31 days left",
@@ -318,63 +738,143 @@
     },
     {
       "deadline": "28 July 2026 11:00am UK time",
+      "firstSeenAt": "2026-06-12T10:52:24+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 5,
       "source": "UKRI",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "ACTASAP pilot phase 1",
       "topics": [
-        "KTP / University-Business Collaboration"
+        "Wireless / Telecoms",
+        "KTP / Collaboration"
       ],
       "urgency": "42 days left",
       "url": "https://www.ukri.org/opportunity/actasap-pilot-phase-1/"
     },
     {
       "deadline": "28 July 2026",
+      "firstSeenAt": "2026-06-12T11:46:31+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 5,
       "source": "Innovate UK",
-      "status": "Open now",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "ACTASAP Pilot Phase 1",
       "topics": [
-        "KTP / University-Business Collaboration"
+        "KTP / Collaboration"
       ],
       "urgency": "42 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2502/overview/35ca10fb-d4f5-4510-9ddd-e7e3133d2b6d"
     },
     {
       "deadline": "29 July 2026",
+      "firstSeenAt": "2026-06-12T11:46:31+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 5,
       "source": "Innovate UK",
-      "status": "Open now",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "Full ADOPT Grant: Round 8",
       "topics": [
-        "KTP / University-Business Collaboration"
+        "Clinical Evidence / Trials",
+        "KTP / Collaboration"
       ],
       "urgency": "43 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2491/overview/77ba6cb6-c14d-41f7-84de-e45446636e50"
     },
     {
       "deadline": "29 July 2026 11:00am UK time",
+      "firstSeenAt": "2026-06-12T10:52:24+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Innovation grants"
+      ],
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
       "source": "UKRI",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "Full ADOPT grant: round eight",
       "topics": [
-        "General / Low Match"
+        "Clinical Evidence / Trials"
       ],
       "urgency": "43 days left",
       "url": "https://www.ukri.org/opportunity/full-adopt-grant-round-eight/"
     },
     {
       "deadline": "5 August 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "EME Programme researcher-led",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Clinical Evidence / Trials"
       ],
       "urgency": "50 days left",
       "url": "https://www.nihr.ac.uk/funding/eme-programme-researcher-led/2026407"
     },
     {
       "deadline": "5 August 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "NIHR James Lind Alliance Priority Setting Partnerships rolling funding opportunity (EME Programme)",
       "topics": [
         "General / Low Match"
@@ -384,8 +884,20 @@
     },
     {
       "deadline": "5 August 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "NIHR NICE rolling funding opportunity (EME Programme)",
       "topics": [
         "General / Low Match"
@@ -395,8 +907,20 @@
     },
     {
       "deadline": "5 August 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "Programme Grants for Applied Research - June 2026",
       "topics": [
         "General / Low Match"
@@ -406,213 +930,451 @@
     },
     {
       "deadline": "12 August 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Studentships / PhD funding"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 6,
       "source": "NIHR",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "EME/HTA-Postdoctoral Award: Building clinical trials experience funding opportunity",
       "topics": [
-        "Digital Health / Assistive Tech / SEND",
-        "Fellowships / Academic Career"
+        "Clinical Evidence / Trials",
+        "Early Career"
       ],
       "urgency": "57 days left",
       "url": "https://www.nihr.ac.uk/funding/emehta-postdoctoral-award-building-clinical-trials-experience-funding-opportunity/2026435"
     },
     {
       "deadline": "18 August 2026 at 1:00 pm",
-      "source": "NIHR",
-      "status": "Open",
-      "title": "PHR Development Awards - women in the armed forces",
-      "topics": [
-        "Digital Health / Assistive Tech / SEND"
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
       ],
-      "urgency": "63 days left",
-      "url": "https://www.nihr.ac.uk/funding/phr-development-awards-women-armed-forces/2026376"
-    },
-    {
-      "deadline": "18 August 2026 at 1:00 pm",
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 7,
       "source": "NIHR",
-      "status": "Open",
-      "title": "Active travel facilitators and barriers within different populations",
-      "topics": [
-        "Digital Health / Assistive Tech / SEND"
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
       ],
-      "urgency": "63 days left",
-      "url": "https://www.nihr.ac.uk/funding/active-travel-facilitators-and-barriers-within-different-populations/2026377"
-    },
-    {
-      "deadline": "18 August 2026 at 1:00 pm",
-      "source": "NIHR",
-      "status": "Open",
-      "title": "Loneliness in the community",
-      "topics": [
-        "Digital Health / Assistive Tech / SEND"
-      ],
-      "urgency": "63 days left",
-      "url": "https://www.nihr.ac.uk/funding/loneliness-community/2025451"
-    },
-    {
-      "deadline": "18 August 2026 at 1:00 pm",
-      "source": "NIHR",
-      "status": "Open",
-      "title": "PHR - Researcher-led",
-      "topics": [
-        "Digital Health / Assistive Tech / SEND"
-      ],
-      "urgency": "63 days left",
-      "url": "https://www.nihr.ac.uk/funding/phr-researcher-led/2026417"
-    },
-    {
-      "deadline": "18 August 2026 at 1:00 pm",
-      "source": "NIHR",
-      "status": "Open",
-      "title": "PHR Commissioned - NIHR James Lind Alliance Priority Setting Partnerships (rolling)",
-      "topics": [
-        "Digital Health / Assistive Tech / SEND"
-      ],
-      "urgency": "63 days left",
-      "url": "https://www.nihr.ac.uk/funding/phr-commissioned-nihr-james-lind-alliance-priority-setting-partnerships-rolling/2026418"
-    },
-    {
-      "deadline": "18 August 2026 at 1:00 pm",
-      "source": "NIHR",
-      "status": "Open",
-      "title": "PHR Commissioned \u2013 NIHR NICE (rolling)",
-      "topics": [
-        "Digital Health / Assistive Tech / SEND"
-      ],
-      "urgency": "63 days left",
-      "url": "https://www.nihr.ac.uk/funding/phr-commissioned-nihr-nice-rolling/2026419"
-    },
-    {
-      "deadline": "18 August 2026 at 1:00 pm",
-      "source": "NIHR",
-      "status": "Open",
       "title": "School readiness and the home learning environment",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health",
+        "Public Health",
+        "Education / Skills",
+        "Climate / Environment"
       ],
       "urgency": "63 days left",
       "url": "https://www.nihr.ac.uk/funding/school-readiness-and-home-learning-environment/2026378"
     },
     {
       "deadline": "18 August 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 4,
       "source": "NIHR",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "PHR Development Awards - women in the armed forces",
+      "topics": [
+        "Digital Health",
+        "Public Health"
+      ],
+      "urgency": "63 days left",
+      "url": "https://www.nihr.ac.uk/funding/phr-development-awards-women-armed-forces/2026376"
+    },
+    {
+      "deadline": "18 August 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Travel / networking funding"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
+      "source": "NIHR",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "Active travel facilitators and barriers within different populations",
+      "topics": [
+        "Digital Health",
+        "Public Health"
+      ],
+      "urgency": "63 days left",
+      "url": "https://www.nihr.ac.uk/funding/active-travel-facilitators-and-barriers-within-different-populations/2026377"
+    },
+    {
+      "deadline": "18 August 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
+      "source": "NIHR",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "Loneliness in the community",
+      "topics": [
+        "Digital Health",
+        "Public Health",
+        "Mental Health"
+      ],
+      "urgency": "63 days left",
+      "url": "https://www.nihr.ac.uk/funding/loneliness-community/2025451"
+    },
+    {
+      "deadline": "18 August 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
+      "source": "NIHR",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "PHR - Researcher-led",
+      "topics": [
+        "Digital Health",
+        "Public Health"
+      ],
+      "urgency": "63 days left",
+      "url": "https://www.nihr.ac.uk/funding/phr-researcher-led/2026417"
+    },
+    {
+      "deadline": "18 August 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
+      "source": "NIHR",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "PHR Commissioned - NIHR James Lind Alliance Priority Setting Partnerships (rolling)",
+      "topics": [
+        "Digital Health",
+        "Public Health"
+      ],
+      "urgency": "63 days left",
+      "url": "https://www.nihr.ac.uk/funding/phr-commissioned-nihr-james-lind-alliance-priority-setting-partnerships-rolling/2026418"
+    },
+    {
+      "deadline": "18 August 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
+      "source": "NIHR",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "PHR Commissioned \u2013 NIHR NICE (rolling)",
+      "topics": [
+        "Digital Health",
+        "Public Health"
+      ],
+      "urgency": "63 days left",
+      "url": "https://www.nihr.ac.uk/funding/phr-commissioned-nihr-nice-rolling/2026419"
+    },
+    {
+      "deadline": "18 August 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
+      "source": "NIHR",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "Women\u2019s health communication",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health",
+        "Public Health"
       ],
       "urgency": "63 days left",
       "url": "https://www.nihr.ac.uk/funding/womens-health-communication/2026379"
     },
     {
       "deadline": "19 August 2026",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Industry collaboration",
+        "Commercialisation / spinout support"
+      ],
+      "rawSource": "Royal Society",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "Royal Society",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "Entrepreneur in Residence",
       "topics": [
-        "General / Low Match"
+        "Clinical Evidence / Trials",
+        "Manufacturing / Industry 4.0",
+        "Commercialisation / Translation"
       ],
       "urgency": "64 days left",
       "url": "https://royalsociety.org/grants/entrepreneur-in-residence/"
     },
     {
       "deadline": "20 August 2026 4:00pm UK time",
+      "firstSeenAt": "2026-06-12T10:52:24+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 5,
       "source": "UKRI",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "Hybrid Algorithms for Quantum Advantage",
       "topics": [
         "AI / Data",
-        "KTP / University-Business Collaboration"
+        "KTP / Collaboration"
       ],
       "urgency": "65 days left",
       "url": "https://www.ukri.org/opportunity/hybrid-algorithms-for-quantum-advantage/"
     },
     {
       "deadline": "26 August 2026 11:00am UK time",
+      "firstSeenAt": "2026-06-12T10:52:24+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration",
+        "Commercialisation / spinout support"
+      ],
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me only highly relevant calls",
+      "relevanceScore": 10,
       "source": "UKRI",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "Consumer Led Flexibility for the Clean Energy Superpower Mission",
       "topics": [
         "Energy / Sustainability",
-        "KTP / University-Business Collaboration"
+        "KTP / Collaboration",
+        "Commercialisation / Translation"
       ],
       "urgency": "71 days left",
       "url": "https://www.ukri.org/opportunity/consumer-led-flexibility-for-the-clean-energy-superpower-mission/"
     },
     {
       "deadline": "26 August 2026",
+      "firstSeenAt": "2026-06-12T11:46:31+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration",
+        "Commercialisation / spinout support"
+      ],
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me only highly relevant calls",
+      "relevanceScore": 10,
       "source": "Innovate UK",
-      "status": "Open now",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "Consumer Led Flexibility for the Clean Energy Superpower Mission",
       "topics": [
         "Energy / Sustainability",
-        "KTP / University-Business Collaboration"
+        "KTP / Collaboration",
+        "Commercialisation / Translation"
       ],
       "urgency": "71 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2509/overview/c1794f5a-06bf-41bb-8a13-3e657dacef54"
     },
     {
-      "deadline": "1 September 2026 11:00am UK time",
-      "source": "UKRI",
-      "status": "Open",
-      "title": "Commercialising Knowledge Assets Fund (CKAF) autumn",
-      "topics": [
-        "KTP / University-Business Collaboration"
-      ],
-      "urgency": "77 days left",
-      "url": "https://www.ukri.org/opportunity/commercialising-knowledge-assets-fund-ckaf-autumn/"
-    },
-    {
       "deadline": "1 September 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Studentships / PhD funding"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "2025 Clinical Lectureships in Medicine",
       "topics": [
-        "Digital Health / Assistive Tech / SEND",
-        "Fellowships / Academic Career"
+        "Clinical Evidence / Trials",
+        "Early Career"
       ],
       "urgency": "77 days left",
       "url": "https://www.nihr.ac.uk/funding/2025-clinical-lectureships-medicine/97046"
     },
     {
       "deadline": "2 September 2026 4:00pm UK time",
+      "firstSeenAt": "2026-06-12T10:52:24+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Fellowships",
+        "Studentships / PhD funding",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 6,
       "source": "UKRI",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "Early independence: clinician scientist fellowship",
       "topics": [
-        "Digital Health / Assistive Tech / SEND",
-        "KTP / University-Business Collaboration",
-        "Fellowships / Academic Career"
+        "Digital Health",
+        "KTP / Collaboration",
+        "Fellowships"
       ],
       "urgency": "78 days left",
       "url": "https://www.ukri.org/opportunity/early-independence-clinician-scientist-fellowship/"
     },
     {
       "deadline": "2 September 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "HTA Researcher-led - Primary Research",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health"
       ],
       "urgency": "78 days left",
       "url": "https://www.nihr.ac.uk/funding/hta-researcher-led-primary-research/2026420"
     },
     {
       "deadline": "2 September 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "NIHR James Lind Alliance Priority Setting Partnerships rolling funding opportunity",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health"
       ],
       "urgency": "78 days left",
       "url": "https://www.nihr.ac.uk/funding/nihr-james-lind-alliance-priority-setting-partnerships-rolling-funding-opportunity/2026422"
     },
     {
       "deadline": "2 September 2026",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "NIHR James Lind Alliance Priority Setting Partnerships rolling funding opportunity",
       "topics": [
         "General / Low Match"
@@ -622,64 +1384,134 @@
     },
     {
       "deadline": "2 September 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:51+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "NIHR NICE Rolling Funding Opportunity",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health"
       ],
       "urgency": "78 days left",
       "url": "https://www.nihr.ac.uk/funding/nihr-nice-rolling-funding-opportunity/2026421"
     },
     {
       "deadline": "2 September 2026",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "NIHR NICE rolling funding opportunity",
       "topics": [
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health"
       ],
       "urgency": "78 days left",
       "url": "https://www.nihr.ac.uk/funding/nihr-nice-rolling-funding-opportunity/36180"
     },
     {
       "deadline": "2 September 2026 at 1:00 pm",
+      "firstSeenAt": "2026-06-16T11:23:52+00:00",
+      "lastSeenAt": "2026-06-16T11:23:52+00:00",
+      "opportunityTypes": [
+        "Research grants"
+      ],
+      "rawSource": "NIHR",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 2,
       "source": "NIHR",
-      "status": "Open",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "Target trial emulation: utilising routine data to answer key health and care questions",
       "topics": [
         "AI / Data",
-        "Digital Health / Assistive Tech / SEND"
+        "Digital Health",
+        "Clinical Evidence / Trials"
       ],
       "urgency": "78 days left",
       "url": "https://www.nihr.ac.uk/funding/target-trial-emulation-utilising-routine-data-answer-key-health-and-care-questions/2026384"
     },
     {
       "deadline": "8 September 2026 4:00pm UK time",
+      "firstSeenAt": "2026-06-12T10:52:24+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me only highly relevant calls",
+      "relevanceScore": 10,
       "source": "UKRI",
-      "status": "Upcoming",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
       "title": "Aviation\u2019s non-CO2 impacts on the climate 2026",
       "topics": [
-        "Energy / Sustainability",
-        "KTP / University-Business Collaboration"
+        "Policy / Social Sciences",
+        "Climate / Environment",
+        "Space / Aerospace",
+        "KTP / Collaboration"
       ],
       "urgency": "84 days left",
       "url": "https://www.ukri.org/opportunity/aviations-non-co2-impacts-on-the-climate-2026/"
     },
     {
       "deadline": "8 September 2026 4:00pm UK time",
+      "firstSeenAt": "2026-06-12T10:52:24+00:00",
+      "lastSeenAt": "2026-06-16T11:23:51+00:00",
+      "opportunityTypes": [
+        "Studentships / PhD funding",
+        "Capital / equipment funding"
+      ],
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 6,
       "source": "UKRI",
-      "status": "Open",
-      "title": "Expression of interest: Japan-UK joint call for collaborations in Advanced Connectivity Technologies",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "UKRI policy internships 2026",
       "topics": [
-        "KTP / University-Business Collaboration"
+        "Digital Health",
+        "Policy / Social Sciences",
+        "Climate / Environment",
+        "Early Career",
+        "Capital / Infrastructure"
       ],
       "urgency": "84 days left",
-      "url": "https://www.ukri.org/opportunity/japan-uk-joint-call-for-collaborations-in-advanced-connectivity-technologies/"
+      "url": "https://www.ukri.org/opportunity/ukri-policy-internships-2026/"
     }
   ],
   "sourceCounts": {
-    "Find a Grant": 10,
+    "GOV.UK Find a Grant": 10,
     "Innovate UK": 10,
     "NIHR": 50,
     "Royal Academy of Engineering": 11,
@@ -687,9 +1519,9 @@
     "UKRI": 20
   },
   "summary": {
-    "closingSoon": 27,
+    "closingSoon": 28,
     "sourcesScanned": 7,
-    "topicCategories": 30,
+    "topicCategories": 28,
     "trackedCalls": 102
   }
 }

@@ -80,8 +80,8 @@
           <p class="section-kicker">No Email Needed</p>
           <h2 id="personal-radar-title">Tune the radar to your interests.</h2>
           <p>
-            Select the topics, funders, and deadline view you care about. Your choices stay in
-            this browser and instantly shape the calls shown below.
+            Select the topics, sources, opportunity types, and relevance level you care about.
+            Your choices stay in this browser and instantly shape the calls shown below.
           </p>
         </div>
 
@@ -91,8 +91,9 @@
               <legend>Deadline view</legend>
               <div class="chip-grid chip-grid--compact" data-filter-group="status">
                 <label><input type="checkbox" name="status" value="New"><span>New</span></label>
+                <label><input type="checkbox" name="status" value="Seen"><span>Seen</span></label>
                 <label><input type="checkbox" name="status" value="Closing soon" checked><span>Closing soon</span></label>
-                <label><input type="checkbox" name="status" value="Open" checked><span>Ongoing</span></label>
+                <label><input type="checkbox" name="status" value="Ongoing" checked><span>Ongoing</span></label>
               </div>
             </fieldset>
 
@@ -105,25 +106,66 @@
                 <label><input type="checkbox" name="topics" value="Electronics / IoT"><span>Electronics / IoT</span></label>
                 <label><input type="checkbox" name="topics" value="Embedded Systems"><span>Embedded Systems</span></label>
                 <label><input type="checkbox" name="topics" value="Sensors / Instrumentation"><span>Sensors / Instrumentation</span></label>
+                <label><input type="checkbox" name="topics" value="Cybersecurity"><span>Cybersecurity</span></label>
+                <label><input type="checkbox" name="topics" value="Wireless / Telecoms"><span>Wireless / Telecoms</span></label>
                 <label><input type="checkbox" name="topics" value="Digital Health"><span>Digital Health</span></label>
-                <label><input type="checkbox" name="topics" value="Assistive Tech"><span>Assistive Tech</span></label>
+                <label><input type="checkbox" name="topics" value="Assistive Technology / SEND"><span>Assistive Technology / SEND</span></label>
+                <label><input type="checkbox" name="topics" value="Clinical Evidence / Trials"><span>Clinical Evidence / Trials</span></label>
+                <label><input type="checkbox" name="topics" value="Public Health"><span>Public Health</span></label>
+                <label><input type="checkbox" name="topics" value="Social Care"><span>Social Care</span></label>
+                <label><input type="checkbox" name="topics" value="Mental Health"><span>Mental Health</span></label>
+                <label><input type="checkbox" name="topics" value="Education / Skills"><span>Education / Skills</span></label>
+                <label><input type="checkbox" name="topics" value="Policy / Social Sciences"><span>Policy / Social Sciences</span></label>
                 <label><input type="checkbox" name="topics" value="Energy / Sustainability"><span>Energy / Sustainability</span></label>
+                <label><input type="checkbox" name="topics" value="Climate / Environment"><span>Climate / Environment</span></label>
+                <label><input type="checkbox" name="topics" value="Manufacturing / Industry 4.0"><span>Manufacturing / Industry 4.0</span></label>
+                <label><input type="checkbox" name="topics" value="Space / Aerospace"><span>Space / Aerospace</span></label>
+                <label><input type="checkbox" name="topics" value="Defence / Security"><span>Defence / Security</span></label>
+                <label><input type="checkbox" name="topics" value="Creative / Media Tech"><span>Creative / Media Tech</span></label>
+                <label><input type="checkbox" name="topics" value="KTP / Collaboration"><span>KTP / Collaboration</span></label>
                 <label><input type="checkbox" name="topics" value="Fellowships"><span>Fellowships</span></label>
-                <label><input type="checkbox" name="topics" value="KTP"><span>KTP / Collaboration</span></label>
-                <label><input type="checkbox" name="topics" value="Infrastructure"><span>Infrastructure</span></label>
+                <label><input type="checkbox" name="topics" value="Early Career"><span>Early Career</span></label>
+                <label><input type="checkbox" name="topics" value="Capital / Infrastructure"><span>Capital / Infrastructure</span></label>
+                <label><input type="checkbox" name="topics" value="International / Horizon Europe"><span>International / Horizon Europe</span></label>
+                <label><input type="checkbox" name="topics" value="Commercialisation / Translation"><span>Commercialisation / Translation</span></label>
               </div>
             </fieldset>
 
             <fieldset>
-              <legend>Funders</legend>
+              <legend>Funders or sources</legend>
               <div class="chip-grid chip-grid--compact" data-filter-group="sources">
                 <label><input type="checkbox" name="sources" value="UKRI"><span>UKRI</span></label>
                 <label><input type="checkbox" name="sources" value="Innovate UK"><span>Innovate UK</span></label>
-                <label><input type="checkbox" name="sources" value="Find a Grant"><span>Find a Grant</span></label>
+                <label><input type="checkbox" name="sources" value="GOV.UK Find a Grant"><span>GOV.UK Find a Grant</span></label>
                 <label><input type="checkbox" name="sources" value="NIHR"><span>NIHR</span></label>
                 <label><input type="checkbox" name="sources" value="Wellcome"><span>Wellcome</span></label>
                 <label><input type="checkbox" name="sources" value="Royal Society"><span>Royal Society</span></label>
-                <label><input type="checkbox" name="sources" value="Royal Academy of Engineering"><span>RAEng</span></label>
+                <label><input type="checkbox" name="sources" value="Royal Academy of Engineering"><span>Royal Academy of Engineering</span></label>
+                <label><input type="checkbox" name="sources" value="All available sources"><span>All available sources</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Opportunity types</legend>
+              <div class="chip-grid" data-filter-group="opportunityTypes">
+                <label><input type="checkbox" name="opportunityTypes" value="Research grants"><span>Research grants</span></label>
+                <label><input type="checkbox" name="opportunityTypes" value="Innovation grants"><span>Innovation grants</span></label>
+                <label><input type="checkbox" name="opportunityTypes" value="Fellowships"><span>Fellowships</span></label>
+                <label><input type="checkbox" name="opportunityTypes" value="Studentships / PhD funding"><span>Studentships / PhD funding</span></label>
+                <label><input type="checkbox" name="opportunityTypes" value="Knowledge Transfer Partnerships"><span>Knowledge Transfer Partnerships</span></label>
+                <label><input type="checkbox" name="opportunityTypes" value="Industry collaboration"><span>Industry collaboration</span></label>
+                <label><input type="checkbox" name="opportunityTypes" value="Capital / equipment funding"><span>Capital / equipment funding</span></label>
+                <label><input type="checkbox" name="opportunityTypes" value="Travel / networking funding"><span>Travel / networking funding</span></label>
+                <label><input type="checkbox" name="opportunityTypes" value="Commercialisation / spinout support"><span>Commercialisation / spinout support</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset>
+              <legend>Minimum relevance level</legend>
+              <div class="chip-grid chip-grid--compact" data-filter-group="relevance">
+                <label><input type="checkbox" name="relevance" value="Send me only highly relevant calls"><span>Send me only highly relevant calls</span></label>
+                <label><input type="checkbox" name="relevance" value="Send me a balanced shortlist" checked><span>Send me a balanced shortlist</span></label>
+                <label><input type="checkbox" name="relevance" value="Send me a broad scan"><span>Send me a broad scan</span></label>
               </div>
             </fieldset>
 

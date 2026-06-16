@@ -107,12 +107,8 @@ function itemMatchesStatus(item, selectedStatuses) {
     return true;
   }
 
-  const status = item.status || "Open";
-  if (selectedStatuses.includes(status)) {
-    return true;
-  }
-
-  return selectedStatuses.includes("Open") && !["New", "Closing soon"].includes(status);
+  const labels = Array.isArray(item.statusLabels) ? item.statusLabels : [item.status || "Ongoing"];
+  return selectedStatuses.some((status) => labels.includes(status));
 }
 
 function itemMatchesNeedle(item, selectedNeedles, fields) {
@@ -131,11 +127,42 @@ function itemMatchesNeedle(item, selectedNeedles, fields) {
   return selectedNeedles.some((needle) => haystack.includes(normaliseText(needle)));
 }
 
+function itemMatchesAny(item, selectedNeedles, fields, allValue = "") {
+  if (selectedNeedles.length === 0 || (allValue && selectedNeedles.includes(allValue))) {
+    return true;
+  }
+
+  return itemMatchesNeedle(item, selectedNeedles, fields);
+}
+
+function itemMatchesRelevance(item, selectedLevels) {
+  if (selectedLevels.length === 0 || selectedLevels.includes("Send me a broad scan")) {
+    return true;
+  }
+
+  const score = Number(item.relevanceScore || 0);
+  if (selectedLevels.includes("Send me only highly relevant calls") && score >= 8) {
+    return true;
+  }
+
+  return selectedLevels.includes("Send me a balanced shortlist") && score >= 4;
+}
+
+function itemStatusLabel(item) {
+  if (Array.isArray(item.statusLabels) && item.statusLabels.length > 0) {
+    return item.statusLabels.join(" · ");
+  }
+
+  return item.status || "Ongoing";
+}
+
 function readPersonalRadarFilters() {
   return {
     status: selectedValues("status"),
     topics: selectedValues("topics"),
     sources: selectedValues("sources"),
+    opportunityTypes: selectedValues("opportunityTypes"),
+    relevance: selectedValues("relevance"),
   };
 }
 
@@ -154,7 +181,7 @@ function restorePersonalRadarFilters() {
 
   try {
     const saved = JSON.parse(window.localStorage.getItem(personalRadarStorageKey) || "{}");
-    ["status", "topics", "sources"].forEach((name) => {
+    ["status", "topics", "sources", "opportunityTypes", "relevance"].forEach((name) => {
       if (!Array.isArray(saved[name])) {
         return;
       }
@@ -173,8 +200,10 @@ function filterPersonalRadarItems() {
   return liveFundingItems.filter((item) => {
     return (
       itemMatchesStatus(item, filters.status) &&
-      itemMatchesNeedle(item, filters.topics, ["topics", "title"]) &&
-      itemMatchesNeedle(item, filters.sources, ["source"])
+      itemMatchesAny(item, filters.topics, ["topics", "title"]) &&
+      itemMatchesAny(item, filters.sources, ["source"], "All available sources") &&
+      itemMatchesAny(item, filters.opportunityTypes, ["opportunityTypes", "fundingType", "title"]) &&
+      itemMatchesRelevance(item, filters.relevance)
     );
   });
 }
@@ -210,7 +239,7 @@ function renderPersonalRadar() {
     const topics = Array.isArray(item.topics) ? item.topics.slice(0, 4) : [];
 
     card.innerHTML = `
-      <p class="live-label">${escapeHtml(item.status || "Open")} · ${escapeHtml(item.source || "Unknown source")}</p>
+      <p class="live-label">${escapeHtml(itemStatusLabel(item))} · ${escapeHtml(item.source || "Unknown source")}</p>
       <h3>${link}</h3>
       <p>${escapeHtml(item.deadline || "No deadline parsed")} <span>${escapeHtml(item.urgency || "")}</span></p>
       <div class="live-tags">${topics.map((topic) => `<span>${escapeHtml(topic)}</span>`).join("")}</div>
@@ -242,7 +271,7 @@ function renderLiveItems(items) {
     const topics = Array.isArray(item.topics) ? item.topics.slice(0, 3) : [];
 
     card.innerHTML = `
-      <p class="live-label">${escapeHtml(item.status || "Tracked")} · ${escapeHtml(item.source || "Unknown source")}</p>
+      <p class="live-label">${escapeHtml(itemStatusLabel(item))} · ${escapeHtml(item.source || "Unknown source")}</p>
       <h3>${link}</h3>
       <p>${escapeHtml(item.deadline || "No deadline parsed")} <span>${escapeHtml(item.urgency || "")}</span></p>
       <div class="live-tags">${topics.map((topic) => `<span>${escapeHtml(topic)}</span>`).join("")}</div>
