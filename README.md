@@ -47,9 +47,47 @@ python run.py --sources ukri,innovate_uk
 python run.py --min-score 5
 python run.py --new-only
 python run.py --send-discord
+python run.py --refresh-live-json --send-discord
 python run.py --no-discord
 python run.py --dry-run
 ```
+
+## Scheduled refresh and Discord alerts
+
+Use the included cron wrapper to refresh the website JSON and send the Discord debrief from one
+fetch cycle:
+
+```bash
+scripts/run_scheduled_debrief.sh
+```
+
+Before scheduling it, make sure `.env` has Discord enabled, using either a webhook or bot token:
+
+```env
+ENABLE_DISCORD=true
+DISCORD_WEBHOOK_URL=https://discord.com/api/webhooks/...
+```
+
+Then edit the crontab:
+
+```bash
+crontab -e
+```
+
+Add these lines to run the job at 09:00 and 21:00 every day:
+
+```cron
+0 9 * * * /home/cadmus/Projects/Debrief/research-funding-debrief/scripts/run_scheduled_debrief.sh >> /home/cadmus/Projects/Debrief/research-funding-debrief/logs/cron.log 2>&1
+0 21 * * * /home/cadmus/Projects/Debrief/research-funding-debrief/scripts/run_scheduled_debrief.sh >> /home/cadmus/Projects/Debrief/research-funding-debrief/logs/cron.log 2>&1
+```
+
+The scheduled job:
+
+- fetches the configured funding sources
+- updates `data/research_funding_debrief.db`
+- refreshes `web/data/live-updates.json`
+- sends the compact Discord debrief when Discord is configured
+- writes normal app logs to `logs/research_funding_debrief.log`
 
 ## Signup front page
 

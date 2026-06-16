@@ -76,6 +76,11 @@ def build_parser() -> argparse.ArgumentParser:
         help="Force Discord sending for this run if Discord credentials are configured.",
     )
     parser.add_argument(
+        "--refresh-live-json",
+        action="store_true",
+        help="Write web/data/live-updates.json from the same fetched opportunities.",
+    )
+    parser.add_argument(
         "--no-discord",
         action="store_true",
         help="Disable Discord sending for this run.",
@@ -141,6 +146,17 @@ def run(argv: Sequence[str] | None = None) -> int:
 
     logger.info("New records: %s.", len(new_opportunities))
     logger.info("Changed records: %s.", len(changed_opportunities))
+
+    if args.refresh_live_json and not args.dry_run:
+        try:
+            from web.live_updates import write_live_updates
+
+            write_live_updates(scored_opportunities, database, list(SOURCE_FACTORIES))
+            logger.info("Live JSON snapshot refreshed.")
+        except Exception:
+            logger.exception("Failed to refresh live JSON snapshot.")
+            print("Fetched opportunities, but could not refresh the live JSON snapshot.")
+
     report = generate_daily_debrief(
         fetched_opportunities=scored_opportunities,
         new_opportunities=new_opportunities,

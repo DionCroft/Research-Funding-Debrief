@@ -59,7 +59,20 @@ def main() -> int:
 
     scored = score_opportunities(fetched, config.keywords)
     database.store_opportunities(scored)
-    today = date.today()
+    write_live_updates(scored, database, source_names)
+    return 0
+
+
+def write_live_updates(
+    scored: list[FundingOpportunity],
+    database: OpportunityDatabase,
+    source_names: list[str],
+    output_path: Path = OUTPUT_PATH,
+    today: date | None = None,
+) -> None:
+    """Write the static live funding snapshot for the front page."""
+
+    today = today or date.today()
     active = [opportunity for opportunity in scored if not _is_closed(opportunity)]
     closing_soon = [
         opportunity
@@ -89,10 +102,9 @@ def main() -> int:
         "sourceCounts": Counter(_source_label(opportunity.source) for opportunity in scored),
     }
 
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    OUTPUT_PATH.write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
-    print(f"Wrote {OUTPUT_PATH}")
-    return 0
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
+    print(f"Wrote {output_path}")
 
 
 def _serialise_opportunity(
