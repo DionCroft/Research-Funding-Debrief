@@ -146,22 +146,24 @@ def generate_discord_debrief(
     category_counts = _category_counts(fetched_opportunities)
 
     lines = [
-        "**Daily Research Funding Debrief**",
-        f"Generated: {generated_at.strftime('%Y-%m-%d %H:%M %Z')}".rstrip(),
+        "**Research Funding Debrief**",
+        f"`{generated_at.strftime('%Y-%m-%d %H:%M %Z').rstrip()}`",
         (
-            f"Fetched: {len(fetched_opportunities)} | New: {len(new_opportunities)} | "
-            f"Relevant new: {len(relevant_new)} | Changed: {len(changed_opportunities)} | "
-            f"Seen before: {len(known_opportunities)}"
+            f"Fetched **{len(fetched_opportunities)}** calls | "
+            f"New **{len(new_opportunities)}** | "
+            f"Relevant new **{len(relevant_new)}** | "
+            f"Changed **{len(changed_opportunities)}** | "
+            f"Seen before **{len(known_opportunities)}**"
         ),
     ]
     if source_counts:
         lines.append(
-            "Sources: "
+            "**Sources:** "
             + ", ".join(f"{source} {count}" for source, count in sorted(source_counts.items()))
         )
     if category_counts:
         lines.append(
-            "Top categories: "
+            "**Top categories:** "
             + ", ".join(
                 f"{category} {count}" for category, count in category_counts.most_common(3)
             )
@@ -354,11 +356,11 @@ def _format_timeline_opportunity(
 
 def _discord_timeline_section(timeline: Timeline, config: Config) -> list[str]:
     lines = [
-        "**Funding timeline**",
+        "## Funding Timeline",
         (
-            f"New: {len(timeline.new)} | "
-            f"Expiring <= {EXPIRING_SOON_DAYS} days: {len(timeline.expiring_soon)} | "
-            f"Other ongoing: {len(timeline.ongoing)}"
+            f"New **{len(timeline.new)}** | "
+            f"Closing soon **{len(timeline.expiring_soon)}** | "
+            f"Other ongoing **{len(timeline.ongoing)}**"
         ),
         "",
     ]
@@ -387,26 +389,41 @@ def _discord_timeline_bucket(
     opportunities: Sequence[FundingOpportunity],
     today: date,
 ) -> list[str]:
-    lines = [f"**{title}**"]
+    lines = [f"### {title}"]
     if not opportunities:
-        lines.extend(["None.", ""])
+        lines.extend(["_None._", ""])
         return lines
 
-    for opportunity in opportunities:
-        lines.extend(_format_discord_timeline_opportunity(opportunity, today))
+    for index, opportunity in enumerate(opportunities, start=1):
+        lines.extend(_format_discord_timeline_opportunity(index, opportunity, today))
     lines.append("")
     return lines
 
 
 def _format_discord_timeline_opportunity(
+    index: int,
     opportunity: FundingOpportunity,
     today: date,
 ) -> list[str]:
-    return [
-        f"- **{opportunity.title}** - {_timeline_timing(opportunity, today)}; score {opportunity.relevance_score}",
-        f"  {opportunity.source} | {opportunity.display_funder()}",
-        f"  {opportunity.url or 'URL not available'}",
+    details = [
+        _discord_source_funder(opportunity),
+        _timeline_timing(opportunity, today),
+        f"score {opportunity.relevance_score}",
     ]
+    categories = _discord_categories(opportunity)
+    if categories:
+        details.append(categories)
+
+    lines = [
+        f"**{index}. {opportunity.title}**",
+        f"> {' | '.join(detail for detail in details if detail)}",
+    ]
+    if opportunity.url:
+        lines.append(f"> Link: <{opportunity.url}>")
+    else:
+        lines.append("> Link: not available")
+    lines.append("")
+    return lines
 
 
 def _sort_by_score(opportunities: Sequence[FundingOpportunity]) -> list[FundingOpportunity]:
@@ -587,28 +604,45 @@ def _format_opportunity(index: int, opportunity: FundingOpportunity) -> list[str
 
 
 def _format_discord_opportunity(index: int, opportunity: FundingOpportunity) -> list[str]:
-    categories = ", ".join(
-        category for category in opportunity.categories if category != "General / Low Match"
-    )
     matched = ", ".join(opportunity.matched_keywords[:5]) if opportunity.matched_keywords else "None"
     lines = [
-        f"{index}. **{opportunity.title}**",
-        f"   Score: {opportunity.relevance_score} | Source: {opportunity.source}",
+        f"**{index}. {opportunity.title}**",
+        f"> {_discord_source_funder(opportunity)} | Score: {opportunity.relevance_score}",
     ]
+    categories = _discord_categories(opportunity)
     if categories:
-        lines.append(f"   Categories: {categories}")
+        lines.append(f"> Topics: {categories}")
     if opportunity.amount or opportunity.closing_date:
         lines.append(
-            f"   Funding/deadline: {opportunity.amount or 'Not stated'} | "
+            f"> Funding/deadline: {opportunity.amount or 'Not stated'} | "
             f"{opportunity.closing_date or 'No closing date parsed'}"
         )
     if opportunity.change_summary:
-        lines.append(f"   Changes: {', '.join(opportunity.change_summary)}")
+        lines.append(f"> Changes: {', '.join(opportunity.change_summary)}")
+    if opportunity.url:
+        link = f"<{opportunity.url}>"
+    else:
+        link = "not available"
     lines.extend(
         [
-            f"   Keywords: {matched}",
-            f"   {opportunity.url or 'URL not available'}",
+            f"> Keywords: {matched}",
+            f"> Link: {link}",
             "",
         ]
     )
     return lines
+
+
+def _discord_categories(opportunity: FundingOpportunity) -> str:
+    return ", ".join(
+        category for category in opportunity.categories if category != "General / Low Match"
+    )
+
+
+def _discord_source_funder(opportunity: FundingOpportunity) -> str:
+    funder = opportunity.display_funder()
+    if not funder or funder == "Unknown":
+        return opportunity.source
+    if funder.casefold() == opportunity.source.casefold():
+        return opportunity.source
+    return f"{opportunity.source} | {funder}"

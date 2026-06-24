@@ -93,6 +93,8 @@ def test_reports_include_channel_appropriate_timeline_sections() -> None:
     assert "New funding calls:" in plain_text
     assert "Expiring within 30 days:" in plain_text
     assert "closes 2026-06-30 (16 days left)" in plain_text
-    assert "**Funding timeline**" in discord
-    assert "**Other ongoing**" in discord
-    assert "- **Soon call** - closes 2026-06-30 (16 days left); score 8" in discord
+    assert "## Funding Timeline" in discord
+    assert "### Other ongoing" in discord
+    assert "**1. Soon call**" in discord
+    assert "> Test | Example Funder | closes 2026-06-30 (16 days left) | score 8" in discord
+    assert "> Link: <https://example.test/soon>" in discord

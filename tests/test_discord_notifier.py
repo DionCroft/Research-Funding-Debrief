@@ -33,7 +33,11 @@ def test_discord_sends_via_bot_when_configured(monkeypatch) -> None:
     assert send_discord_report("hello", config=config) is True
     assert captured["url"].endswith("/channels/123456789/messages")
     assert captured["headers"]["Authorization"] == "Bot dummy-token"
-    assert captured["json"] == {"content": "hello"}
+    assert captured["json"] == {
+        "content": "hello",
+        "flags": 4,
+        "allowed_mentions": {"parse": []},
+    }
 
 
 def test_discord_splits_long_messages(monkeypatch) -> None:

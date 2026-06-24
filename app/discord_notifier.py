@@ -13,6 +13,7 @@ from app.config import Config, load_config
 logger = logging.getLogger(__name__)
 DISCORD_API_BASE_URL = "https://discord.com/api/v10"
 DISCORD_MESSAGE_LIMIT = 1900
+DISCORD_SUPPRESS_EMBEDS_FLAG = 4
 
 
 def send_discord_report(body: str, config: Config | None = None) -> bool:
@@ -74,7 +75,11 @@ def _send_via_bot(body: str, bot_token: str, channel_id: str) -> bool:
 
 
 def _message_payload(body: str) -> dict[str, Any]:
-    return {"content": body}
+    return {
+        "content": body,
+        "flags": DISCORD_SUPPRESS_EMBEDS_FLAG,
+        "allowed_mentions": {"parse": []},
+    }
 
 
 def _message_chunks(body: str) -> list[str]:
