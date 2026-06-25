@@ -88,6 +88,8 @@ The scheduled job:
 - refreshes `web/data/live-updates.json`
 - refreshes `web/data/live-updates.xml`
 - sends the compact Discord debrief when Discord is configured
+- commits and pushes refreshed JSON/RSS files when they have changed
+- triggers GitHub Pages to redeploy the latest committed snapshot
 - writes normal app logs to `logs/research_funding_debrief.log`
 
 The published GitHub Pages data endpoints are:
@@ -191,14 +193,10 @@ The deployment workflow publishes the committed static snapshot in `web/data/`. 
 regenerate live funding data on GitHub Actions, because Actions runners do not have the persistent
 local SQLite database needed to preserve `first_seen_at` and accurate `New`/`Seen` tracking.
 
-Generate the live data on the persistent scheduled machine instead, then commit and push the
-refreshed files:
+Generate and publish the live data from the persistent scheduled machine instead:
 
 ```bash
-python web/live_updates.py
-git add web/data/live-updates.json web/data/live-updates.xml
-git commit -m "Refresh live funding data"
-git push
+scripts/run_scheduled_debrief.sh
 ```
 
 The website reads the featured `items` list from the JSON snapshot. The RSS feed is generated from

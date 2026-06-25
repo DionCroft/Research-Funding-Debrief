@@ -1,63 +1,9 @@
 {
   "allItems": [
     {
-      "deadline": "24 June 2026",
-      "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
-      "opportunityTypes": [
-        "Innovation grants",
-        "Knowledge Transfer Partnerships",
-        "Industry collaboration"
-      ],
-      "publishedAt": "",
-      "publishedLabel": "Not provided by source",
-      "rawSource": "Innovate UK",
-      "relevanceLevel": "Send me a broad scan",
-      "relevanceScore": 3,
-      "source": "Innovate UK",
-      "status": "New \u00b7 Closing soon",
-      "statusLabels": [
-        "New",
-        "Closing soon"
-      ],
-      "title": "Ofgem Strategic Innovation Fund Discovery C6",
-      "topics": [
-        "KTP / Collaboration"
-      ],
-      "urgency": "8 days left",
-      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2484/overview/770c0946-2e24-4566-bab1-2bf1c1dd2b38"
-    },
-    {
-      "deadline": "24 June 2026",
-      "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
-      "opportunityTypes": [
-        "Innovation grants",
-        "Knowledge Transfer Partnerships",
-        "Industry collaboration"
-      ],
-      "publishedAt": "",
-      "publishedLabel": "Not provided by source",
-      "rawSource": "Innovate UK",
-      "relevanceLevel": "Send me a broad scan",
-      "relevanceScore": 3,
-      "source": "Innovate UK",
-      "status": "New \u00b7 Closing soon",
-      "statusLabels": [
-        "New",
-        "Closing soon"
-      ],
-      "title": "Ofgem Strategic Innovation Fund Round 5 Discovery C6",
-      "topics": [
-        "KTP / Collaboration"
-      ],
-      "urgency": "8 days left",
-      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2480/overview/96372f42-c714-4d17-91b0-dd75b9a80e17"
-    },
-    {
       "deadline": "8 July 2026 11:00am UK time",
       "firstSeenAt": "2026-06-16T11:23:50+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -70,9 +16,9 @@
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 9,
       "source": "UKRI",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "status": "Seen \u00b7 Closing soon \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Closing soon",
         "Ongoing"
       ],
@@ -81,13 +27,13 @@
         "Robotics / Automation",
         "KTP / Collaboration"
       ],
-      "urgency": "22 days left",
+      "urgency": "13 days left",
       "url": "https://www.ukri.org/opportunity/robotics-adoption-central-convening-body-summer-2026/"
     },
     {
       "deadline": "8 July 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -97,27 +43,26 @@
       "publishedAt": "",
       "publishedLabel": "Not provided by source",
       "rawSource": "Innovate UK",
-      "relevanceLevel": "Send me only highly relevant calls",
-      "relevanceScore": 9,
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 7,
       "source": "Innovate UK",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "status": "Seen \u00b7 Closing soon",
       "statusLabels": [
-        "New",
-        "Closing soon",
-        "Ongoing"
+        "Seen",
+        "Closing soon"
       ],
       "title": "Robotics Adoption Central Convening Body summer 2026",
       "topics": [
         "Robotics / Automation",
         "KTP / Collaboration"
       ],
-      "urgency": "22 days left",
+      "urgency": "13 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2504/overview/05f2babb-c5b0-4b37-80dc-3883b41bc2c7"
     },
     {
       "deadline": "8 July 2026 11:00am UK time",
       "firstSeenAt": "2026-06-15T15:44:37+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -129,9 +74,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "UKRI",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "status": "Seen \u00b7 Closing soon \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Closing soon",
         "Ongoing"
       ],
@@ -139,93 +84,13 @@
       "topics": [
         "KTP / Collaboration"
       ],
-      "urgency": "22 days left",
+      "urgency": "13 days left",
       "url": "https://www.ukri.org/opportunity/scaling-supply-chains-for-quantum-enabled-sensing-and-pnt/"
-    },
-    {
-      "deadline": "8 July 2026",
-      "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
-      "opportunityTypes": [
-        "Innovation grants",
-        "Knowledge Transfer Partnerships",
-        "Industry collaboration"
-      ],
-      "publishedAt": "",
-      "publishedLabel": "Not provided by source",
-      "rawSource": "Innovate UK",
-      "relevanceLevel": "Send me a balanced shortlist",
-      "relevanceScore": 5,
-      "source": "Innovate UK",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
-      "statusLabels": [
-        "New",
-        "Closing soon",
-        "Ongoing"
-      ],
-      "title": "Scaling Supply Chains for Quantum Enabled Sensing and PNT",
-      "topics": [
-        "KTP / Collaboration"
-      ],
-      "urgency": "22 days left",
-      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2495/overview/b2a4cd81-a226-4a11-83c8-966284542f59"
-    },
-    {
-      "deadline": "8 July 2026 11:00am UK time",
-      "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
-      "opportunityTypes": [
-        "Innovation grants"
-      ],
-      "publishedAt": "2026-06-02T11:46:57+00:00",
-      "publishedLabel": "2 June 2026",
-      "rawSource": "UKRI",
-      "relevanceLevel": "Send me a broad scan",
-      "relevanceScore": 3,
-      "source": "UKRI",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
-      "statusLabels": [
-        "New",
-        "Closing soon",
-        "Ongoing"
-      ],
-      "title": "ADOPT facilitator support grant: round 9",
-      "topics": [
-        "General / Low Match"
-      ],
-      "urgency": "22 days left",
-      "url": "https://www.ukri.org/opportunity/adopt-facilitator-support-grant-round-9/"
-    },
-    {
-      "deadline": "8 July 2026",
-      "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
-      "opportunityTypes": [
-        "Innovation grants"
-      ],
-      "publishedAt": "",
-      "publishedLabel": "Not provided by source",
-      "rawSource": "Innovate UK",
-      "relevanceLevel": "Send me a broad scan",
-      "relevanceScore": 3,
-      "source": "Innovate UK",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
-      "statusLabels": [
-        "New",
-        "Closing soon",
-        "Ongoing"
-      ],
-      "title": "ADOPT Facilitator Support Grant: Round 9",
-      "topics": [
-        "General / Low Match"
-      ],
-      "urgency": "22 days left",
-      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2482/overview/a17ac084-56fa-4679-8d35-1f5602f27d29"
     },
     {
       "deadline": "14 July 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-16T11:23:50+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Commercialisation / spinout support"
@@ -236,9 +101,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "UKRI",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "status": "Seen \u00b7 Closing soon \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Closing soon",
         "Ongoing"
       ],
@@ -248,13 +113,13 @@
         "Policy / Social Sciences",
         "Commercialisation / Translation"
       ],
-      "urgency": "28 days left",
+      "urgency": "19 days left",
       "url": "https://www.ukri.org/opportunity/ukri-metascience-impact-funding-invite-only/"
     },
     {
       "deadline": "16 July 2026",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Capital / equipment funding"
@@ -265,9 +130,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 4,
       "source": "UKRI",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "status": "Seen \u00b7 Closing soon \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Closing soon",
         "Ongoing"
       ],
@@ -277,13 +142,13 @@
         "Policy / Social Sciences",
         "Capital / Infrastructure"
       ],
-      "urgency": "30 days left",
+      "urgency": "21 days left",
       "url": "https://www.ukri.org/opportunity/future-data-services-sandpit-transforming-discovery-and-access/"
     },
     {
       "deadline": "17 July 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -296,9 +161,10 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 7,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Closing soon \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
+        "Closing soon",
         "Ongoing"
       ],
       "title": "AIRR compute opportunity: AI open access",
@@ -309,13 +175,13 @@
         "Climate / Environment",
         "Capital / Infrastructure"
       ],
-      "urgency": "31 days left",
+      "urgency": "22 days left",
       "url": "https://www.ukri.org/opportunity/airr-compute-opportunity-ai-open-access/"
     },
     {
       "deadline": "28 July 2026 11:00am UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -327,9 +193,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "ACTASAP pilot phase 1",
@@ -337,13 +203,13 @@
         "Wireless / Telecoms",
         "KTP / Collaboration"
       ],
-      "urgency": "42 days left",
+      "urgency": "33 days left",
       "url": "https://www.ukri.org/opportunity/actasap-pilot-phase-1/"
     },
     {
       "deadline": "28 July 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -355,22 +221,22 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "Innovate UK",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "ACTASAP Pilot Phase 1",
       "topics": [
         "KTP / Collaboration"
       ],
-      "urgency": "42 days left",
+      "urgency": "33 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2502/overview/35ca10fb-d4f5-4510-9ddd-e7e3133d2b6d"
     },
     {
       "deadline": "29 July 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -382,9 +248,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "Innovate UK",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Full ADOPT Grant: Round 8",
@@ -392,13 +258,13 @@
         "Clinical Evidence / Trials",
         "KTP / Collaboration"
       ],
-      "urgency": "43 days left",
+      "urgency": "34 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2491/overview/77ba6cb6-c14d-41f7-84de-e45446636e50"
     },
     {
       "deadline": "29 July 2026 11:00am UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants"
       ],
@@ -408,22 +274,110 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Full ADOPT grant: round eight",
       "topics": [
         "Clinical Evidence / Trials"
       ],
-      "urgency": "43 days left",
+      "urgency": "34 days left",
       "url": "https://www.ukri.org/opportunity/full-adopt-grant-round-eight/"
+    },
+    {
+      "deadline": "5 August 2026",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
+      "opportunityTypes": [
+        "Innovation grants",
+        "Commercialisation / spinout support"
+      ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 4,
+      "source": "Innovate UK",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "CfI: Earlier identification of UK children with SEN",
+      "topics": [
+        "Education / Skills",
+        "International / Horizon Europe",
+        "Commercialisation / Translation"
+      ],
+      "urgency": "41 days left",
+      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2511/overview/cc9f4bb9-55a5-4b4c-9843-015c385e021f"
+    },
+    {
+      "deadline": "11 August 2026 11:00am UK time",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "publishedAt": "2026-06-23T15:10:06+00:00",
+      "publishedLabel": "23 June 2026",
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 5,
+      "source": "UKRI",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "Next Wave: Breakthrough Wave 1",
+      "topics": [
+        "Clinical Evidence / Trials",
+        "Manufacturing / Industry 4.0",
+        "KTP / Collaboration"
+      ],
+      "urgency": "47 days left",
+      "url": "https://www.ukri.org/opportunity/next-wave-breakthrough-wave-1/"
+    },
+    {
+      "deadline": "11 August 2026",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 5,
+      "source": "Innovate UK",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "Next Wave: Breakthrough Wave 1",
+      "topics": [
+        "Clinical Evidence / Trials",
+        "Manufacturing / Industry 4.0",
+        "KTP / Collaboration"
+      ],
+      "urgency": "47 days left",
+      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2517/overview/6ff2066d-4639-44e6-bb4f-ce7099222739"
     },
     {
       "deadline": "20 August 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -435,9 +389,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Hybrid Algorithms for Quantum Advantage",
@@ -445,13 +399,13 @@
         "AI / Data",
         "KTP / Collaboration"
       ],
-      "urgency": "65 days left",
+      "urgency": "56 days left",
       "url": "https://www.ukri.org/opportunity/hybrid-algorithms-for-quantum-advantage/"
     },
     {
       "deadline": "26 August 2026 11:00am UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -465,9 +419,9 @@
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 10,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Consumer Led Flexibility for the Clean Energy Superpower Mission",
@@ -476,13 +430,13 @@
         "KTP / Collaboration",
         "Commercialisation / Translation"
       ],
-      "urgency": "71 days left",
+      "urgency": "62 days left",
       "url": "https://www.ukri.org/opportunity/consumer-led-flexibility-for-the-clean-energy-superpower-mission/"
     },
     {
       "deadline": "26 August 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -496,9 +450,9 @@
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 10,
       "source": "Innovate UK",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Consumer Led Flexibility for the Clean Energy Superpower Mission",
@@ -507,44 +461,98 @@
         "KTP / Collaboration",
         "Commercialisation / Translation"
       ],
-      "urgency": "71 days left",
+      "urgency": "62 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2509/overview/c1794f5a-06bf-41bb-8a13-3e657dacef54"
     },
     {
-      "deadline": "2 September 2026 4:00pm UK time",
-      "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "deadline": "26 August 2026 4:00pm UK time",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
-        "Fellowships",
-        "Studentships / PhD funding",
+        "Innovation grants",
         "Knowledge Transfer Partnerships",
-        "Industry collaboration"
+        "Industry collaboration",
+        "Capital / equipment funding",
+        "Commercialisation / spinout support"
       ],
-      "publishedAt": "2026-06-04T08:00:06+00:00",
-      "publishedLabel": "4 June 2026",
+      "publishedAt": "2026-06-17T15:46:21+00:00",
+      "publishedLabel": "17 June 2026",
       "rawSource": "UKRI",
-      "relevanceLevel": "Send me a balanced shortlist",
-      "relevanceScore": 6,
+      "relevanceLevel": "Send me only highly relevant calls",
+      "relevanceScore": 9,
       "source": "UKRI",
       "status": "New \u00b7 Ongoing",
       "statusLabels": [
         "New",
         "Ongoing"
       ],
-      "title": "Early independence: clinician scientist fellowship",
+      "title": "UKRI Translation: STFC Proof of Concept",
       "topics": [
-        "Digital Health",
         "KTP / Collaboration",
-        "Fellowships"
+        "Capital / Infrastructure",
+        "Commercialisation / Translation"
       ],
-      "urgency": "78 days left",
-      "url": "https://www.ukri.org/opportunity/early-independence-clinician-scientist-fellowship/"
+      "urgency": "62 days left",
+      "url": "https://www.ukri.org/opportunity/ukri-translation-stfc-proof-of-concept/"
+    },
+    {
+      "deadline": "3 September 2026",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 5,
+      "source": "Innovate UK",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "UK-Switzerland CR&D Round 3",
+      "topics": [
+        "KTP / Collaboration"
+      ],
+      "urgency": "70 days left",
+      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2512/overview/2f0a03c4-44b7-42dc-8845-70751b6bc531"
+    },
+    {
+      "deadline": "3 September 2026 11:00am UK time",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
+      "opportunityTypes": [
+        "Innovation grants"
+      ],
+      "publishedAt": "2026-06-22T14:19:58+00:00",
+      "publishedLabel": "22 June 2026",
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
+      "source": "UKRI",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "UK-Switzerland CR&D Round 3",
+      "topics": [
+        "General / Low Match"
+      ],
+      "urgency": "70 days left",
+      "url": "https://www.ukri.org/opportunity/uk-switzerland-crd-round-3/"
     },
     {
       "deadline": "8 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -556,9 +564,9 @@
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 10,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Aviation\u2019s non-CO2 impacts on the climate 2026",
@@ -568,13 +576,13 @@
         "Space / Aerospace",
         "KTP / Collaboration"
       ],
-      "urgency": "84 days left",
+      "urgency": "75 days left",
       "url": "https://www.ukri.org/opportunity/aviations-non-co2-impacts-on-the-climate-2026/"
     },
     {
       "deadline": "8 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-15T15:44:37+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -586,9 +594,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Expression of interest: Japan-UK joint call for collaborations in Advanced Connectivity Technologies",
@@ -597,13 +605,13 @@
         "KTP / Collaboration",
         "International / Horizon Europe"
       ],
-      "urgency": "84 days left",
+      "urgency": "75 days left",
       "url": "https://www.ukri.org/opportunity/japan-uk-joint-call-for-collaborations-in-advanced-connectivity-technologies/"
     },
     {
       "deadline": "8 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-16T13:51:41+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -613,22 +621,22 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "UK Japan Civil Nuclear Research Programme 2026",
       "topics": [
         "Policy / Social Sciences"
       ],
-      "urgency": "84 days left",
+      "urgency": "75 days left",
       "url": "https://www.ukri.org/opportunity/uk-japan-civil-nuclear-research-programme-2026/"
     },
     {
       "deadline": "10 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -641,9 +649,9 @@
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 14,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Sector transition: UKRI policy fellowships 2026",
@@ -658,13 +666,13 @@
         "Capital / Infrastructure",
         "International / Horizon Europe"
       ],
-      "urgency": "86 days left",
+      "urgency": "77 days left",
       "url": "https://www.ukri.org/opportunity/sector-transition-ukri-policy-fellowships-2026/"
     },
     {
       "deadline": "15 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Fellowships",
@@ -678,9 +686,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 6,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Early independence: career development fellowship",
@@ -690,13 +698,13 @@
         "Fellowships",
         "Early Career"
       ],
-      "urgency": "91 days left",
+      "urgency": "82 days left",
       "url": "https://www.ukri.org/opportunity/early-independence-career-development-fellowship/"
     },
     {
       "deadline": "15 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Capital / equipment funding",
@@ -708,9 +716,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "UKRI Translation: Impact Acceleration Accounts 2027",
@@ -719,13 +727,13 @@
         "Capital / Infrastructure",
         "Commercialisation / Translation"
       ],
-      "urgency": "91 days left",
+      "urgency": "82 days left",
       "url": "https://www.ukri.org/opportunity/ukri-translation-impact-acceleration-accounts-2027/"
     },
     {
       "deadline": "17 September 2026",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Knowledge Transfer Partnerships",
         "Industry collaboration",
@@ -737,9 +745,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 4,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Funding for STFC core summer schools for 2027",
@@ -749,44 +757,13 @@
         "KTP / Collaboration",
         "Capital / Infrastructure"
       ],
-      "urgency": "93 days left",
+      "urgency": "84 days left",
       "url": "https://www.ukri.org/opportunity/funding-for-stfc-core-summer-schools/"
-    },
-    {
-      "deadline": "30 September 2026 4:00pm UK time",
-      "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
-      "opportunityTypes": [
-        "Research grants",
-        "Fellowships",
-        "Knowledge Transfer Partnerships",
-        "Industry collaboration",
-        "Capital / equipment funding"
-      ],
-      "publishedAt": "2026-06-03T15:37:35+00:00",
-      "publishedLabel": "3 June 2026",
-      "rawSource": "UKRI",
-      "relevanceLevel": "Send me only highly relevant calls",
-      "relevanceScore": 9,
-      "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
-      "statusLabels": [
-        "New",
-        "Ongoing"
-      ],
-      "title": "Early Independence: Ernest Rutherford Fellowships 2026",
-      "topics": [
-        "KTP / Collaboration",
-        "Fellowships",
-        "Capital / Infrastructure"
-      ],
-      "urgency": "106 days left",
-      "url": "https://www.ukri.org/opportunity/early-independence-ernest-rutherford-fellowships-2026/"
     },
     {
       "deadline": "4 November 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -800,9 +777,9 @@
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 9,
       "source": "Innovate UK",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Future Leaders Fellowships: Round 11, business and non-academic",
@@ -810,13 +787,13 @@
         "KTP / Collaboration",
         "Fellowships"
       ],
-      "urgency": "141 days left",
+      "urgency": "132 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2499/overview/60da9000-d438-47fb-92aa-e8d9435a17ab"
     },
     {
       "deadline": "31 March 2035, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -826,9 +803,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 6,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Community and Environment Fund (CEF) and Business and Local Economy Fund (BLEF)",
@@ -839,9 +816,39 @@
       "url": "https://www.find-government-grants.service.gov.uk/grants/community-and-environment-fund-cef-and-business-and-local-economy-fund-blef-1"
     },
     {
+      "deadline": "No submission deadline",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
+      "opportunityTypes": [
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration",
+        "Capital / equipment funding"
+      ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 6,
+      "source": "Innovate UK",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "DRIVE35: Scale Up Fund",
+      "topics": [
+        "Manufacturing / Industry 4.0",
+        "KTP / Collaboration",
+        "Capital / Infrastructure"
+      ],
+      "urgency": "Deadline not parsed",
+      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2445/overview/a850ba04-f0b3-42c5-8dfa-03375731a884"
+    },
+    {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -851,9 +858,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "England Woodland Creation Offer",
@@ -866,7 +873,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -876,9 +883,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Trees, woodlands and forestry - Woodland Creation Planning Grant",
@@ -891,7 +898,7 @@
     {
       "deadline": "31 December 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Capital / equipment funding"
       ],
@@ -901,9 +908,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 4,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Boiler Upgrade Scheme",
@@ -918,7 +925,7 @@
     {
       "deadline": "31 March 2029, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Capital / equipment funding"
       ],
@@ -928,9 +935,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 4,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Tree Health Pilot",
@@ -945,7 +952,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Capital / equipment funding"
       ],
@@ -955,9 +962,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 4,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Workplace Charging Scheme",
@@ -970,7 +977,7 @@
     {
       "deadline": "29 March 2027, 5:00pm",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -980,9 +987,9 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Commissioned Rehabilitative Services General Grant Scheme",
@@ -995,7 +1002,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -1005,9 +1012,9 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Electric Vehicle Chargepoint Grant for Renters and Flat Owners",
@@ -1020,7 +1027,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -1030,9 +1037,9 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Electric vehicle chargepoint grant for renters and flat owners",
@@ -1045,7 +1052,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -1055,9 +1062,9 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Electric vehicle chargepoint grant for residential landlords",
@@ -1070,7 +1077,7 @@
     {
       "deadline": "Open - no closing date",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Commercialisation / spinout support"
@@ -1081,9 +1088,9 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Innovation Loans Expression of Interest",
@@ -1096,7 +1103,7 @@
     {
       "deadline": "No submission deadline",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Commercialisation / spinout support"
@@ -1107,9 +1114,9 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
       "source": "Innovate UK",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Innovation Loans Expression of Interest",
@@ -1120,66 +1127,12 @@
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2505/overview/8ef63f10-ea07-4ffd-9812-e944542751b6"
     }
   ],
-  "generatedAt": "2026-06-16T20:10:15+01:00",
+  "generatedAt": "2026-06-25T01:13:29+01:00",
   "items": [
-    {
-      "deadline": "24 June 2026",
-      "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
-      "opportunityTypes": [
-        "Innovation grants",
-        "Knowledge Transfer Partnerships",
-        "Industry collaboration"
-      ],
-      "publishedAt": "",
-      "publishedLabel": "Not provided by source",
-      "rawSource": "Innovate UK",
-      "relevanceLevel": "Send me a broad scan",
-      "relevanceScore": 3,
-      "source": "Innovate UK",
-      "status": "New \u00b7 Closing soon",
-      "statusLabels": [
-        "New",
-        "Closing soon"
-      ],
-      "title": "Ofgem Strategic Innovation Fund Discovery C6",
-      "topics": [
-        "KTP / Collaboration"
-      ],
-      "urgency": "8 days left",
-      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2484/overview/770c0946-2e24-4566-bab1-2bf1c1dd2b38"
-    },
-    {
-      "deadline": "24 June 2026",
-      "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
-      "opportunityTypes": [
-        "Innovation grants",
-        "Knowledge Transfer Partnerships",
-        "Industry collaboration"
-      ],
-      "publishedAt": "",
-      "publishedLabel": "Not provided by source",
-      "rawSource": "Innovate UK",
-      "relevanceLevel": "Send me a broad scan",
-      "relevanceScore": 3,
-      "source": "Innovate UK",
-      "status": "New \u00b7 Closing soon",
-      "statusLabels": [
-        "New",
-        "Closing soon"
-      ],
-      "title": "Ofgem Strategic Innovation Fund Round 5 Discovery C6",
-      "topics": [
-        "KTP / Collaboration"
-      ],
-      "urgency": "8 days left",
-      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2480/overview/96372f42-c714-4d17-91b0-dd75b9a80e17"
-    },
     {
       "deadline": "8 July 2026 11:00am UK time",
       "firstSeenAt": "2026-06-16T11:23:50+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1192,9 +1145,9 @@
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 9,
       "source": "UKRI",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "status": "Seen \u00b7 Closing soon \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Closing soon",
         "Ongoing"
       ],
@@ -1203,13 +1156,13 @@
         "Robotics / Automation",
         "KTP / Collaboration"
       ],
-      "urgency": "22 days left",
+      "urgency": "13 days left",
       "url": "https://www.ukri.org/opportunity/robotics-adoption-central-convening-body-summer-2026/"
     },
     {
       "deadline": "8 July 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1219,27 +1172,26 @@
       "publishedAt": "",
       "publishedLabel": "Not provided by source",
       "rawSource": "Innovate UK",
-      "relevanceLevel": "Send me only highly relevant calls",
-      "relevanceScore": 9,
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 7,
       "source": "Innovate UK",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "status": "Seen \u00b7 Closing soon",
       "statusLabels": [
-        "New",
-        "Closing soon",
-        "Ongoing"
+        "Seen",
+        "Closing soon"
       ],
       "title": "Robotics Adoption Central Convening Body summer 2026",
       "topics": [
         "Robotics / Automation",
         "KTP / Collaboration"
       ],
-      "urgency": "22 days left",
+      "urgency": "13 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2504/overview/05f2babb-c5b0-4b37-80dc-3883b41bc2c7"
     },
     {
       "deadline": "8 July 2026 11:00am UK time",
       "firstSeenAt": "2026-06-15T15:44:37+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -1251,9 +1203,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "UKRI",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "status": "Seen \u00b7 Closing soon \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Closing soon",
         "Ongoing"
       ],
@@ -1261,93 +1213,13 @@
       "topics": [
         "KTP / Collaboration"
       ],
-      "urgency": "22 days left",
+      "urgency": "13 days left",
       "url": "https://www.ukri.org/opportunity/scaling-supply-chains-for-quantum-enabled-sensing-and-pnt/"
-    },
-    {
-      "deadline": "8 July 2026",
-      "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
-      "opportunityTypes": [
-        "Innovation grants",
-        "Knowledge Transfer Partnerships",
-        "Industry collaboration"
-      ],
-      "publishedAt": "",
-      "publishedLabel": "Not provided by source",
-      "rawSource": "Innovate UK",
-      "relevanceLevel": "Send me a balanced shortlist",
-      "relevanceScore": 5,
-      "source": "Innovate UK",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
-      "statusLabels": [
-        "New",
-        "Closing soon",
-        "Ongoing"
-      ],
-      "title": "Scaling Supply Chains for Quantum Enabled Sensing and PNT",
-      "topics": [
-        "KTP / Collaboration"
-      ],
-      "urgency": "22 days left",
-      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2495/overview/b2a4cd81-a226-4a11-83c8-966284542f59"
-    },
-    {
-      "deadline": "8 July 2026 11:00am UK time",
-      "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
-      "opportunityTypes": [
-        "Innovation grants"
-      ],
-      "publishedAt": "2026-06-02T11:46:57+00:00",
-      "publishedLabel": "2 June 2026",
-      "rawSource": "UKRI",
-      "relevanceLevel": "Send me a broad scan",
-      "relevanceScore": 3,
-      "source": "UKRI",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
-      "statusLabels": [
-        "New",
-        "Closing soon",
-        "Ongoing"
-      ],
-      "title": "ADOPT facilitator support grant: round 9",
-      "topics": [
-        "General / Low Match"
-      ],
-      "urgency": "22 days left",
-      "url": "https://www.ukri.org/opportunity/adopt-facilitator-support-grant-round-9/"
-    },
-    {
-      "deadline": "8 July 2026",
-      "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
-      "opportunityTypes": [
-        "Innovation grants"
-      ],
-      "publishedAt": "",
-      "publishedLabel": "Not provided by source",
-      "rawSource": "Innovate UK",
-      "relevanceLevel": "Send me a broad scan",
-      "relevanceScore": 3,
-      "source": "Innovate UK",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
-      "statusLabels": [
-        "New",
-        "Closing soon",
-        "Ongoing"
-      ],
-      "title": "ADOPT Facilitator Support Grant: Round 9",
-      "topics": [
-        "General / Low Match"
-      ],
-      "urgency": "22 days left",
-      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2482/overview/a17ac084-56fa-4679-8d35-1f5602f27d29"
     },
     {
       "deadline": "14 July 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-16T11:23:50+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Commercialisation / spinout support"
@@ -1358,9 +1230,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "UKRI",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "status": "Seen \u00b7 Closing soon \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Closing soon",
         "Ongoing"
       ],
@@ -1370,13 +1242,13 @@
         "Policy / Social Sciences",
         "Commercialisation / Translation"
       ],
-      "urgency": "28 days left",
+      "urgency": "19 days left",
       "url": "https://www.ukri.org/opportunity/ukri-metascience-impact-funding-invite-only/"
     },
     {
       "deadline": "16 July 2026",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Capital / equipment funding"
@@ -1387,9 +1259,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 4,
       "source": "UKRI",
-      "status": "New \u00b7 Closing soon \u00b7 Ongoing",
+      "status": "Seen \u00b7 Closing soon \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Closing soon",
         "Ongoing"
       ],
@@ -1399,13 +1271,13 @@
         "Policy / Social Sciences",
         "Capital / Infrastructure"
       ],
-      "urgency": "30 days left",
+      "urgency": "21 days left",
       "url": "https://www.ukri.org/opportunity/future-data-services-sandpit-transforming-discovery-and-access/"
     },
     {
       "deadline": "17 July 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1418,9 +1290,10 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 7,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Closing soon \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
+        "Closing soon",
         "Ongoing"
       ],
       "title": "AIRR compute opportunity: AI open access",
@@ -1431,13 +1304,13 @@
         "Climate / Environment",
         "Capital / Infrastructure"
       ],
-      "urgency": "31 days left",
+      "urgency": "22 days left",
       "url": "https://www.ukri.org/opportunity/airr-compute-opportunity-ai-open-access/"
     },
     {
       "deadline": "28 July 2026 11:00am UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -1449,9 +1322,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "ACTASAP pilot phase 1",
@@ -1459,13 +1332,13 @@
         "Wireless / Telecoms",
         "KTP / Collaboration"
       ],
-      "urgency": "42 days left",
+      "urgency": "33 days left",
       "url": "https://www.ukri.org/opportunity/actasap-pilot-phase-1/"
     },
     {
       "deadline": "28 July 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -1477,22 +1350,22 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "Innovate UK",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "ACTASAP Pilot Phase 1",
       "topics": [
         "KTP / Collaboration"
       ],
-      "urgency": "42 days left",
+      "urgency": "33 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2502/overview/35ca10fb-d4f5-4510-9ddd-e7e3133d2b6d"
     },
     {
       "deadline": "29 July 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -1504,9 +1377,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "Innovate UK",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Full ADOPT Grant: Round 8",
@@ -1514,13 +1387,13 @@
         "Clinical Evidence / Trials",
         "KTP / Collaboration"
       ],
-      "urgency": "43 days left",
+      "urgency": "34 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2491/overview/77ba6cb6-c14d-41f7-84de-e45446636e50"
     },
     {
       "deadline": "29 July 2026 11:00am UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants"
       ],
@@ -1530,22 +1403,110 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Full ADOPT grant: round eight",
       "topics": [
         "Clinical Evidence / Trials"
       ],
-      "urgency": "43 days left",
+      "urgency": "34 days left",
       "url": "https://www.ukri.org/opportunity/full-adopt-grant-round-eight/"
+    },
+    {
+      "deadline": "5 August 2026",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
+      "opportunityTypes": [
+        "Innovation grants",
+        "Commercialisation / spinout support"
+      ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 4,
+      "source": "Innovate UK",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "CfI: Earlier identification of UK children with SEN",
+      "topics": [
+        "Education / Skills",
+        "International / Horizon Europe",
+        "Commercialisation / Translation"
+      ],
+      "urgency": "41 days left",
+      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2511/overview/cc9f4bb9-55a5-4b4c-9843-015c385e021f"
+    },
+    {
+      "deadline": "11 August 2026 11:00am UK time",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "publishedAt": "2026-06-23T15:10:06+00:00",
+      "publishedLabel": "23 June 2026",
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 5,
+      "source": "UKRI",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "Next Wave: Breakthrough Wave 1",
+      "topics": [
+        "Clinical Evidence / Trials",
+        "Manufacturing / Industry 4.0",
+        "KTP / Collaboration"
+      ],
+      "urgency": "47 days left",
+      "url": "https://www.ukri.org/opportunity/next-wave-breakthrough-wave-1/"
+    },
+    {
+      "deadline": "11 August 2026",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 5,
+      "source": "Innovate UK",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "Next Wave: Breakthrough Wave 1",
+      "topics": [
+        "Clinical Evidence / Trials",
+        "Manufacturing / Industry 4.0",
+        "KTP / Collaboration"
+      ],
+      "urgency": "47 days left",
+      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2517/overview/6ff2066d-4639-44e6-bb4f-ce7099222739"
     },
     {
       "deadline": "20 August 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -1557,9 +1518,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Hybrid Algorithms for Quantum Advantage",
@@ -1567,13 +1528,13 @@
         "AI / Data",
         "KTP / Collaboration"
       ],
-      "urgency": "65 days left",
+      "urgency": "56 days left",
       "url": "https://www.ukri.org/opportunity/hybrid-algorithms-for-quantum-advantage/"
     },
     {
       "deadline": "26 August 2026 11:00am UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1587,9 +1548,9 @@
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 10,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Consumer Led Flexibility for the Clean Energy Superpower Mission",
@@ -1598,13 +1559,13 @@
         "KTP / Collaboration",
         "Commercialisation / Translation"
       ],
-      "urgency": "71 days left",
+      "urgency": "62 days left",
       "url": "https://www.ukri.org/opportunity/consumer-led-flexibility-for-the-clean-energy-superpower-mission/"
     },
     {
       "deadline": "26 August 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1618,9 +1579,9 @@
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 10,
       "source": "Innovate UK",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Consumer Led Flexibility for the Clean Energy Superpower Mission",
@@ -1629,44 +1590,98 @@
         "KTP / Collaboration",
         "Commercialisation / Translation"
       ],
-      "urgency": "71 days left",
+      "urgency": "62 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2509/overview/c1794f5a-06bf-41bb-8a13-3e657dacef54"
     },
     {
-      "deadline": "2 September 2026 4:00pm UK time",
-      "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "deadline": "26 August 2026 4:00pm UK time",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
-        "Fellowships",
-        "Studentships / PhD funding",
+        "Innovation grants",
         "Knowledge Transfer Partnerships",
-        "Industry collaboration"
+        "Industry collaboration",
+        "Capital / equipment funding",
+        "Commercialisation / spinout support"
       ],
-      "publishedAt": "2026-06-04T08:00:06+00:00",
-      "publishedLabel": "4 June 2026",
+      "publishedAt": "2026-06-17T15:46:21+00:00",
+      "publishedLabel": "17 June 2026",
       "rawSource": "UKRI",
-      "relevanceLevel": "Send me a balanced shortlist",
-      "relevanceScore": 6,
+      "relevanceLevel": "Send me only highly relevant calls",
+      "relevanceScore": 9,
       "source": "UKRI",
       "status": "New \u00b7 Ongoing",
       "statusLabels": [
         "New",
         "Ongoing"
       ],
-      "title": "Early independence: clinician scientist fellowship",
+      "title": "UKRI Translation: STFC Proof of Concept",
       "topics": [
-        "Digital Health",
         "KTP / Collaboration",
-        "Fellowships"
+        "Capital / Infrastructure",
+        "Commercialisation / Translation"
       ],
-      "urgency": "78 days left",
-      "url": "https://www.ukri.org/opportunity/early-independence-clinician-scientist-fellowship/"
+      "urgency": "62 days left",
+      "url": "https://www.ukri.org/opportunity/ukri-translation-stfc-proof-of-concept/"
+    },
+    {
+      "deadline": "3 September 2026",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 5,
+      "source": "Innovate UK",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "UK-Switzerland CR&D Round 3",
+      "topics": [
+        "KTP / Collaboration"
+      ],
+      "urgency": "70 days left",
+      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2512/overview/2f0a03c4-44b7-42dc-8845-70751b6bc531"
+    },
+    {
+      "deadline": "3 September 2026 11:00am UK time",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
+      "opportunityTypes": [
+        "Innovation grants"
+      ],
+      "publishedAt": "2026-06-22T14:19:58+00:00",
+      "publishedLabel": "22 June 2026",
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a broad scan",
+      "relevanceScore": 3,
+      "source": "UKRI",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "UK-Switzerland CR&D Round 3",
+      "topics": [
+        "General / Low Match"
+      ],
+      "urgency": "70 days left",
+      "url": "https://www.ukri.org/opportunity/uk-switzerland-crd-round-3/"
     },
     {
       "deadline": "8 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -1678,9 +1693,9 @@
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 10,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Aviation\u2019s non-CO2 impacts on the climate 2026",
@@ -1690,13 +1705,13 @@
         "Space / Aerospace",
         "KTP / Collaboration"
       ],
-      "urgency": "84 days left",
+      "urgency": "75 days left",
       "url": "https://www.ukri.org/opportunity/aviations-non-co2-impacts-on-the-climate-2026/"
     },
     {
       "deadline": "8 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-15T15:44:37+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -1708,9 +1723,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Expression of interest: Japan-UK joint call for collaborations in Advanced Connectivity Technologies",
@@ -1719,13 +1734,13 @@
         "KTP / Collaboration",
         "International / Horizon Europe"
       ],
-      "urgency": "84 days left",
+      "urgency": "75 days left",
       "url": "https://www.ukri.org/opportunity/japan-uk-joint-call-for-collaborations-in-advanced-connectivity-technologies/"
     },
     {
       "deadline": "8 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-16T13:51:41+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -1735,22 +1750,22 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "UK Japan Civil Nuclear Research Programme 2026",
       "topics": [
         "Policy / Social Sciences"
       ],
-      "urgency": "84 days left",
+      "urgency": "75 days left",
       "url": "https://www.ukri.org/opportunity/uk-japan-civil-nuclear-research-programme-2026/"
     },
     {
       "deadline": "10 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1763,9 +1778,9 @@
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 14,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Sector transition: UKRI policy fellowships 2026",
@@ -1780,13 +1795,13 @@
         "Capital / Infrastructure",
         "International / Horizon Europe"
       ],
-      "urgency": "86 days left",
+      "urgency": "77 days left",
       "url": "https://www.ukri.org/opportunity/sector-transition-ukri-policy-fellowships-2026/"
     },
     {
       "deadline": "15 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Fellowships",
@@ -1800,9 +1815,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 6,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Early independence: career development fellowship",
@@ -1812,13 +1827,13 @@
         "Fellowships",
         "Early Career"
       ],
-      "urgency": "91 days left",
+      "urgency": "82 days left",
       "url": "https://www.ukri.org/opportunity/early-independence-career-development-fellowship/"
     },
     {
       "deadline": "15 September 2026 4:00pm UK time",
       "firstSeenAt": "2026-06-16T11:23:51+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Capital / equipment funding",
@@ -1830,9 +1845,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "UKRI Translation: Impact Acceleration Accounts 2027",
@@ -1841,13 +1856,13 @@
         "Capital / Infrastructure",
         "Commercialisation / Translation"
       ],
-      "urgency": "91 days left",
+      "urgency": "82 days left",
       "url": "https://www.ukri.org/opportunity/ukri-translation-impact-acceleration-accounts-2027/"
     },
     {
       "deadline": "17 September 2026",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Knowledge Transfer Partnerships",
         "Industry collaboration",
@@ -1859,9 +1874,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 4,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Funding for STFC core summer schools for 2027",
@@ -1871,44 +1886,13 @@
         "KTP / Collaboration",
         "Capital / Infrastructure"
       ],
-      "urgency": "93 days left",
+      "urgency": "84 days left",
       "url": "https://www.ukri.org/opportunity/funding-for-stfc-core-summer-schools/"
-    },
-    {
-      "deadline": "30 September 2026 4:00pm UK time",
-      "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
-      "opportunityTypes": [
-        "Research grants",
-        "Fellowships",
-        "Knowledge Transfer Partnerships",
-        "Industry collaboration",
-        "Capital / equipment funding"
-      ],
-      "publishedAt": "2026-06-03T15:37:35+00:00",
-      "publishedLabel": "3 June 2026",
-      "rawSource": "UKRI",
-      "relevanceLevel": "Send me only highly relevant calls",
-      "relevanceScore": 9,
-      "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
-      "statusLabels": [
-        "New",
-        "Ongoing"
-      ],
-      "title": "Early Independence: Ernest Rutherford Fellowships 2026",
-      "topics": [
-        "KTP / Collaboration",
-        "Fellowships",
-        "Capital / Infrastructure"
-      ],
-      "urgency": "106 days left",
-      "url": "https://www.ukri.org/opportunity/early-independence-ernest-rutherford-fellowships-2026/"
     },
     {
       "deadline": "4 November 2026",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1922,9 +1906,9 @@
       "relevanceLevel": "Send me only highly relevant calls",
       "relevanceScore": 9,
       "source": "Innovate UK",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Future Leaders Fellowships: Round 11, business and non-academic",
@@ -1932,13 +1916,13 @@
         "KTP / Collaboration",
         "Fellowships"
       ],
-      "urgency": "141 days left",
+      "urgency": "132 days left",
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2499/overview/60da9000-d438-47fb-92aa-e8d9435a17ab"
     },
     {
       "deadline": "31 March 2035, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -1948,9 +1932,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 6,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Community and Environment Fund (CEF) and Business and Local Economy Fund (BLEF)",
@@ -1961,9 +1945,39 @@
       "url": "https://www.find-government-grants.service.gov.uk/grants/community-and-environment-fund-cef-and-business-and-local-economy-fund-blef-1"
     },
     {
+      "deadline": "No submission deadline",
+      "firstSeenAt": "2026-06-24T22:22:29+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
+      "opportunityTypes": [
+        "Innovation grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration",
+        "Capital / equipment funding"
+      ],
+      "publishedAt": "",
+      "publishedLabel": "Not provided by source",
+      "rawSource": "Innovate UK",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 6,
+      "source": "Innovate UK",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "DRIVE35: Scale Up Fund",
+      "topics": [
+        "Manufacturing / Industry 4.0",
+        "KTP / Collaboration",
+        "Capital / Infrastructure"
+      ],
+      "urgency": "Deadline not parsed",
+      "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2445/overview/a850ba04-f0b3-42c5-8dfa-03375731a884"
+    },
+    {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -1973,9 +1987,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "England Woodland Creation Offer",
@@ -1988,7 +2002,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -1998,9 +2012,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 5,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Trees, woodlands and forestry - Woodland Creation Planning Grant",
@@ -2013,7 +2027,7 @@
     {
       "deadline": "31 December 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Capital / equipment funding"
       ],
@@ -2023,9 +2037,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 4,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Boiler Upgrade Scheme",
@@ -2040,7 +2054,7 @@
     {
       "deadline": "31 March 2029, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Capital / equipment funding"
       ],
@@ -2050,9 +2064,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 4,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Tree Health Pilot",
@@ -2067,7 +2081,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Capital / equipment funding"
       ],
@@ -2077,9 +2091,9 @@
       "relevanceLevel": "Send me a balanced shortlist",
       "relevanceScore": 4,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Workplace Charging Scheme",
@@ -2092,7 +2106,7 @@
     {
       "deadline": "29 March 2027, 5:00pm",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -2102,9 +2116,9 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Commissioned Rehabilitative Services General Grant Scheme",
@@ -2117,7 +2131,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -2127,9 +2141,9 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Electric Vehicle Chargepoint Grant for Renters and Flat Owners",
@@ -2142,7 +2156,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -2152,9 +2166,9 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Electric vehicle chargepoint grant for renters and flat owners",
@@ -2167,7 +2181,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:29+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -2177,9 +2191,9 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "GOV.UK Find a Grant",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Electric vehicle chargepoint grant for residential landlords",
@@ -2192,7 +2206,7 @@
     {
       "deadline": "Open - no closing date",
       "firstSeenAt": "2026-06-12T10:52:24+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Commercialisation / spinout support"
@@ -2203,9 +2217,9 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 3,
       "source": "UKRI",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Innovation Loans Expression of Interest",
@@ -2218,7 +2232,7 @@
     {
       "deadline": "No submission deadline",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-06-16T19:10:15+00:00",
+      "lastSeenAt": "2026-06-25T00:13:28+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Commercialisation / spinout support"
@@ -2229,9 +2243,9 @@
       "relevanceLevel": "Send me a broad scan",
       "relevanceScore": 2,
       "source": "Innovate UK",
-      "status": "New \u00b7 Ongoing",
+      "status": "Seen \u00b7 Ongoing",
       "statusLabels": [
-        "New",
+        "Seen",
         "Ongoing"
       ],
       "title": "Innovation Loans Expression of Interest",
@@ -2248,7 +2262,7 @@
     "UKRI": 20
   },
   "summary": {
-    "closingSoon": 10,
+    "closingSoon": 6,
     "featuredCalls": 40,
     "rssCalls": 40,
     "sourcesScanned": 3,

@@ -10,5 +10,6 @@ venv/
 .venv/
 data/*.db
 data/*.db-*
+.scheduled_debrief.lock
 logs/*.log
 logs/*.log.*
