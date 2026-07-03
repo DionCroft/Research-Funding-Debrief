@@ -19,7 +19,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deploy_attempt_1.outputs.page_url || steps.deploy_attempt_2.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -42,5 +42,22 @@ jobs:
           path: _site
 
       - name: Deploy to GitHub Pages
-        id: deployment
+        id: deploy_attempt_1
         uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Wait before retrying Pages deployment
+        if: steps.deploy_attempt_1.outcome == 'failure'
+        run: sleep 60
+
+      - name: Retry GitHub Pages deployment
+        id: deploy_attempt_2
+        if: steps.deploy_attempt_1.outcome == 'failure'
+        uses: actions/deploy-pages@v5
+        continue-on-error: true
+
+      - name: Fail if Pages deployment did not complete
+        if: steps.deploy_attempt_1.outcome == 'failure' && steps.deploy_attempt_2.outcome == 'failure'
+        run: |
+          echo "GitHub Pages deployment failed after two attempts."
+          exit 1
