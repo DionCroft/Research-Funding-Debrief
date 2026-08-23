@@ -77,8 +77,8 @@ crontab -e
 Add these lines to run the job at 09:00 and 21:00 every day:
 
 ```cron
-0 9 * * * /home/cadmus/Projects/Debrief/research-funding-debrief/scripts/run_scheduled_debrief.sh >> /home/cadmus/Projects/Debrief/research-funding-debrief/logs/cron.log 2>&1
-0 21 * * * /home/cadmus/Projects/Debrief/research-funding-debrief/scripts/run_scheduled_debrief.sh >> /home/cadmus/Projects/Debrief/research-funding-debrief/logs/cron.log 2>&1
+0 9 * * * /home/cadmus/Projects/research-funding-debrief/scripts/run_scheduled_debrief.sh >> /home/cadmus/Projects/research-funding-debrief/logs/cron.log 2>&1
+0 21 * * * /home/cadmus/Projects/research-funding-debrief/scripts/run_scheduled_debrief.sh >> /home/cadmus/Projects/research-funding-debrief/logs/cron.log 2>&1
 ```
 
 The scheduled job:

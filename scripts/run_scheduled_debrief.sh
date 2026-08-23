@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-PROJECT_DIR="/home/cadmus/Projects/Debrief/research-funding-debrief"
+PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 DATA_FILES=(
   "web/data/live-updates.json"
   "web/data/live-updates.xml"
