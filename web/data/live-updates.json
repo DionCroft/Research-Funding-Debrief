@@ -3,7 +3,7 @@
     {
       "deadline": "26 November 2026",
       "firstSeenAt": "2026-09-09T08:00:20+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -34,7 +34,7 @@
     {
       "deadline": "2 December 2026",
       "firstSeenAt": "2026-10-14T20:00:25+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants"
       ],
@@ -60,7 +60,7 @@
     {
       "deadline": "3 December 2026 4:00pm UK time",
       "firstSeenAt": "2026-10-29T21:00:17+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -92,7 +92,7 @@
     {
       "deadline": "8 December 2026",
       "firstSeenAt": "2026-10-06T20:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -123,7 +123,7 @@
     {
       "deadline": "8 December 2026",
       "firstSeenAt": "2026-10-06T20:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -154,7 +154,7 @@
     {
       "deadline": "7 January 2027 4:00pm UK time",
       "firstSeenAt": "2026-10-29T21:00:17+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -182,7 +182,7 @@
     {
       "deadline": "12 January 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-02T09:00:17+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Capital / equipment funding"
@@ -207,35 +207,9 @@
       "url": "https://www.ukri.org/opportunity/uk-compute-roadmap-community-centres-of-excellence/"
     },
     {
-      "deadline": "13 January 2027 11:00am UK time",
-      "firstSeenAt": "2026-10-26T21:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
-      "opportunityTypes": [
-        "Knowledge Transfer Partnerships",
-        "Industry collaboration"
-      ],
-      "publishedAt": "2026-10-26T11:50:26+00:00",
-      "publishedLabel": "26 October 2026",
-      "rawSource": "UKRI",
-      "relevanceLevel": "Send me a balanced shortlist",
-      "relevanceScore": 5,
-      "source": "UKRI",
-      "status": "Seen \u00b7 Ongoing",
-      "statusLabels": [
-        "Seen",
-        "Ongoing"
-      ],
-      "title": "Testing and validating underground hydrogen storage components",
-      "topics": [
-        "KTP / Collaboration"
-      ],
-      "urgency": "64 days left",
-      "url": "https://www.ukri.org/opportunity/testing-and-validating-underground-hydrogen-storage-components/"
-    },
-    {
       "deadline": "13 January 2027",
       "firstSeenAt": "2026-10-26T09:00:21+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -261,39 +235,9 @@
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2606/overview/52a725a1-ecfe-4eec-a30a-ac6d4078c350"
     },
     {
-      "deadline": "13 January 2027 11:00am UK time",
-      "firstSeenAt": "2026-10-26T21:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
-      "opportunityTypes": [
-        "Research grants",
-        "Innovation grants",
-        "Knowledge Transfer Partnerships",
-        "Industry collaboration",
-        "Capital / equipment funding"
-      ],
-      "publishedAt": "2026-10-26T11:41:50+00:00",
-      "publishedLabel": "26 October 2026",
-      "rawSource": "UKRI",
-      "relevanceLevel": "Send me a balanced shortlist",
-      "relevanceScore": 5,
-      "source": "UKRI",
-      "status": "Seen \u00b7 Ongoing",
-      "statusLabels": [
-        "Seen",
-        "Ongoing"
-      ],
-      "title": "Underground hydrogen storage demonstrator DEVEX support",
-      "topics": [
-        "KTP / Collaboration",
-        "Capital / Infrastructure"
-      ],
-      "urgency": "64 days left",
-      "url": "https://www.ukri.org/opportunity/underground-hydrogen-storage-demonstrator-devex-support/"
-    },
-    {
       "deadline": "13 January 2027",
       "firstSeenAt": "2026-10-26T09:00:21+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -323,7 +267,7 @@
     {
       "deadline": "14 January 2027 4:00pm UK time",
       "firstSeenAt": "2026-08-21T20:00:26+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -353,7 +297,7 @@
     {
       "deadline": "19 January 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-04T21:00:15+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -385,7 +329,7 @@
     {
       "deadline": "19 January 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-03T21:00:15+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Studentships / PhD funding",
@@ -419,7 +363,7 @@
     {
       "deadline": "19 January 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-03T21:00:15+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Studentships / PhD funding",
         "Knowledge Transfer Partnerships",
@@ -451,7 +395,7 @@
     {
       "deadline": "19 January 2027 11:00am UK time",
       "firstSeenAt": "2026-11-03T21:00:15+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Innovation grants"
       ],
@@ -476,7 +420,7 @@
     {
       "deadline": "19 January 2027",
       "firstSeenAt": "2026-10-30T21:00:16+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants"
       ],
@@ -501,7 +445,7 @@
     {
       "deadline": "27 January 2027",
       "firstSeenAt": "2026-11-04T09:00:16+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -531,7 +475,7 @@
     {
       "deadline": "27 January 2027 11:00am UK time",
       "firstSeenAt": "2026-11-06T21:00:16+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -561,7 +505,7 @@
     {
       "deadline": "27 January 2027",
       "firstSeenAt": "2026-11-10T09:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -589,7 +533,7 @@
     {
       "deadline": "28 January 2027 11:00am UK time",
       "firstSeenAt": "2026-10-27T21:00:17+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -620,7 +564,7 @@
     {
       "deadline": "28 January 2027",
       "firstSeenAt": "2026-10-22T20:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -650,7 +594,7 @@
     {
       "deadline": "2 February 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-04T09:00:16+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -678,9 +622,37 @@
       "url": "https://www.ukri.org/opportunity/arctic-frontier-accelerating-innovation-in-ocean-autonomy/"
     },
     {
+      "deadline": "2 February 2027 4:00pm UK time",
+      "firstSeenAt": "2026-11-10T21:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "publishedAt": "2026-11-10T10:41:11+00:00",
+      "publishedLabel": "10 November 2026",
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 6,
+      "source": "UKRI",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "Arctic frontier: shifts in science",
+      "topics": [
+        "AI / Data",
+        "KTP / Collaboration"
+      ],
+      "urgency": "84 days left",
+      "url": "https://www.ukri.org/opportunity/arctic-frontier-shifts-in-science/"
+    },
+    {
       "deadline": "9 February 2027",
       "firstSeenAt": "2026-11-02T09:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -707,7 +679,7 @@
     {
       "deadline": "9 February 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-03T21:00:15+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -734,7 +706,7 @@
     {
       "deadline": "9 February 2027 11:00am UK time",
       "firstSeenAt": "2026-11-03T21:00:15+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Innovation grants"
       ],
@@ -759,7 +731,7 @@
     {
       "deadline": "3 March 2027",
       "firstSeenAt": "2026-07-09T20:00:16+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -789,7 +761,7 @@
     {
       "deadline": "9 March 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-02T21:00:17+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -818,9 +790,42 @@
       "url": "https://www.ukri.org/opportunity/international-placement-scheme-2027/"
     },
     {
+      "deadline": "23 March 2027 11:59pm UK time",
+      "firstSeenAt": "2026-11-10T21:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Fellowships",
+        "Studentships / PhD funding",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "publishedAt": "2026-11-10T09:00:29+00:00",
+      "publishedLabel": "10 November 2026",
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me only highly relevant calls",
+      "relevanceScore": 8,
+      "source": "UKRI",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "ESRC postdoctoral fellowships",
+      "topics": [
+        "Education / Skills",
+        "Policy / Social Sciences",
+        "KTP / Collaboration",
+        "Fellowships",
+        "Early Career"
+      ],
+      "urgency": "133 days left",
+      "url": "https://www.ukri.org/opportunity/esrc-postdoctoral-fellowships/"
+    },
+    {
       "deadline": "31 March 2035, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -845,7 +850,7 @@
     {
       "deadline": "18 December 2026, 5:00pm",
       "firstSeenAt": "2026-11-02T21:00:17+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
@@ -871,7 +876,7 @@
     {
       "deadline": "Open - no closing date",
       "firstSeenAt": "2026-09-08T20:00:20+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -899,7 +904,7 @@
     {
       "deadline": "Open - no closing date",
       "firstSeenAt": "2026-09-08T20:00:20+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -927,7 +932,7 @@
     {
       "deadline": "19 October 2028, 4:00pm",
       "firstSeenAt": "2026-10-22T20:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -959,7 +964,7 @@
     {
       "deadline": "31 December 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Capital / equipment funding"
       ],
@@ -986,7 +991,7 @@
     {
       "deadline": "31 March 2030, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -1011,7 +1016,7 @@
     {
       "deadline": "31 March 2030, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -1036,7 +1041,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Capital / equipment funding"
       ],
@@ -1061,7 +1066,7 @@
     {
       "deadline": "29 March 2027, 5:00pm",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -1086,7 +1091,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-08-14T20:00:16+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -1111,7 +1116,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -1134,12 +1139,12 @@
       "url": "https://www.find-government-grants.service.gov.uk/grants/electric-vehicle-chargepoint-and-infrastructure-grants-for-landlords-1"
     }
   ],
-  "generatedAt": "2026-11-10T09:00:18+00:00",
+  "generatedAt": "2026-11-10T21:00:18+00:00",
   "items": [
     {
       "deadline": "26 November 2026",
       "firstSeenAt": "2026-09-09T08:00:20+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1170,7 +1175,7 @@
     {
       "deadline": "2 December 2026",
       "firstSeenAt": "2026-10-14T20:00:25+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants"
       ],
@@ -1196,7 +1201,7 @@
     {
       "deadline": "3 December 2026 4:00pm UK time",
       "firstSeenAt": "2026-10-29T21:00:17+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -1228,7 +1233,7 @@
     {
       "deadline": "8 December 2026",
       "firstSeenAt": "2026-10-06T20:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -1259,7 +1264,7 @@
     {
       "deadline": "8 December 2026",
       "firstSeenAt": "2026-10-06T20:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -1290,7 +1295,7 @@
     {
       "deadline": "7 January 2027 4:00pm UK time",
       "firstSeenAt": "2026-10-29T21:00:17+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -1318,7 +1323,7 @@
     {
       "deadline": "12 January 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-02T09:00:17+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Capital / equipment funding"
@@ -1343,35 +1348,9 @@
       "url": "https://www.ukri.org/opportunity/uk-compute-roadmap-community-centres-of-excellence/"
     },
     {
-      "deadline": "13 January 2027 11:00am UK time",
-      "firstSeenAt": "2026-10-26T21:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
-      "opportunityTypes": [
-        "Knowledge Transfer Partnerships",
-        "Industry collaboration"
-      ],
-      "publishedAt": "2026-10-26T11:50:26+00:00",
-      "publishedLabel": "26 October 2026",
-      "rawSource": "UKRI",
-      "relevanceLevel": "Send me a balanced shortlist",
-      "relevanceScore": 5,
-      "source": "UKRI",
-      "status": "Seen \u00b7 Ongoing",
-      "statusLabels": [
-        "Seen",
-        "Ongoing"
-      ],
-      "title": "Testing and validating underground hydrogen storage components",
-      "topics": [
-        "KTP / Collaboration"
-      ],
-      "urgency": "64 days left",
-      "url": "https://www.ukri.org/opportunity/testing-and-validating-underground-hydrogen-storage-components/"
-    },
-    {
       "deadline": "13 January 2027",
       "firstSeenAt": "2026-10-26T09:00:21+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1397,39 +1376,9 @@
       "url": "https://apply-for-innovation-funding.service.gov.uk/competition/2606/overview/52a725a1-ecfe-4eec-a30a-ac6d4078c350"
     },
     {
-      "deadline": "13 January 2027 11:00am UK time",
-      "firstSeenAt": "2026-10-26T21:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
-      "opportunityTypes": [
-        "Research grants",
-        "Innovation grants",
-        "Knowledge Transfer Partnerships",
-        "Industry collaboration",
-        "Capital / equipment funding"
-      ],
-      "publishedAt": "2026-10-26T11:41:50+00:00",
-      "publishedLabel": "26 October 2026",
-      "rawSource": "UKRI",
-      "relevanceLevel": "Send me a balanced shortlist",
-      "relevanceScore": 5,
-      "source": "UKRI",
-      "status": "Seen \u00b7 Ongoing",
-      "statusLabels": [
-        "Seen",
-        "Ongoing"
-      ],
-      "title": "Underground hydrogen storage demonstrator DEVEX support",
-      "topics": [
-        "KTP / Collaboration",
-        "Capital / Infrastructure"
-      ],
-      "urgency": "64 days left",
-      "url": "https://www.ukri.org/opportunity/underground-hydrogen-storage-demonstrator-devex-support/"
-    },
-    {
       "deadline": "13 January 2027",
       "firstSeenAt": "2026-10-26T09:00:21+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1459,7 +1408,7 @@
     {
       "deadline": "14 January 2027 4:00pm UK time",
       "firstSeenAt": "2026-08-21T20:00:26+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -1489,7 +1438,7 @@
     {
       "deadline": "19 January 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-04T21:00:15+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1521,7 +1470,7 @@
     {
       "deadline": "19 January 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-03T21:00:15+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Studentships / PhD funding",
@@ -1555,7 +1504,7 @@
     {
       "deadline": "19 January 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-03T21:00:15+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Studentships / PhD funding",
         "Knowledge Transfer Partnerships",
@@ -1587,7 +1536,7 @@
     {
       "deadline": "19 January 2027 11:00am UK time",
       "firstSeenAt": "2026-11-03T21:00:15+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Innovation grants"
       ],
@@ -1612,7 +1561,7 @@
     {
       "deadline": "19 January 2027",
       "firstSeenAt": "2026-10-30T21:00:16+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants"
       ],
@@ -1637,7 +1586,7 @@
     {
       "deadline": "27 January 2027",
       "firstSeenAt": "2026-11-04T09:00:16+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -1667,7 +1616,7 @@
     {
       "deadline": "27 January 2027 11:00am UK time",
       "firstSeenAt": "2026-11-06T21:00:16+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -1697,7 +1646,7 @@
     {
       "deadline": "27 January 2027",
       "firstSeenAt": "2026-11-10T09:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1725,7 +1674,7 @@
     {
       "deadline": "28 January 2027 11:00am UK time",
       "firstSeenAt": "2026-10-27T21:00:17+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1756,7 +1705,7 @@
     {
       "deadline": "28 January 2027",
       "firstSeenAt": "2026-10-22T20:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -1786,7 +1735,7 @@
     {
       "deadline": "2 February 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-04T09:00:16+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1814,9 +1763,37 @@
       "url": "https://www.ukri.org/opportunity/arctic-frontier-accelerating-innovation-in-ocean-autonomy/"
     },
     {
+      "deadline": "2 February 2027 4:00pm UK time",
+      "firstSeenAt": "2026-11-10T21:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "publishedAt": "2026-11-10T10:41:11+00:00",
+      "publishedLabel": "10 November 2026",
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me a balanced shortlist",
+      "relevanceScore": 6,
+      "source": "UKRI",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "Arctic frontier: shifts in science",
+      "topics": [
+        "AI / Data",
+        "KTP / Collaboration"
+      ],
+      "urgency": "84 days left",
+      "url": "https://www.ukri.org/opportunity/arctic-frontier-shifts-in-science/"
+    },
+    {
       "deadline": "9 February 2027",
       "firstSeenAt": "2026-11-02T09:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Innovation grants",
         "Knowledge Transfer Partnerships",
@@ -1843,7 +1820,7 @@
     {
       "deadline": "9 February 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-03T21:00:15+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -1870,7 +1847,7 @@
     {
       "deadline": "9 February 2027 11:00am UK time",
       "firstSeenAt": "2026-11-03T21:00:15+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Innovation grants"
       ],
@@ -1895,7 +1872,7 @@
     {
       "deadline": "3 March 2027",
       "firstSeenAt": "2026-07-09T20:00:16+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -1925,7 +1902,7 @@
     {
       "deadline": "9 March 2027 4:00pm UK time",
       "firstSeenAt": "2026-11-02T21:00:17+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -1954,9 +1931,42 @@
       "url": "https://www.ukri.org/opportunity/international-placement-scheme-2027/"
     },
     {
+      "deadline": "23 March 2027 11:59pm UK time",
+      "firstSeenAt": "2026-11-10T21:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
+      "opportunityTypes": [
+        "Research grants",
+        "Fellowships",
+        "Studentships / PhD funding",
+        "Knowledge Transfer Partnerships",
+        "Industry collaboration"
+      ],
+      "publishedAt": "2026-11-10T09:00:29+00:00",
+      "publishedLabel": "10 November 2026",
+      "rawSource": "UKRI",
+      "relevanceLevel": "Send me only highly relevant calls",
+      "relevanceScore": 8,
+      "source": "UKRI",
+      "status": "New \u00b7 Ongoing",
+      "statusLabels": [
+        "New",
+        "Ongoing"
+      ],
+      "title": "ESRC postdoctoral fellowships",
+      "topics": [
+        "Education / Skills",
+        "Policy / Social Sciences",
+        "KTP / Collaboration",
+        "Fellowships",
+        "Early Career"
+      ],
+      "urgency": "133 days left",
+      "url": "https://www.ukri.org/opportunity/esrc-postdoctoral-fellowships/"
+    },
+    {
       "deadline": "31 March 2035, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -1981,7 +1991,7 @@
     {
       "deadline": "18 December 2026, 5:00pm",
       "firstSeenAt": "2026-11-02T21:00:17+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Knowledge Transfer Partnerships",
         "Industry collaboration"
@@ -2007,7 +2017,7 @@
     {
       "deadline": "Open - no closing date",
       "firstSeenAt": "2026-09-08T20:00:20+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -2035,7 +2045,7 @@
     {
       "deadline": "Open - no closing date",
       "firstSeenAt": "2026-09-08T20:00:20+00:00",
-      "lastSeenAt": "2026-11-10T09:00:17+00:00",
+      "lastSeenAt": "2026-11-10T21:00:17+00:00",
       "opportunityTypes": [
         "Research grants",
         "Knowledge Transfer Partnerships",
@@ -2063,7 +2073,7 @@
     {
       "deadline": "19 October 2028, 4:00pm",
       "firstSeenAt": "2026-10-22T20:00:18+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants",
         "Innovation grants",
@@ -2095,7 +2105,7 @@
     {
       "deadline": "31 December 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Capital / equipment funding"
       ],
@@ -2122,7 +2132,7 @@
     {
       "deadline": "31 March 2030, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -2147,7 +2157,7 @@
     {
       "deadline": "31 March 2030, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -2172,7 +2182,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Capital / equipment funding"
       ],
@@ -2197,7 +2207,7 @@
     {
       "deadline": "29 March 2027, 5:00pm",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -2222,7 +2232,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-08-14T20:00:16+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
@@ -2247,7 +2257,7 @@
     {
       "deadline": "31 March 2027, 11:59pm (Midnight)",
       "firstSeenAt": "2026-06-12T11:46:31+00:00",
-      "lastSeenAt": "2026-11-10T09:00:18+00:00",
+      "lastSeenAt": "2026-11-10T21:00:18+00:00",
       "opportunityTypes": [
         "Research grants"
       ],
