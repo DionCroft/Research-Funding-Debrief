@@ -14,4 +14,4 @@ class FundingSource(ABC):
 
     @abstractmethod
     def fetch(self) -> list[FundingOpportunity]:
-        """Fetch and parse funding opportunities."""
+        """Fetch and parse opportunities, raising if the source check fails."""

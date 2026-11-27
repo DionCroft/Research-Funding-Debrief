@@ -6,7 +6,6 @@ import logging
 import re
 from urllib.parse import urlparse
 
-import requests
 from bs4 import Tag
 
 from app.config import NIHR_FUNDING_URL
@@ -36,11 +35,7 @@ class NIHRFundingSource(FundingSource):
         pages_fetched = 0
 
         while next_url and pages_fetched < self.max_pages:
-            try:
-                soup = get_soup(next_url)
-            except requests.RequestException:
-                logger.exception("Failed to fetch NIHR funding opportunities.")
-                break
+            soup = get_soup(next_url)
 
             pages_fetched += 1
             for opportunity in parse_nihr_opportunities(next_url, soup):

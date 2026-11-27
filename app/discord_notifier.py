@@ -48,8 +48,8 @@ def _send_via_webhook(body: str, webhook_url: str) -> bool:
             response.raise_for_status()
         logger.info("Discord report sent via webhook.")
         return True
-    except requests.RequestException:
-        logger.exception("Discord webhook report failed.")
+    except requests.RequestException as error:
+        logger.warning("Discord webhook report failed (%s).", type(error).__name__)
         return False
 
 

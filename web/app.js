@@ -1,12 +1,16 @@
 const form = document.querySelector("#signup-form");
 const statusMessage = document.querySelector("#form-status");
 const liveUpdated = document.querySelector("#live-updated");
+const liveFreshness = document.querySelector("#live-freshness");
 const liveList = document.querySelector("#live-list");
 const liveActiveCount = document.querySelector("#live-active-count");
 const liveClosingCount = document.querySelector("#live-closing-count");
 const liveSourceCount = document.querySelector("#live-source-count");
 const liveTopicCount = document.querySelector("#live-topic-count");
 const liveRefresh = document.querySelector("#live-refresh");
+const sourceHealthSummary = document.querySelector("#source-health-summary");
+const sourceHealthEmpty = document.querySelector("#source-health-empty");
+const sourceHealthList = document.querySelector("#source-health-list");
 const personalRadarForm = document.querySelector("#personal-radar-form");
 const personalRadarResults = document.querySelector("#personal-radar-results");
 const personalRadarCount = document.querySelector("#personal-radar-count");
@@ -14,6 +18,8 @@ const personalRadarReset = document.querySelector("#personal-radar-reset");
 const localHosts = new Set(["localhost", "127.0.0.1", "::1"]);
 const configuredSignupApi = window.RESEARCH_FUNDING_SIGNUP_API || "";
 const personalRadarStorageKey = "researchFundingDebrief.personalRadar";
+const snapshotFreshnessLimitMs = 26 * 60 * 60 * 1000;
+let currentSnapshot = null;
 let liveFundingItems = [];
 
 function selectedTopics(formData) {
@@ -50,20 +56,25 @@ function mailtoSignup(payload) {
   window.location.href = `mailto:d.mariyanayagam@londonmet.ac.uk?subject=${subject}&body=${body}`;
 }
 
-function formatUpdatedAt(value) {
+function formatTimestamp(value) {
   if (!value) {
-    return "Latest snapshot pending";
+    return "";
   }
 
   const parsed = new Date(value);
   if (Number.isNaN(parsed.getTime())) {
-    return `Last updated ${value}`;
+    return "";
   }
 
-  return `Last updated ${parsed.toLocaleString("en-GB", {
-    dateStyle: "medium",
-    timeStyle: "short",
-  })}`;
+  return parsed.toLocaleString("en-GB", {
+    day: "numeric",
+    month: "short",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: "Europe/London",
+    timeZoneName: "short",
+  });
 }
 
 function setText(element, value) {
@@ -84,8 +95,68 @@ function escapeHtml(value) {
 function updateLiveStats(summary) {
   setText(liveActiveCount, summary.trackedCalls ?? "--");
   setText(liveClosingCount, summary.closingSoon ?? "--");
-  setText(liveSourceCount, summary.sourcesScanned ?? "--");
+  setText(liveSourceCount, summary.sourcesVerified ?? "--");
   setText(liveTopicCount, summary.topicCategories ?? "--");
+}
+
+function snapshotIsStale(generatedAt) {
+  const timestamp = Date.parse(generatedAt);
+  return !Number.isFinite(timestamp) || Date.now() - timestamp > snapshotFreshnessLimitMs;
+}
+
+function renderSourceHealth(rows, staleSnapshot) {
+  if (!sourceHealthList || !sourceHealthEmpty) {
+    return;
+  }
+  if (!Array.isArray(rows) || rows.length === 0) {
+    setText(sourceHealthSummary, "Source health");
+    setText(sourceHealthEmpty, "Per-source checks are unavailable for this snapshot.");
+    sourceHealthEmpty.hidden = false;
+    sourceHealthList.hidden = true;
+    return;
+  }
+
+  const disabled = rows.filter((row) => row.status === "disabled").length;
+  const verified = staleSnapshot ? 0 : rows.filter((row) => row.status === "healthy").length;
+  const degraded = rows.length - disabled - verified;
+  const summary = [`${verified} verified`];
+  if (degraded) summary.push(`${degraded} ${degraded === 1 ? "needs" : "need"} attention`);
+  if (disabled) summary.push(`${disabled} not enabled`);
+  setText(sourceHealthSummary, `Source health · ${summary.join(" · ")}`);
+  sourceHealthEmpty.hidden = true;
+  sourceHealthList.hidden = false;
+
+  const labels = {
+    healthy: staleSnapshot ? "Stale snapshot" : "Verified",
+    empty: "No records returned",
+    failed: "Check failed",
+    disabled: "Not enabled",
+  };
+  sourceHealthList.replaceChildren(...rows.map((row) => {
+    const entry = document.createElement("li");
+    const title = document.createElement("strong");
+    const state = document.createElement("span");
+    const freshness = document.createElement("span");
+    title.textContent = row.source;
+    const count = Number(row.callCount) || 0;
+    const retained = row.status === "failed" || row.status === "empty";
+    const calls = `${count} ${retained ? "retained " : ""}${count === 1 ? "call" : "calls"}`;
+    const label = labels[row.status] || "Check unavailable";
+    state.textContent = row.status === "disabled" ? label : `${label} · ${calls}`;
+    const success = formatTimestamp(row.lastSuccessAt);
+    const checked = formatTimestamp(row.lastCheckedAt);
+    freshness.textContent = success ? `Last verified ${success}` : "No verified data";
+    entry.append(title, state);
+    if (row.status !== "disabled") {
+      entry.append(freshness);
+    }
+    if (retained && checked) {
+      const attempt = document.createElement("span");
+      attempt.textContent = `Last attempted ${checked}`;
+      entry.append(attempt);
+    }
+    return entry;
+  }));
 }
 
 function normaliseText(value) {
@@ -154,6 +225,11 @@ function itemStatusLabel(item) {
   }
 
   return item.status || "Ongoing";
+}
+
+function itemSourceLabel(item) {
+  const source = item.source || "Unknown source";
+  return item.sourceStale ? `${source} · retained data` : source;
 }
 
 function readPersonalRadarFilters() {
@@ -239,7 +315,7 @@ function renderPersonalRadar() {
     const topics = Array.isArray(item.topics) ? item.topics.slice(0, 4) : [];
 
     card.innerHTML = `
-      <p class="live-label">${escapeHtml(itemStatusLabel(item))} · ${escapeHtml(item.source || "Unknown source")}</p>
+      <p class="live-label">${escapeHtml(itemStatusLabel(item))} · ${escapeHtml(itemSourceLabel(item))}</p>
       <h3>${link}</h3>
       <p>${escapeHtml(item.deadline || "No deadline parsed")} <span>${escapeHtml(item.urgency || "")}</span></p>
       <div class="live-tags">${topics.map((topic) => `<span>${escapeHtml(topic)}</span>`).join("")}</div>
@@ -271,7 +347,7 @@ function renderLiveItems(items) {
     const topics = Array.isArray(item.topics) ? item.topics.slice(0, 3) : [];
 
     card.innerHTML = `
-      <p class="live-label">${escapeHtml(itemStatusLabel(item))} · ${escapeHtml(item.source || "Unknown source")}</p>
+      <p class="live-label">${escapeHtml(itemStatusLabel(item))} · ${escapeHtml(itemSourceLabel(item))}</p>
       <h3>${link}</h3>
       <p>${escapeHtml(item.deadline || "No deadline parsed")} <span>${escapeHtml(item.urgency || "")}</span></p>
       <div class="live-tags">${topics.map((topic) => `<span>${escapeHtml(topic)}</span>`).join("")}</div>
@@ -298,14 +374,30 @@ async function loadLiveUpdates() {
       throw new Error("Live updates unavailable");
     }
     const payload = await response.json();
-    liveFundingItems = payload.items || [];
-    setText(liveUpdated, formatUpdatedAt(payload.generatedAt));
+    if (!Array.isArray(payload?.items)) {
+      throw new Error("Invalid funding snapshot");
+    }
+    liveFundingItems = payload.items;
+    const updatedAt = formatTimestamp(payload.generatedAt);
+    const staleSnapshot = snapshotIsStale(payload.generatedAt);
+    setText(liveUpdated, updatedAt ? `Last updated ${updatedAt}` : "Update time unavailable");
+    setText(liveFreshness, staleSnapshot ? "This snapshot is overdue. Check deadlines with the funder." : "");
     updateLiveStats(payload.summary || {});
+    if (staleSnapshot) {
+      setText(liveSourceCount, "--");
+    }
+    renderSourceHealth(payload.sourceHealth, staleSnapshot);
     renderLiveItems(liveFundingItems);
     renderPersonalRadar();
+    currentSnapshot = payload;
   } catch (error) {
-    liveFundingItems = [];
     setText(liveUpdated, "Live snapshot unavailable right now");
+    if (currentSnapshot) {
+      const shownAt = formatTimestamp(currentSnapshot.generatedAt);
+      liveFundingItems = currentSnapshot.items;
+      setText(liveFreshness, shownAt ? `Still showing the snapshot from ${shownAt}.` : "Still showing the previous snapshot.");
+      return;
+    }
     liveList.innerHTML = `
       <article>
         <p class="live-label">Refresh failed</p>

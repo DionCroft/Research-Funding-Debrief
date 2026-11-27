@@ -6,7 +6,6 @@ import logging
 import re
 from urllib.parse import urlparse
 
-import requests
 from bs4 import Tag
 
 from app.config import RAENG_PROGRAMMES_URL
@@ -28,11 +27,7 @@ class RAEngProgrammesSource(FundingSource):
 
     def fetch(self) -> list[FundingOpportunity]:
         logger.info("Fetching Royal Academy of Engineering programmes: %s", self.programmes_url)
-        try:
-            soup = get_soup(self.programmes_url)
-        except requests.RequestException:
-            logger.exception("Failed to fetch Royal Academy of Engineering programmes.")
-            return []
+        soup = get_soup(self.programmes_url)
 
         opportunities = parse_raeng_opportunities(self.programmes_url, soup)
         logger.info("Parsed %s opportunities from Royal Academy of Engineering.", len(opportunities))

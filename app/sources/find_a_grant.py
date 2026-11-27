@@ -6,8 +6,6 @@ import logging
 import re
 from urllib.parse import urlparse
 
-import requests
-
 from app.config import FIND_A_GRANT_URL
 from app.filters import normalise_amount
 from app.models import FundingOpportunity
@@ -28,11 +26,7 @@ class FindAGrantSource(FundingSource):
 
     def fetch(self) -> list[FundingOpportunity]:
         logger.info("Fetching Find a Grant results: %s", self.grants_url)
-        try:
-            soup = get_soup(self.grants_url)
-        except requests.RequestException:
-            logger.exception("Failed to fetch Find a Grant results.")
-            return []
+        soup = get_soup(self.grants_url)
 
         opportunities: list[FundingOpportunity] = []
         seen_ids: set[str] = set()

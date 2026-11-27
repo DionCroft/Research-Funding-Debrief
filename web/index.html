@@ -28,7 +28,7 @@
             fellowships, translational funding, and collaboration calls.
           </p>
           <div class="hero__metrics" aria-label="Current coverage">
-            <span><strong>7</strong> live sources</span>
+            <span><strong>7</strong> supported sources</span>
             <span><strong>30</strong> day deadline radar</span>
             <span><strong>2</strong> delivery rhythms</span>
           </div>
@@ -59,7 +59,7 @@
             <strong id="live-closing-count">--</strong>
           </article>
           <article>
-            <span>Sources scanned</span>
+            <span>Sources verified</span>
             <strong id="live-source-count">--</strong>
           </article>
           <article>
@@ -67,6 +67,12 @@
             <strong id="live-topic-count">--</strong>
           </article>
         </div>
+        <p class="live-freshness" id="live-freshness" role="status"></p>
+        <details class="source-health">
+          <summary id="source-health-summary">Source health</summary>
+          <p id="source-health-empty">Source checks will appear with the latest snapshot.</p>
+          <ul id="source-health-list" hidden></ul>
+        </details>
         <div class="live-list" id="live-list" aria-label="Latest funding updates">
           <article>
             <p class="live-label">Preparing snapshot</p>

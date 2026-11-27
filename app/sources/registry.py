@@ -18,29 +18,27 @@ from app.sources.wellcome import WellcomeFundingSource
 
 logger = logging.getLogger(__name__)
 
-SourceFactory = Callable[[Config], FundingSource]
-
-
-SOURCE_FACTORIES: dict[str, SourceFactory] = {
-    "ukri": lambda config: UKRIFundingSource(config.ukri_rss_url),
-    "innovate_uk": lambda config: InnovateUKSource(config.innovate_uk_search_url),
-    "find_a_grant": lambda config: FindAGrantSource(config.find_a_grant_url),
-    "nihr": lambda config: NIHRFundingSource(config.nihr_funding_url),
-    "wellcome": lambda config: WellcomeFundingSource(config.wellcome_funding_url),
-    "royal_society": lambda config: RoyalSocietyGrantsSource(config.royal_society_grants_url),
-    "raeng": lambda config: RAEngProgrammesSource(config.raeng_programmes_url),
+SOURCE_REGISTRY: dict[str, tuple[type[FundingSource], Callable[[Config], str]]] = {
+    "ukri": (UKRIFundingSource, lambda config: config.ukri_rss_url),
+    "innovate_uk": (InnovateUKSource, lambda config: config.innovate_uk_search_url),
+    "find_a_grant": (FindAGrantSource, lambda config: config.find_a_grant_url),
+    "nihr": (NIHRFundingSource, lambda config: config.nihr_funding_url),
+    "wellcome": (WellcomeFundingSource, lambda config: config.wellcome_funding_url),
+    "royal_society": (RoyalSocietyGrantsSource, lambda config: config.royal_society_grants_url),
+    "raeng": (RAEngProgrammesSource, lambda config: config.raeng_programmes_url),
 }
+SOURCE_NAMES = tuple(source_type.name for source_type, _ in SOURCE_REGISTRY.values())
 
 
 def build_sources(source_names: Sequence[str], config: Config) -> list[FundingSource]:
     """Build source objects for configured source names."""
 
     sources: list[FundingSource] = []
-    for source_name in source_names:
-        key = source_name.strip().lower()
-        factory = SOURCE_FACTORIES.get(key)
-        if not factory:
-            logger.warning("Unknown funding source configured: %s", source_name)
+    for key in dict.fromkeys(name.strip().lower() for name in source_names):
+        definition = SOURCE_REGISTRY.get(key)
+        if definition is None:
+            logger.warning("Unknown funding source configured: %s", key)
             continue
-        sources.append(factory(config))
+        source_type, get_url = definition
+        sources.append(source_type(get_url(config)))
     return sources

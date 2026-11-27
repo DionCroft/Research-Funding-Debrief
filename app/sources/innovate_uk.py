@@ -6,8 +6,6 @@ import logging
 import re
 from urllib.parse import urlparse
 
-import requests
-
 from app.config import INNOVATE_UK_SEARCH_URL
 from app.filters import detect_amount, normalise_amount
 from app.models import FundingOpportunity
@@ -28,11 +26,7 @@ class InnovateUKSource(FundingSource):
 
     def fetch(self) -> list[FundingOpportunity]:
         logger.info("Fetching Innovate UK competitions: %s", self.search_url)
-        try:
-            soup = get_soup(self.search_url)
-        except requests.RequestException:
-            logger.exception("Failed to fetch Innovate UK competitions.")
-            return []
+        soup = get_soup(self.search_url)
 
         opportunities: list[FundingOpportunity] = []
         seen_ids: set[str] = set()

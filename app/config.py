@@ -13,6 +13,10 @@ from dotenv import load_dotenv
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DATABASE_PATH = PROJECT_ROOT / "data" / "research_funding_debrief.db"
 DEFAULT_LOG_PATH = PROJECT_ROOT / "logs" / "research_funding_debrief.log"
+PUBLIC_SITE_URL = "https://dioncroft.github.io/Research-Funding-Debrief/"
+PUBLIC_DATA_DIR = PROJECT_ROOT / "web" / "data"
+PUBLIC_JSON_PATH = PUBLIC_DATA_DIR / "live-updates.json"
+PUBLIC_RSS_PATH = PUBLIC_DATA_DIR / "live-updates.xml"
 UKRI_RSS_URL = "https://www.ukri.org/opportunity/feed/"
 INNOVATE_UK_SEARCH_URL = "https://apply-for-innovation-funding.service.gov.uk/competition/search"
 FIND_A_GRANT_URL = "https://www.find-government-grants.service.gov.uk/grants"

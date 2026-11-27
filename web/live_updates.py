@@ -10,23 +10,22 @@ from collections.abc import Iterable
 from datetime import date, datetime, time
 from email.utils import format_datetime
 from pathlib import Path
+from tempfile import TemporaryDirectory
 from xml.etree import ElementTree as ET
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT))
 
 from app.categories import category_names
-from app.config import load_config
+from app.config import PUBLIC_JSON_PATH, PUBLIC_RSS_PATH, PUBLIC_SITE_URL, load_config
 from app.database import OpportunityDatabase
 from app.filters import score_opportunities
 from app.models import FundingOpportunity
 from app.report import EXPIRING_SOON_DAYS, parse_opportunity_date
-from app.sources.registry import build_sources
+from app.sources.health import SourceCheck, fetch_sources
+from app.sources.registry import SOURCE_NAMES, build_sources
 
 
-OUTPUT_PATH = Path(__file__).resolve().parent / "data" / "live-updates.json"
-RSS_OUTPUT_PATH = Path(__file__).resolve().parent / "data" / "live-updates.xml"
-SITE_URL = "https://dioncroft.github.io/Research-Funding-Debrief/"
 MAX_FEATURED_ITEMS = 60
 NEW_DAYS = 7
 logger = logging.getLogger(__name__)
@@ -60,90 +59,154 @@ def main() -> int:
     config = load_config()
     database = OpportunityDatabase(config.database_path)
     database.initialise()
-    source_names = config.enabled_sources
-
-    fetched = _fetch_opportunities(build_sources(source_names, config))
-
+    sources = build_sources(config.enabled_sources, config)
+    if not sources:
+        logger.error("No valid funding sources are configured.")
+        return 1
+    fetched, source_checks = fetch_sources(sources)
     scored = score_opportunities(fetched, config.keywords)
     database.store_opportunities(scored)
-    write_live_updates(
-        scored,
-        database,
-        source_names,
-        relevant_score_threshold=config.relevant_score_threshold,
-    )
+    write_live_updates(scored, database, source_checks)
     return 0
-
-
-def _fetch_opportunities(sources: Iterable[object]) -> list[FundingOpportunity]:
-    """Fetch every source that works, logging and skipping unexpected failures."""
-
-    fetched: list[FundingOpportunity] = []
-    for source in sources:
-        try:
-            fetched.extend(source.fetch())
-        except Exception:
-            logger.exception(
-                "Source failed unexpectedly: %s",
-                getattr(source, "name", source.__class__.__name__),
-            )
-    return fetched
 
 
 def write_live_updates(
     scored: list[FundingOpportunity],
     database: OpportunityDatabase,
-    source_names: list[str],
-    relevant_score_threshold: int = 4,
-    output_path: Path = OUTPUT_PATH,
-    rss_output_path: Path = RSS_OUTPUT_PATH,
+    source_checks: dict[str, SourceCheck],
+    output_path: Path = PUBLIC_JSON_PATH,
+    rss_output_path: Path = PUBLIC_RSS_PATH,
     today: date | None = None,
 ) -> None:
-    """Write the static live funding snapshots for the front page and RSS feed."""
+    """Publish fresh results plus the last verified results from failing sources."""
 
     today = today or date.today()
-    active = [opportunity for opportunity in scored if not _is_closed(opportunity)]
-    closing_soon = [
-        opportunity
-        for opportunity in active
-        if _days_left(opportunity, today) is not None
-        and 0 <= _days_left(opportunity, today) <= EXPIRING_SOON_DAYS
-    ]
-    relevant = [
-        opportunity
-        for opportunity in active
-        if opportunity.relevance_score >= relevant_score_threshold
-    ]
-    all_items = _unique(active)
-    featured = _unique(closing_soon + relevant + active)[:MAX_FEATURED_ITEMS]
+    unverified_sources = {name for name, check in source_checks.items() if check.status != "healthy"}
+    previous = _read_previous_snapshot(output_path) if unverified_sources else {}
+    verified_sources = len(source_checks) - len(unverified_sources)
+    if not verified_sources and not previous:
+        raise RuntimeError("No source could be verified and no previous snapshot is available.")
+
+    active = _unique([opportunity for opportunity in scored if not _is_closed(opportunity)])
+    all_items = [_serialise_opportunity(opportunity, today, database) for opportunity in active]
+    previous_items = previous.get("allItems", previous.get("items", []))
+    for item in previous_items:
+        if item.get("rawSource") in unverified_sources:
+            retained = _retain_item(item, today)
+            if retained is not None:
+                all_items.append(retained)
+
+    all_items.sort(key=_snapshot_sort_key)
+    featured = all_items[:MAX_FEATURED_ITEMS]
+    source_counts = Counter(str(item["source"]) for item in all_items)
 
     payload = {
         "generatedAt": datetime.now().astimezone().isoformat(timespec="seconds"),
         "summary": {
-            "trackedCalls": len(active),
+            "trackedCalls": len(all_items),
             "featuredCalls": len(featured),
             "rssCalls": len(all_items),
-            "closingSoon": len(closing_soon),
-            "sourcesScanned": len(source_names),
+            "closingSoon": sum("Closing soon" in _as_list(item["statusLabels"]) for item in all_items),
+            "sourcesScanned": len(source_checks),
+            "sourcesVerified": verified_sources,
             "topicCategories": len(category_names()),
         },
-        "items": [
-            _serialise_opportunity(opportunity, today, database)
-            for opportunity in featured
-        ],
-        "allItems": [
-            _serialise_opportunity(opportunity, today, database)
-            for opportunity in all_items
-        ],
-        "sourceCounts": Counter(_source_label(opportunity.source) for opportunity in scored),
+        "items": featured,
+        "allItems": all_items,
+        "sourceCounts": source_counts,
+        "sourceHealth": _source_health(source_checks, previous, source_counts),
     }
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
-    print(f"Wrote {output_path}")
+    rss_output_path.parent.mkdir(parents=True, exist_ok=True)
+    with TemporaryDirectory(dir=output_path.parent) as json_dir:
+        with TemporaryDirectory(dir=rss_output_path.parent) as rss_dir:
+            staged_json = Path(json_dir) / output_path.name
+            staged_rss = Path(rss_dir) / rss_output_path.name
+            staged_json.write_text(json.dumps(payload, indent=2, sort_keys=True), encoding="utf-8")
+            _write_rss_feed(payload, staged_rss)
+            staged_rss.replace(rss_output_path)
+            staged_json.replace(output_path)
 
-    _write_rss_feed(payload, rss_output_path)
+    print(f"Wrote {output_path}")
     print(f"Wrote {rss_output_path}")
+
+
+def _read_previous_snapshot(path: Path) -> dict:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except FileNotFoundError:
+        return {}
+    if not isinstance(payload, dict) or not isinstance(
+        payload.get("allItems", payload.get("items")), list
+    ):
+        raise ValueError(f"Previous funding snapshot has an invalid structure: {path}")
+    return payload
+
+
+def _source_health(
+    checks: dict[str, SourceCheck], previous: dict, counts: Counter[str]
+) -> list[dict[str, object]]:
+    previous_successes = {
+        row["rawSource"]: row["lastSuccessAt"] for row in previous.get("sourceHealth", [])
+    }
+    # The older snapshot format only recorded the build time and counts by source.
+    if "sourceHealth" not in previous:
+        previous_successes = {
+            name: previous.get("generatedAt")
+            for name in checks
+            if _source_label(name) in previous.get("sourceCounts", {})
+        }
+
+    health = []
+    for name in dict.fromkeys((*SOURCE_NAMES, *checks)):
+        check = checks.get(name)
+        label = _source_label(name)
+        last_success_at = previous_successes.get(name) if check else None
+        if check and check.status == "healthy":
+            last_success_at = check.checked_at
+        health.append(
+            {
+                "source": label,
+                "rawSource": name,
+                "status": check.status if check else "disabled",
+                "lastCheckedAt": check.checked_at if check else None,
+                "lastSuccessAt": last_success_at,
+                "callCount": counts[label],
+            }
+        )
+    return health
+
+
+def _retain_item(item: dict, today: date) -> dict | None:
+    closing = _item_closing_date(item)
+    days_left = (closing - today).days if closing else None
+    if days_left is not None and days_left < 0:
+        return None
+    labels = _status_labels(
+        item.get("firstSeenAt"),
+        today,
+        days_left,
+        "Ongoing" in item.get("statusLabels", []),
+    )
+    return {
+        **item,
+        "status": " · ".join(labels),
+        "statusLabels": labels,
+        "urgency": _urgency_label(days_left),
+        "closingDate": closing.isoformat() if closing else None,
+        "sourceStale": True,
+    }
+
+
+def _item_closing_date(item: dict) -> date | None:
+    return parse_opportunity_date(item.get("closingDate") or item.get("deadline"))
+
+
+def _snapshot_sort_key(item: dict) -> tuple[int, int, str]:
+    closing = _item_closing_date(item)
+    ordinal = closing.toordinal() if closing else date.max.toordinal()
+    return ordinal, -int(item["relevanceScore"]), str(item["title"]).lower()
 
 
 def _write_rss_feed(payload: dict[str, object], output_path: Path) -> None:
@@ -153,7 +216,7 @@ def _write_rss_feed(payload: dict[str, object], output_path: Path) -> None:
     rss = ET.Element("rss", {"version": "2.0"})
     channel = ET.SubElement(rss, "channel")
     ET.SubElement(channel, "title").text = "Research Funding Debrief"
-    ET.SubElement(channel, "link").text = SITE_URL
+    ET.SubElement(channel, "link").text = PUBLIC_SITE_URL
     ET.SubElement(channel, "description").text = (
         "Live research funding opportunities for personalised briefings."
     )
@@ -177,7 +240,7 @@ def _append_rss_item(
     entry = ET.SubElement(channel, "item")
     title = str(item.get("title") or "Untitled funding opportunity")
     source = str(item.get("source") or "Unknown source")
-    url = str(item.get("url") or SITE_URL)
+    url = str(item.get("url") or PUBLIC_SITE_URL)
 
     ET.SubElement(entry, "title").text = title
     ET.SubElement(entry, "link").text = url
@@ -213,6 +276,8 @@ def _rss_description(item: dict[str, object]) -> str:
         f"Relevance: {item.get('relevanceLevel') or 'Send me a broad scan'}",
         f"First seen: {item.get('firstSeenAt') or 'Unknown'}",
     ]
+    if item.get("sourceStale"):
+        lines.append("Source freshness: Retained from the last verified snapshot")
     return "\n".join(lines)
 
 
@@ -246,14 +311,15 @@ def _serialise_opportunity(
     today: date,
     database: OpportunityDatabase,
 ) -> dict[str, object]:
-    days_left = _days_left(opportunity, today)
+    closing = parse_opportunity_date(opportunity.closing_date)
+    days_left = (closing - today).days if closing else None
     first_seen_at, last_seen_at = database.seen_timestamps(
         opportunity.source,
         opportunity.external_id,
     )
     opportunity.first_seen_at = first_seen_at
     opportunity.last_seen_at = last_seen_at
-    status_labels = _status_labels(opportunity, today, days_left)
+    status_labels = _status_labels(first_seen_at, today, days_left, _is_ongoing(opportunity))
 
     return {
         "status": " · ".join(status_labels),
@@ -262,6 +328,7 @@ def _serialise_opportunity(
         "source": _source_label(opportunity.source),
         "rawSource": opportunity.source,
         "deadline": _deadline_label(opportunity),
+        "closingDate": closing.isoformat() if closing else None,
         "urgency": _urgency_label(days_left),
         "publishedAt": opportunity.published_date or "",
         "publishedLabel": _published_label(opportunity),
@@ -291,13 +358,6 @@ def _sort_key(opportunity: FundingOpportunity) -> tuple[int, int, str]:
     closing = parse_opportunity_date(opportunity.closing_date)
     ordinal = closing.toordinal() if closing else date.max.toordinal()
     return (ordinal, -opportunity.relevance_score, opportunity.title.lower())
-
-
-def _days_left(opportunity: FundingOpportunity, today: date) -> int | None:
-    closing = parse_opportunity_date(opportunity.closing_date)
-    if not closing:
-        return None
-    return (closing - today).days
 
 
 def _deadline_label(opportunity: FundingOpportunity) -> str:
@@ -336,23 +396,24 @@ def _urgency_label(days_left: int | None) -> str:
 
 
 def _status_labels(
-    opportunity: FundingOpportunity,
+    first_seen_at: str | None,
     today: date,
     days_left: int | None,
+    ongoing: bool,
 ) -> list[str]:
-    labels = ["New" if _is_new(opportunity, today) else "Seen"]
+    labels = ["New" if _is_new(first_seen_at, today) else "Seen"]
     if days_left is not None and 0 <= days_left <= EXPIRING_SOON_DAYS:
         labels.append("Closing soon")
-    if _is_ongoing(opportunity):
+    if ongoing:
         labels.append("Ongoing")
     return labels
 
 
-def _is_new(opportunity: FundingOpportunity, today: date) -> bool:
-    if not opportunity.first_seen_at:
+def _is_new(first_seen_at: str | None, today: date) -> bool:
+    if not first_seen_at:
         return True
     try:
-        first_seen = datetime.fromisoformat(opportunity.first_seen_at).date()
+        first_seen = datetime.fromisoformat(first_seen_at).date()
     except ValueError:
         return False
     return 0 <= (today - first_seen).days <= NEW_DAYS
