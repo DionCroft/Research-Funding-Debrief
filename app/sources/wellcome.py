@@ -6,8 +6,6 @@ import logging
 import re
 from urllib.parse import urlparse
 
-import requests
-
 from app.config import WELLCOME_FUNDING_URL
 from app.models import FundingOpportunity
 from app.sources.base import FundingSource
@@ -27,11 +25,7 @@ class WellcomeFundingSource(FundingSource):
 
     def fetch(self) -> list[FundingOpportunity]:
         logger.info("Fetching Wellcome funding schemes: %s", self.funding_url)
-        try:
-            soup = get_soup(self.funding_url)
-        except requests.RequestException:
-            logger.exception("Failed to fetch Wellcome funding schemes.")
-            return []
+        soup = get_soup(self.funding_url)
 
         opportunities = parse_wellcome_opportunities(self.funding_url, soup)
         logger.info("Parsed %s opportunities from Wellcome.", len(opportunities))

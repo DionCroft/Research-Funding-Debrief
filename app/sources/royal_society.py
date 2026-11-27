@@ -6,8 +6,6 @@ import logging
 import re
 from urllib.parse import urlparse
 
-import requests
-
 from app.config import ROYAL_SOCIETY_GRANTS_URL
 from app.models import FundingOpportunity
 from app.sources.base import FundingSource
@@ -27,11 +25,7 @@ class RoyalSocietyGrantsSource(FundingSource):
 
     def fetch(self) -> list[FundingOpportunity]:
         logger.info("Fetching Royal Society grants: %s", self.grants_url)
-        try:
-            soup = get_soup(self.grants_url)
-        except requests.RequestException:
-            logger.exception("Failed to fetch Royal Society grants.")
-            return []
+        soup = get_soup(self.grants_url)
 
         opportunities = parse_royal_society_opportunities(self.grants_url, soup)
         logger.info("Parsed %s opportunities from Royal Society.", len(opportunities))

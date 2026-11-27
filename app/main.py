@@ -15,7 +15,8 @@ from app.discord_notifier import send_discord_report
 from app.emailer import send_email_report
 from app.filters import score_opportunities
 from app.report import generate_daily_debrief, generate_discord_debrief
-from app.sources.registry import SOURCE_FACTORIES, build_sources
+from app.sources.health import fetch_sources
+from app.sources.registry import SOURCE_REGISTRY, build_sources
 
 
 logger = logging.getLogger(__name__)
@@ -61,7 +62,7 @@ def build_parser() -> argparse.ArgumentParser:
         "--sources",
         help=(
             "Comma-separated sources to run. "
-            f"Available: {', '.join(sorted(SOURCE_FACTORIES))}"
+            f"Available: {', '.join(sorted(SOURCE_REGISTRY))}"
         ),
     )
     parser.add_argument("--min-score", type=int, help="Override the relevant score threshold.")
@@ -78,7 +79,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument(
         "--refresh-live-json",
         action="store_true",
-        help="Write web/data/live-updates.json from the same fetched opportunities.",
+        help="Write the public JSON and RSS snapshots from the same source checks.",
     )
     parser.add_argument(
         "--no-discord",
@@ -118,13 +119,7 @@ def run(argv: Sequence[str] | None = None) -> int:
         logger.warning("No valid funding sources configured: %s", config.enabled_sources)
         return 1
 
-    opportunities = []
-    for source in sources:
-        try:
-            opportunities.extend(source.fetch())
-        except Exception:
-            logger.exception("Source failed unexpectedly: %s", source.name)
-
+    opportunities, source_checks = fetch_sources(sources)
     logger.info("Fetched %s opportunities.", len(opportunities))
 
     scored_opportunities = score_opportunities(opportunities, config.keywords)
@@ -151,16 +146,12 @@ def run(argv: Sequence[str] | None = None) -> int:
         try:
             from web.live_updates import write_live_updates
 
-            write_live_updates(
-                scored_opportunities,
-                database,
-                config.enabled_sources,
-                relevant_score_threshold=config.relevant_score_threshold,
-            )
-            logger.info("Live JSON snapshot refreshed.")
+            write_live_updates(scored_opportunities, database, source_checks)
+            logger.info("Public funding snapshots refreshed.")
         except Exception:
-            logger.exception("Failed to refresh live JSON snapshot.")
-            print("Fetched opportunities, but could not refresh the live JSON snapshot.")
+            logger.exception("Failed to refresh public funding snapshots.")
+            print("Could not refresh the public funding snapshots. Check the logs for details.")
+            return 1
 
     report = generate_daily_debrief(
         fetched_opportunities=scored_opportunities,

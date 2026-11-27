@@ -245,6 +245,53 @@ h1 {
   line-height: 0.95;
 }
 
+.live-freshness:empty {
+  display: none;
+}
+
+.live-freshness {
+  margin: 0;
+  color: #79521a;
+  font-weight: 700;
+}
+
+.source-health {
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #ffffff;
+}
+
+.source-health summary {
+  color: var(--teal-dark);
+  font-weight: 750;
+  cursor: pointer;
+}
+
+.source-health ul:not([hidden]) {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr));
+  gap: 14px;
+  margin: 14px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.source-health li > * {
+  display: block;
+}
+
+.source-health p,
+.source-health li span {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.source-health p {
+  margin-top: 10px;
+}
+
 .live-list {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

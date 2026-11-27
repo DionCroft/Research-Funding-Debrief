@@ -31,16 +31,12 @@ class UKRIFundingSource(FundingSource):
         """Fetch and parse UKRI RSS opportunities."""
 
         logger.info("Fetching UKRI RSS feed: %s", self.feed_url)
-        try:
-            response = requests.get(
-                self.feed_url,
-                headers={"User-Agent": "ResearchFundingDebrief/0.1"},
-                timeout=30,
-            )
-            response.raise_for_status()
-        except requests.RequestException:
-            logger.exception("Failed to fetch UKRI RSS feed.")
-            return []
+        response = requests.get(
+            self.feed_url,
+            headers={"User-Agent": "ResearchFundingDebrief/0.1"},
+            timeout=30,
+        )
+        response.raise_for_status()
 
         parsed = feedparser.parse(response.content)
         if parsed.bozo:
